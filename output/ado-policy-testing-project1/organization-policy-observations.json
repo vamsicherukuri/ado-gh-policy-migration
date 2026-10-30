@@ -1,0 +1,36 @@
+{
+  "organization": "https://dev.azure.com/ado-policy-testing",
+  "providedAt": "2026-10-23T19:25:43-04:00",
+  "evidenceType": "User-provided screenshots; organization identified from conversation context, not a visible URL",
+  "verifiedViaApi": false,
+  "changedByAssistant": false,
+  "values": {
+    "ADO-001": false,
+    "ADO-002": true,
+    "ADO-003": true,
+    "ADO-004": false,
+    "ADO-005": false,
+    "ADO-007": true,
+    "ADO-008": false,
+    "ADO-009": false,
+    "ADO-010": true,
+    "ADO-011": true,
+    "ADO-012": true
+  },
+  "proposedStates": {
+    "ADO-001": false,
+    "ADO-002": true,
+    "ADO-003": true,
+    "ADO-004": true,
+    "ADO-005": null,
+    "ADO-007": true,
+    "ADO-008": null,
+    "ADO-009": false,
+    "ADO-010": false,
+    "ADO-011": false,
+    "ADO-012": false
+  },
+  "additionalVisibleControlsOutsideInventory": {
+    "Allow extensions to access resources on the local network": false
+  }
+}

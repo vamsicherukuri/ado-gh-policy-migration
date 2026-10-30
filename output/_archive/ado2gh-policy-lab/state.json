@@ -1,0 +1,590 @@
+{
+  "branches": {
+    "sample2": {
+      "ref": "refs/heads/policy-direct/main",
+      "pushId": 248
+    },
+    "sample3": {
+      "ref": "refs/heads/policy-lab/main",
+      "pushId": 249
+    },
+    "sample4": {
+      "ref": "refs/heads/policy-control/main",
+      "pushId": 250
+    }
+  },
+  "pipelines": {
+    "sample2": {
+      "id": 36,
+      "name": "policy-lab-sample2"
+    },
+    "sample3": {
+      "id": 37,
+      "name": "policy-lab-sample3"
+    }
+  },
+  "policies": {
+    "ADO-013": {
+      "id": 21,
+      "kind": "email",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        },
+        "settings": {
+          "authorEmailPatterns": [
+            "*@MngEnvMCAP267305.onmicrosoft.com"
+          ],
+          "scope": [
+            {
+              "repositoryId": null
+            }
+          ]
+        }
+      }
+    },
+    "ADO-014": {
+      "id": 22,
+      "kind": "path",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "51c78909-e838-41a2-9496-c647091e3c61"
+        },
+        "settings": {
+          "filenamePatterns": [
+            "/policy-lab-blocked/*",
+            "*/policy-lab-blocked/*"
+          ],
+          "scope": [
+            {
+              "repositoryId": null
+            }
+          ]
+        }
+      }
+    },
+    "ADO-015": {
+      "id": 23,
+      "kind": "case",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        },
+        "settings": {
+          "enforceConsistentCase": true,
+          "scope": [
+            {
+              "repositoryId": null
+            }
+          ]
+        }
+      }
+    },
+    "ADO-016": {
+      "id": 24,
+      "kind": "reserved",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "db2b9b4c-180d-4529-9701-01541d19f36b"
+        },
+        "settings": {
+          "scope": [
+            {
+              "repositoryId": null
+            }
+          ]
+        }
+      }
+    },
+    "ADO-017": {
+      "id": 25,
+      "kind": "length",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        },
+        "settings": {
+          "maxPathLength": 180,
+          "scope": [
+            {
+              "repositoryId": null
+            }
+          ]
+        }
+      }
+    },
+    "ADO-018": {
+      "id": 26,
+      "kind": "size",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "2e26e725-8201-4edd-8bf5-978563c34a80"
+        },
+        "settings": {
+          "maximumGitBlobSizeInBytes": 1048576,
+          "useUncompressedSize": true,
+          "scope": [
+            {
+              "repositoryId": null
+            }
+          ]
+        }
+      }
+    },
+    "ADO-026": {
+      "id": 27,
+      "kind": "email",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        },
+        "settings": {
+          "authorEmailPatterns": [
+            "*@MngEnvMCAP267305.onmicrosoft.com"
+          ],
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-027": {
+      "id": 28,
+      "kind": "path",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "51c78909-e838-41a2-9496-c647091e3c61"
+        },
+        "settings": {
+          "filenamePatterns": [
+            "/policy-lab-blocked/*",
+            "*/policy-lab-blocked/*"
+          ],
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-028": {
+      "id": 29,
+      "kind": "case",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        },
+        "settings": {
+          "enforceConsistentCase": true,
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-029": {
+      "id": 30,
+      "kind": "reserved",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "db2b9b4c-180d-4529-9701-01541d19f36b"
+        },
+        "settings": {
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-030": {
+      "id": 31,
+      "kind": "length",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        },
+        "settings": {
+          "maxPathLength": 180,
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-031": {
+      "id": 32,
+      "kind": "size",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "2e26e725-8201-4edd-8bf5-978563c34a80"
+        },
+        "settings": {
+          "maximumGitBlobSizeInBytes": 1048576,
+          "useUncompressedSize": true,
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-019": {
+      "id": 33,
+      "kind": "reviewers",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        },
+        "settings": {
+          "minimumApproverCount": 2,
+          "creatorVoteCounts": false,
+          "allowDownvotes": false,
+          "resetOnSourcePush": true,
+          "scope": [
+            {
+              "repositoryId": null,
+              "refName": "refs/heads/policy-lab/",
+              "matchKind": "Prefix"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-020": {
+      "id": 34,
+      "kind": "workitems",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        },
+        "settings": {
+          "scope": [
+            {
+              "repositoryId": null,
+              "refName": "refs/heads/policy-lab/",
+              "matchKind": "Prefix"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-021": {
+      "id": 35,
+      "kind": "comments",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        },
+        "settings": {
+          "scope": [
+            {
+              "repositoryId": null,
+              "refName": "refs/heads/policy-lab/",
+              "matchKind": "Prefix"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-022": {
+      "id": 36,
+      "kind": "merge",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        },
+        "settings": {
+          "allowSquash": true,
+          "allowRebase": false,
+          "allowRebaseMerge": false,
+          "allowNoFastForward": false,
+          "scope": [
+            {
+              "repositoryId": null,
+              "refName": "refs/heads/policy-lab/",
+              "matchKind": "Prefix"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-023": {
+      "id": 37,
+      "kind": "build",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "0609b952-1397-4640-95ec-e00a01b2c241"
+        },
+        "settings": {
+          "buildDefinitionId": 37,
+          "manualQueueOnly": false,
+          "queueOnSourceUpdateOnly": false,
+          "validDuration": 0,
+          "displayName": "Policy lab fixture validation",
+          "scope": [
+            {
+              "repositoryId": null,
+              "refName": "refs/heads/policy-lab/",
+              "matchKind": "Prefix"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-024": {
+      "id": 38,
+      "kind": "status",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        },
+        "settings": {
+          "statusGenre": "policy-lab",
+          "statusName": "external-validation",
+          "invalidateOnSourceUpdate": true,
+          "policyApplicability": 0,
+          "scope": [
+            {
+              "repositoryId": null,
+              "refName": "refs/heads/policy-lab/",
+              "matchKind": "Prefix"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-025": {
+      "id": 39,
+      "kind": "required",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "fd2167ab-b0be-447a-8ec8-39368250530e"
+        },
+        "settings": {
+          "requiredReviewerIds": [
+            "5250e609-5e8d-6403-9e6a-7f627014779e",
+            "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+          ],
+          "message": "Policy migration lab: both named reviewers must approve.",
+          "scope": [
+            {
+              "repositoryId": null,
+              "refName": "refs/heads/policy-lab/",
+              "matchKind": "Prefix"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-032": {
+      "id": 40,
+      "kind": "reviewers",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        },
+        "settings": {
+          "minimumApproverCount": 2,
+          "creatorVoteCounts": false,
+          "allowDownvotes": false,
+          "resetOnSourcePush": true,
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b",
+              "refName": "refs/heads/policy-direct/main",
+              "matchKind": "Exact"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-033": {
+      "id": 41,
+      "kind": "workitems",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        },
+        "settings": {
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b",
+              "refName": "refs/heads/policy-direct/main",
+              "matchKind": "Exact"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-034": {
+      "id": 42,
+      "kind": "comments",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        },
+        "settings": {
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b",
+              "refName": "refs/heads/policy-direct/main",
+              "matchKind": "Exact"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-035": {
+      "id": 43,
+      "kind": "merge",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        },
+        "settings": {
+          "allowSquash": true,
+          "allowRebase": false,
+          "allowRebaseMerge": false,
+          "allowNoFastForward": false,
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b",
+              "refName": "refs/heads/policy-direct/main",
+              "matchKind": "Exact"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-036": {
+      "id": 44,
+      "kind": "build",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "0609b952-1397-4640-95ec-e00a01b2c241"
+        },
+        "settings": {
+          "buildDefinitionId": 36,
+          "manualQueueOnly": false,
+          "queueOnSourceUpdateOnly": false,
+          "validDuration": 0,
+          "displayName": "Policy lab fixture validation",
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b",
+              "refName": "refs/heads/policy-direct/main",
+              "matchKind": "Exact"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-037": {
+      "id": 45,
+      "kind": "status",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        },
+        "settings": {
+          "statusGenre": "policy-lab",
+          "statusName": "external-validation",
+          "invalidateOnSourceUpdate": true,
+          "policyApplicability": 0,
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b",
+              "refName": "refs/heads/policy-direct/main",
+              "matchKind": "Exact"
+            }
+          ]
+        }
+      }
+    },
+    "ADO-038": {
+      "id": 46,
+      "kind": "required",
+      "expected": {
+        "isEnabled": true,
+        "isBlocking": true,
+        "type": {
+          "id": "fd2167ab-b0be-447a-8ec8-39368250530e"
+        },
+        "settings": {
+          "requiredReviewerIds": [
+            "5250e609-5e8d-6403-9e6a-7f627014779e",
+            "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+          ],
+          "message": "Policy migration lab: both named reviewers must approve.",
+          "scope": [
+            {
+              "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b",
+              "refName": "refs/heads/policy-direct/main",
+              "matchKind": "Exact"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

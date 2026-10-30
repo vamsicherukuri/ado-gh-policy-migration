@@ -1,0 +1,353 @@
+ADO POLICY LAB - STEP 1 ASSESSMENT AND APPROVED CONFIGURATION
+==========================================================
+
+Organization: https://dev.azure.com/contosodevopstest/
+Project: ado2gh-policy-lab (85357c78-817f-44fd-b5c7-d77a97d1c650)
+URL: https://dev.azure.com/contosodevopstest/ado2gh-policy-lab/
+Source project (read-only): sample-repo-testing
+Source: Azure_DevOps_Policies.xlsx, Policy Inventory (42 unique inventory IDs)
+Assessment date: 2026-10-23
+
+SECOND ORGANIZATION - CURRENT POLICY LAB
+---------------------------------------
+The user created https://dev.azure.com/ado-policy-testing/project1.
+Authenticated API access verified project ID 214eef9d-ce60-45f3-8cd9-0bdfff07bf20
+and private visibility. The initial 404 during organization provisioning no
+longer occurs.
+
+At the user's request, sample2, sample3 and sample4 were copied from the
+contosodevopstest/ado2gh-policy-lab project into this new project. Both branches
+in each repository have matching source/destination commit IDs, including the
+policy-direct/main, policy-lab/main and policy-control/main lab branches.
+Default branches and Git history are preserved.
+
+The Git-copy step did not transfer policies or pipeline definitions. Following
+the user's approval, 26 new enabled/blocking policy entries were separately
+configured in project1. Two new Azure-Repos-backed validation pipelines were
+created and the two approved reviewers were added to the new organization's
+Basic users and project1 Contributors. No PR histories were copied.
+
+Organization policy follow-up (2026-10-26):
+The user selected five organization controls: ADO-002, ADO-003, ADO-004,
+ADO-007 and ADO-011. Authenticated browser inspection of
+https://dev.azure.com/ado-policy-testing/_settings/organizationPolicy confirmed
+SSH authentication, Validate SSH key expiration, and public package-registry
+protections already On; these three were left unchanged.
+Log audit events was changed from Off to On and verified On after page reload.
+Request access remains On: disabling it requires an approved internal
+access-request URL. No URL was supplied, so the dialog was cancelled without
+saving. No other organization controls were changed.
+The organization observations below describe the earlier 2026-10-23 baseline,
+not the current audit-logging state.
+
+project1 policy layout:
+  sample2: policy IDs 1-12 and 20-26 effective on policy-direct/main (19).
+  sample3: policy IDs 1-6 and 13-19 effective on policy-lab/main (13).
+  sample4: policy IDs 1-6 effective on policy-control/main (6).
+These are 26 unique configurations, not 26 per repository.
+Pipeline policy-lab-sample2 has ID 1; policy-lab-sample3 has ID 2.
+Smoke builds 1 and 2 both succeeded on the expected copied lab commits.
+Build 2 initially waited for a hosted-runner provisioning issue and subsequently
+completed without changing YAML, Git refs, policies or agent configuration.
+Their evidence is recorded in policy-verification.json and the assessment.
+
+On 2026-10-23 the user approved applying the non-tenant policy scope and keeping
+all four tenant policies excluded. No organization or tenant policy settings
+have yet been changed. Organization changes are blocked by admin portal access:
+the integrated-browser sharing request timed out, and the automation browser
+redirects to Microsoft sign-in. The OrganizationPolicy area is unavailable via
+az devops invoke; read-only probes of the proposed OrganizationPolicy/Policies
+route returned 404 on both dev.azure.com and vssps.dev.azure.com. No writes were
+attempted against these unverified routes.
+The user supplied two Policies-page screenshots on 2026-10-23 at 19:25 Eastern.
+They show all 11 active inventory organization controls. These are observed
+UI values, not API read-back or evidence that the assistant changed settings.
+The organization identity comes from conversation context; the cropped images
+do not display an organization URL.
+Five values already match the proposed profile: OAuth Off, SSH On, SSH-key
+expiration validation On, public registry protection On, external guests Off.
+Four changes are still needed in the user's portal: audit logging Off to On;
+team/project-admin invitations On to Off; access requests On to Off; Microsoft
+feedback collection On to Off.
+PAT restriction and non-interactive Conditional Access validation both show Off.
+PAT-creation exemptions and Conditional Access prerequisites still require review before
+potentially access-blocking settings are changed. The public-project capability
+is retired, not an applicable policy to enable. Excluding four tenant entries
+leaves 38 inventory entries, of which 37 are potentially active/applicable and
+one is retired. Currently 26 entries were configured by this task. Of the 11
+active organization entries, five are observed matching the proposed profile,
+four require portal changes and two need prerequisite review. None is reported
+as a new organization change made by the assistant.
+The screenshot also shows "Allow extensions to access resources on the local
+network" Off. This is outside the original 42-entry inventory; leave unchanged.
+The new assessment distinguishes observed settings from proposed changes:
+  ADO-001 OAuth: Off.
+  ADO-002 SSH authentication: On.
+  ADO-003 SSH expiration validation: On.
+  ADO-004 Audit events: On, subject to availability.
+  ADO-005 PAT creation restriction: leave unchanged until a migration PAT and
+          any required exemptions are prepared.
+  ADO-006 Public projects: do not enable; retired capability.
+  ADO-007 Public package-registry protections: On.
+  ADO-008 Non-interactive IP Conditional Access validation: leave unchanged
+          until applicable tenant CA rules and lockout risks are reviewed.
+  ADO-009 External guest access: Off.
+  ADO-010 Team/project-admin user invitations: Off.
+  ADO-011 Access requests: Off.
+  ADO-012 Microsoft feedback collection: Off.
+The four tenant controls remain excluded; a new organization in the same
+tenant cannot isolate their effects.
+
+BEHAVIORAL TEST BASELINE - CURRENT PROJECT1
+------------------------------------------
+The user additionally excluded ADO-005 (PAT creation restrictions) and ADO-008
+(non-interactive IP Conditional Access validation). With retired ADO-006 and
+TEN-001 through TEN-004, there are seven exclusions and 35 in-scope entries.
+These exclusions apply to testing; none of those settings was modified.
+
+Test-AdoPolicyLab.py exercises dedicated fixture branches and PRs without
+changing policies, using bypass permissions, or impersonating reviewers.
+Completed run: 20261023PolicyBaseline02.
+Automated cases: 64 PASS, 20 BLOCKED, zero FAIL or ERROR.
+Inventory-level behavior: 14 PASS, eight PARTIAL, 13 BLOCKED.
+All 26 project/repository/branch configurations passed exact live read-back.
+The nine organization entries have no authenticated current read-back and are
+BLOCKED, not screenshot-based passes. The four requested portal toggle changes
+above remain unconfirmed.
+
+Behavioral coverage:
+  Six project push validators rejected invalid author email, prohibited paths,
+  case collisions, reserved names, excessive path length and excessive size.
+  Boundary checks accepted ADO path length 180 and rejected 181; ADO counts the
+  leading slash in the submitted path. They accepted 1,048,576 bytes and
+  rejected 1,048,577 bytes.
+  The same checks passed on sample2 with both project and explicit repository
+  validators effective. Those six repository entries are PARTIAL: identical
+  inherited validators prevent independent layer attribution without changing
+  the policy layout. No validator was disabled.
+  Work-item link, comment resolution and iteration-specific status evaluations
+  transitioned from rejected to approved on both protected branches.
+  Automatic PR builds 5 and 6 succeeded for PR merge refs 4 and 5, respectively.
+  Both required named reviewers appeared automatically, but their positive
+  approval/completion path remains blocked pending their own authenticated votes.
+  Minimum-reviewer evaluations remained queued. Queued is recorded as BLOCKED,
+  never as proof of rejection or approval. A lone creator vote cannot prove
+  creator-vote exclusion independently when two approvers are required.
+  Squash-only configuration is verified; alternative merge completion remains
+  BLOCKED while independent reviewer gates are unsatisfied.
+  sample4 PR 6 had no branch-policy evaluations and was abandoned. Its six
+  project push validators still apply; it is not a policy-free repository.
+
+Active baseline PRs for independent review:
+  https://dev.azure.com/ado-policy-testing/project1/_git/sample2/pullrequest/4
+  https://dev.azure.com/ado-policy-testing/project1/_git/sample3/pullrequest/5
+The status producer is the controlled test runner on its synthetic PRs only,
+not a general-purpose integration for arbitrary future PRs.
+Original source refs/policies and original destination refs/defaults/policies
+were verified unchanged. Accepted fixture branches, work items and PR history
+are intentionally retained for later ADO2GH comparison.
+
+Run a fresh independent suite:
+  python .\scripts\testing\Test-AdoPolicyLab.py
+Resume an existing run (completed cases, including blockers, are not repeated):
+  python .\scripts\testing\Test-AdoPolicyLab.py --run-id 20261023PolicyBaseline02
+Explicitly refresh a safe check, preserving its previous result:
+  python .\scripts\testing\Test-AdoPolicyLab.py --run-id 20261023PolicyBaseline02 --retry-check preservation/destination
+--retry-check is repeatable. It permits configuration, scope, push, safety,
+reviewer-vote/evaluation and automatic-build checks, not stateful work-item,
+comment or status sequences. Use a fresh run for those sequences.
+Exit codes: 0 = all checks passed; 1 = FAIL/ERROR; 2 = blockers without failures.
+Run local harness regression tests:
+  python -m unittest discover -s .\tests -p "test_*.py" -v
+All 14 regression tests passed, including rejection attribution, authentication
+errors not counting as passes, exact path lengths, queued-state classification
+and strict fixture-manifest ref preservation.
+
+Evidence under output\ado-policy-testing-project1\policy-tests\<run-id>:
+  baseline.json: live pre-test policies, original refs and defaults.
+  resources.json: exact owned fixture refs/commits, PRs and work items.
+  results.json: latest result and evidence per automated check.
+  attempt-history.json: previous results for explicitly retried checks.
+  Policy-Test-Matrix.csv: all 42 IDs, 35 included and seven excluded.
+  summary.json: case and inventory counts, resources and limitations.
+The first run, 20261023PolicyBaseline01, is retained as harness-calibration
+evidence, not the final baseline. Corrected actual ADO error types, API preview
+version, iteration-specific status publishing and leading-slash path counting
+were verified in the second run. Setup verification accepts only unchanged
+original refs plus exact refs/commit IDs recorded by owned fixture manifests.
+No ADO2GH migration has been performed.
+
+Recreate or reverify the approved project1 settings:
+  python .\scripts\lab\Initialize-NewOrgPolicyLab.py setup
+  python .\scripts\lab\Initialize-NewOrgPolicyLab.py verify
+For an explicitly requested retry of failed/queued smoke builds only:
+  python .\scripts\lab\Initialize-NewOrgPolicyLab.py retry-smoke
+This retains successful runs, records the old attempt, cancels an incomplete
+owned run if necessary, and queues the same pipeline/branch without Git changes.
+This reuses the original policy definitions with explicit new-project repository
+IDs, resolved new-organization reviewers, and new pipeline IDs. It does not add
+or modify any Git refs or commit history. Source writes remain prohibited.
+The two required status-check configurations still need a status producer.
+Configuration read-back and pipeline smoke checks are not the behavioral suite.
+
+Evidence under output\ado-policy-testing-project1:
+  copy-state.json: point-in-time Git-copy snapshot, before policy setup.
+  policy-baseline.json: destination policy/repo baseline before recreation.
+  policy-state.json: new pipeline IDs, policy IDs and smoke build IDs.
+  policy-verification.json: current read-back and smoke-run evidence.
+  organization-policy-observations.json: the 11 screenshot-observed states,
+  with evidence provenance and pending targets, without copying the images.
+  Policy-Assessment.csv: all 42 inventory entries and explicit pending proposals.
+Do not use the initial Git-copy-only command to assess policy state after
+intentional policy recreation: its unchanged-policy check refers to the earlier
+empty destination baseline. Use Initialize-NewOrgPolicyLab.py verify instead.
+
+The setup/results below describe the original contosodevopstest lab only.
+
+CURRENT RESULT
+--------------
+Created a separate private Agile/Git project, as requested.
+Copied all six source Git repositories, including the empty default repository,
+and verified identical source branch/tag object IDs before adding lab branches.
+Original commit history and default branches are preserved.
+All 26 approved project/repository/branch entries are now enabled, blocking and
+verified through policy configuration read-back and effective-policy queries.
+Two new Azure-Repos-backed build pipelines completed successfully.
+The original project was not modified. Source refs, default branches and its
+two policies were compared with the pre-copy snapshot and remain unchanged.
+
+The earlier inherited-Deny blocker applies to the source project, not this new
+project. Source ACLs were not copied or changed. Both requested reviewers were
+added to the new project's Contributors group only. Neither policy-bypass
+permission is set for the setup identity in the new project's Git permissions.
+
+This is a Git-content copy plus new lab configuration, not a full project-data
+migration. Source PRs, work items, pipeline histories, existing CI definitions,
+service connections, secrets and security ACLs were not cloned. The source's
+existing policies 5 and 6 were not imported; lab policies are newly configured.
+
+COUNTS AND SCOPE
+----------------
+12 organization policies: ADO-001 through ADO-012.
+13 project entries: ADO-013 through ADO-025.
+  Six All Repositories push policies and seven cross-repository branch policies.
+6 repository policies: ADO-026 through ADO-031.
+7 branch policies: ADO-032 through ADO-038.
+4 tenant policies: TEN-001 through TEN-004.
+Total: 42 entries. Repeated names at different scopes are intentional.
+
+The 26 project/repository/branch entries represent 13 underlying policy types.
+All 26 entries are configured and have passed server read-back verification.
+This historical first-step verification was configuration-only. Current project1
+behavioral results and limitations are documented above.
+
+The remaining 16 entries are outside the user's approved write scope.
+Their current organization/tenant values have not been verified.
+They cannot be implemented as settings on one Git repository. Most require
+Project Collection Administrator or tenant Azure DevOps Administrator authority.
+ADO-006 (Allow public projects) is a retired capability and is not a lab target.
+Organization and tenant controls remain unchanged.
+
+APPROVED LAYOUT
+---------------
+sample2:
+  Explicit six repository push policies.
+  Seven branch policies on policy-direct/main (exact match).
+  Dedicated policy-lab-sample2 pipeline (ID 36), backed by Azure Repos.
+  Smoke build 295 succeeded.
+  Effective policy IDs: 21-32 and 40-46 (19 configurations).
+sample3:
+  Cross-repository branch policies on policy-lab/main, matched by the
+  project-level refs/heads/policy-lab/ prefix (repositoryId=null).
+  Dedicated policy-lab-sample3 pipeline (ID 37), backed by Azure Repos.
+  Smoke build 296 succeeded.
+  Effective policy IDs: 21-26 and 33-39 (13 configurations).
+sample4:
+  Comparison branch policy-control/main, outside both branch-policy selectors.
+  No explicit repository push or branch policies were configured here.
+  Project push policies 21-26 are effective (6 configurations).
+  This is a branch-policy comparison, not a policy-free control.
+
+Six project-level All Repositories push settings were explicitly approved.
+Although Microsoft's settings reference describes defaults for new repositories,
+the live Git policy API reports all six project configurations effective on each
+of the three existing copied repositories. This observed result is recorded in
+verification.json. Actual push rejection and inheritance on newly created
+repositories still require the next-phase behavioral tests.
+
+Existing default branches are not changed. Existing branches are not modified.
+The copied sample1, sample5 and empty sample-repo-testing repositories retain
+their source Git contents without new lab branches. Project-wide push controls
+are configured only in the new project.
+Source CI definitions are not repointed or reused. In particular, the source
+sample2-ci definition points to GitHub, not Azure Repos.
+
+CONFIGURED VALUES
+--------------
+Commit-author email: *@MngEnvMCAP267305.onmicrosoft.com.
+Prohibited paths: /policy-lab-blocked/* and */policy-lab-blocked/*.
+Case consistency: enabled.
+Reserved names: blocking/enabled.
+Maximum path length: 180.
+Maximum file size: 1,048,576 uncompressed bytes.
+Minimum approvers: 2; creator vote excluded; reset approvals on source push.
+Linked work items: required.
+Comment resolution: required.
+Merge strategy: squash only.
+Build validation: automatic, blocking, immediately stale on target change.
+Status check: required context policy-lab/external-validation, invalidated
+on source update. No success status is fabricated; its producer and behavioral
+tests are explicitly deferred to the next phase.
+Automatic required reviewers:
+  kiran@MngEnvMCAP267305.onmicrosoft.com
+  kiranch@MngEnvMCAP267305.onmicrosoft.com
+Both identities were resolved successfully through the organization user API.
+
+REPRODUCE AND VERIFY
+-----------------
+From the workspace root:
+  python .\scripts\lab\Initialize-AdoPolicyLab.py copy
+  python .\scripts\lab\Initialize-AdoPolicyLab.py setup
+  python .\scripts\lab\Initialize-AdoPolicyLab.py verify
+
+Run from the workspace root. Authentication uses the current Azure CLI Entra
+session for the Azure DevOps resource, not a checked-in token or credential.
+The setup is fixed to the isolated project. Source-project writes are rejected.
+The copy step reuses its recorded destination resources; it does not overwrite
+untracked repositories. Git authentication uses process-only environment
+configuration; credentials are not stored in Git remote URLs or on disk.
+The baseline is captured before mutations; each successful creation is recorded
+in state.json. Existing conflicting policies cause a stop, not an overwrite.
+
+Outputs under output\ado2gh-policy-lab:
+  copy-state.json: source snapshot, copied repo IDs and verified source refs.
+  baseline.json: original policies, target metadata and branch refs.
+  Policy-Assessment.csv: all 42 inventory IDs and their actual status.
+  state.json: created lab branch, pipeline and policy IDs.
+  verification.json: policy read-back, effective scopes, pipeline definitions
+  and successful smoke-build evidence.
+The previous output\ado-policy-lab assessment is retained as historical evidence
+of the blocked attempt on the original project; it is not the current result.
+
+Configuration read-back verifies expected settings and checks preservation of
+existing policies/defaults/refs. These historical old-lab smoke results are not
+the current project1 behavioral results. The old lab's required status policies
+still have no producer; the current test runner publishes controlled statuses
+only on its project1 fixture PRs. Independent-reviewer and merge completion
+coverage remains limited as documented above.
+
+MIGRATION MEASUREMENT
+---------------------
+Do not report policies as migrated because an equivalent GitHub feature exists.
+First freeze the ADO configuration and behavioral baseline. Later run ADO2GH,
+then compare destination configuration and enforcement for every inventory ID.
+Track original source scope, including inherited project policy versus explicit
+repository policy. Keep organization/tenant entries and retired capabilities
+separate from repository-migration coverage. Nothing has been migrated yet.
+
+PRIMARY REFERENCES
+------------------
+https://learn.microsoft.com/en-us/azure/devops/repos/git/repository-settings?view=azure-devops
+https://learn.microsoft.com/en-us/azure/devops/repos/git/branch-policies?view=azure-devops
+https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops
+https://learn.microsoft.com/en-us/rest/api/azure/devops/git/policy-configurations/get?view=azure-devops-rest-7.1

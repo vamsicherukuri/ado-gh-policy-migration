@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "runId": "20261028-221352",
+  "captures": [
+    {
+      "capture": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261028-221352\\project1.capture.json",
+      "organization": "ado-policy-testing",
+      "project": "project1",
+      "repositories": [
+        "project1",
+        "sample2",
+        "sample3",
+        "sample4"
+      ],
+      "policies": 26,
+      "getRequests": 36,
+      "warnings": [],
+      "policyCounts": {
+        "project": 6,
+        "repositoryBranch": 7,
+        "mixed": 0,
+        "crossRepoBranch": 7,
+        "repository": 6
+      },
+      "next": ".\\scripts\\capture\\Export-AdoPolicies.ps1 -Capture \"C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261028-221352\\project1.capture.json\""
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "capturedAt": "2026-10-23T19:45:12.132486+00:00",
+  "destination": [
+    "ado-policy-testing",
+    "214eef9d-ce60-45f3-8cd9-0bdfff07bf20"
+  ],
+  "policies": [],
+  "repositories": {
+    "7779cd9a-edf0-42a9-9775-8998e63b2de4": {
+      "metadata": {
+        "id": "7779cd9a-edf0-42a9-9775-8998e63b2de4",
+        "name": "sample4",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/7779cd9a-edf0-42a9-9775-8998e63b2de4",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample4",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample4",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample4",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/master": "dc5e4014c4fc8d68439e63bc69cef78511829fac",
+        "refs/heads/policy-control/main": "29b2365c062507c3db95155af417ff3f5655adb8"
+      }
+    },
+    "6f1f8b01-b81c-4b15-8145-d4ae3403cb19": {
+      "metadata": {
+        "id": "6f1f8b01-b81c-4b15-8145-d4ae3403cb19",
+        "name": "project1",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/6f1f8b01-b81c-4b15-8145-d4ae3403cb19",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/project1",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/project1",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/project1",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {}
+    },
+    "54f04bde-a309-4cfd-ace5-e89953f382a7": {
+      "metadata": {
+        "id": "54f04bde-a309-4cfd-ace5-e89953f382a7",
+        "name": "sample3",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample3",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample3",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample3",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/master": "b63b1feeb92a88b3e750d12b3799a250e792b357",
+        "refs/heads/policy-lab/main": "4e626cce091d157c062ad8330efa8dfdbaed78f2"
+      }
+    },
+    "1fe43113-48cd-4edd-8a67-f49b20b57e0a": {
+      "metadata": {
+        "id": "1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+        "name": "sample2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample2",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample2",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample2",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/master": "91971113a1b391168c85b54488595d886b9c87a7",
+        "refs/heads/policy-direct/main": "4f57ccb1669d328d21c659a231d0b744b3400a50"
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+[
+  {
+    "acesDictionary": {
+      "Microsoft.IdentityModel.Claims.ClaimsIdentity;91deab60-469f-438a-a2a4-831aa559e461\\admin@MngEnvMCAP267305.onmicrosoft.com": {
+        "allow": 228990,
+        "deny": 0,
+        "descriptor": "Microsoft.IdentityModel.Claims.ClaimsIdentity;91deab60-469f-438a-a2a4-831aa559e461\\admin@MngEnvMCAP267305.onmicrosoft.com",
+        "extendedInfo": {
+          "effectiveAllow": 467458,
+          "effectiveDeny": 56828,
+          "inheritedAllow": 524286
+        },
+        "resolvedPermissions": [
+          {
+            "bit": 1,
+            "displayName": "Administer",
+            "effectivePermission": "Not set",
+            "name": "Administer"
+          },
+          {
+            "bit": 2,
+            "displayName": "Read",
+            "effectivePermission": "Allow",
+            "name": "GenericRead"
+          },
+          {
+            "bit": 4,
+            "displayName": "Contribute",
+            "effectivePermission": "Deny (inherited)",
+            "name": "GenericContribute"
+          },
+          {
+            "bit": 8,
+            "displayName": "Force push (rewrite history, delete branches and tags)",
+            "effectivePermission": "Deny (inherited)",
+            "name": "ForcePush"
+          },
+          {
+            "bit": 16,
+            "displayName": "Create branch",
+            "effectivePermission": "Deny (inherited)",
+            "name": "CreateBranch"
+          },
+          {
+            "bit": 32,
+            "displayName": "Create tag",
+            "effectivePermission": "Deny (inherited)",
+            "name": "CreateTag"
+          },
+          {
+            "bit": 64,
+            "displayName": "Manage notes",
+            "effectivePermission": "Deny (inherited)",
+            "name": "ManageNote"
+          },
+          {
+            "bit": 128,
+            "displayName": "Bypass policies when pushing",
+            "effectivePermission": "Deny (inherited)",
+            "name": "PolicyExempt"
+          },
+          {
+            "bit": 256,
+            "displayName": "Create repository",
+            "effectivePermission": "Deny (inherited)",
+            "name": "CreateRepository"
+          },
+          {
+            "bit": 512,
+            "displayName": "Delete or disable repository",
+            "effectivePermission": "Allow",
+            "name": "DeleteRepository"
+          },
+          {
+            "bit": 1024,
+            "displayName": "Rename repository",
+            "effectivePermission": "Deny (inherited)",
+            "name": "RenameRepository"
+          },
+          {
+            "bit": 2048,
+            "displayName": "Edit policies",
+            "effectivePermission": "Deny (inherited)",
+            "name": "EditPolicies"
+          },
+          {
+            "bit": 4096,
+            "displayName": "Remove others' locks",
+            "effectivePermission": "Deny (inherited)",
+            "name": "RemoveOthersLocks"
+          },
+          {
+            "bit": 8192,
+            "displayName": "Manage permissions",
+            "effectivePermission": "Allow",
+            "name": "ManagePermissions"
+          },
+          {
+            "bit": 16384,
+            "displayName": "Contribute to pull requests",
+            "effectivePermission": "Deny (inherited)",
+            "name": "PullRequestContribute"
+          },
+          {
+            "bit": 32768,
+            "displayName": "Bypass policies when completing pull requests",
+            "effectivePermission": "Deny (inherited)",
+            "name": "PullRequestBypassPolicy"
+          },
+          {
+            "bit": 65536,
+            "displayName": "Advanced Security: view alerts",
+            "effectivePermission": "Allow",
+            "name": "ViewAdvSecAlerts"
+          },
+          {
+            "bit": 131072,
+            "displayName": "Advanced Security: manage and dismiss alerts",
+            "effectivePermission": "Allow",
+            "name": "DismissAdvSecAlerts"
+          },
+          {
+            "bit": 262144,
+            "displayName": "Advanced Security: manage settings",
+            "effectivePermission": "Allow (inherited)",
+            "name": "ManageAdvSecScanning"
+          },
+          {
+            "bit": 524288,
+            "displayName": "Enterprise Live Migration: manage migrations",
+            "effectivePermission": "Not set",
+            "name": "ManageEnterpriseLiveMigrations"
+          }
+        ]
+      }
+    },
+    "includeExtendedInfo": true,
+    "inheritPermissions": true,
+    "token": "repoV2/027fa3fb-f624-4754-9d1f-639baea883a2/49520042-e39e-4493-b865-9f99f33b5980"
+  }
+]

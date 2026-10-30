@@ -1,0 +1,2642 @@
+{
+  "capturedAt": "2026-10-23T23:49:00.450701+00:00",
+  "policies": [
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.3180359Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/1"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        }
+      },
+      "revision": 1,
+      "id": 1,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/1",
+      "type": {
+        "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "displayName": "Commit author email validation"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.4960122Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/2"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 2,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/2",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.7510744Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/3"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        }
+      },
+      "revision": 1,
+      "id": 3,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/3",
+      "type": {
+        "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "displayName": "Git repository settings"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.9178254Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/4"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b"
+        }
+      },
+      "revision": 1,
+      "id": 4,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/4",
+      "type": {
+        "id": "db2b9b4c-180d-4529-9701-01541d19f36b",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b",
+        "displayName": "Reserved names restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.0508818Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/5"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        }
+      },
+      "revision": 1,
+      "id": 5,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/5",
+      "type": {
+        "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "displayName": "Path Length restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.1739474Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/6"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 1,
+      "id": 6,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/6",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.3274357Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/7"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        }
+      },
+      "revision": 1,
+      "id": 7,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/7",
+      "type": {
+        "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "displayName": "Commit author email validation"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.4702103Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/8"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 8,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/8",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.6007406Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/9"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        }
+      },
+      "revision": 1,
+      "id": 9,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/9",
+      "type": {
+        "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "displayName": "Git repository settings"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.7299605Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/10"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b"
+        }
+      },
+      "revision": 1,
+      "id": 10,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/10",
+      "type": {
+        "id": "db2b9b4c-180d-4529-9701-01541d19f36b",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b",
+        "displayName": "Reserved names restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.8607731Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/11"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        }
+      },
+      "revision": 1,
+      "id": 11,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/11",
+      "type": {
+        "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "displayName": "Path Length restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.0165468Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/12"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 1,
+      "id": 12,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/12",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.1673256Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/13"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 13,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/13",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.3317017Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 14,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.4734794Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 15,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.6029535Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/16"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 16,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/16",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.7684532Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 2,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 17,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.9629201Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 18,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.157869Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/19"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 19,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/19",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.2858845Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/20"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 20,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/20",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.4261221Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 21,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.5795283Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 22,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.7122808Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/23"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 23,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/23",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.8704275Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 1,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/24"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 24,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/24",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:20.0145636Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 25,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:20.1372086Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/26"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 26,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/26",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    }
+  ],
+  "sourcePolicies": [
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:14.3558606Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/21"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        }
+      },
+      "revision": 1,
+      "id": 21,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/21",
+      "type": {
+        "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "displayName": "Commit author email validation"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:14.5200122Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/22"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 22,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/22",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:14.65639Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/23"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        }
+      },
+      "revision": 1,
+      "id": 23,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/23",
+      "type": {
+        "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "displayName": "Git repository settings"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:14.7924922Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/24"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b"
+        }
+      },
+      "revision": 1,
+      "id": 24,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/24",
+      "type": {
+        "id": "db2b9b4c-180d-4529-9701-01541d19f36b",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b",
+        "displayName": "Reserved names restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:14.9004542Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/25"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        }
+      },
+      "revision": 1,
+      "id": 25,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/25",
+      "type": {
+        "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "displayName": "Path Length restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:15.017325Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/26"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 1,
+      "id": 26,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/26",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:15.1486333Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/27"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        }
+      },
+      "revision": 1,
+      "id": 27,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/27",
+      "type": {
+        "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "displayName": "Commit author email validation"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:15.287364Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/28"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 28,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/28",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:15.4492074Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/29"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        }
+      },
+      "revision": 1,
+      "id": 29,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/29",
+      "type": {
+        "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "displayName": "Git repository settings"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:15.5638577Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/30"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b"
+        }
+      },
+      "revision": 1,
+      "id": 30,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/30",
+      "type": {
+        "id": "db2b9b4c-180d-4529-9701-01541d19f36b",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b",
+        "displayName": "Reserved names restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:15.6958152Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/31"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        }
+      },
+      "revision": 1,
+      "id": 31,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/31",
+      "type": {
+        "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "displayName": "Path Length restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:15.820743Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/32"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 1,
+      "id": 32,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/32",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:15.953849Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/33"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 33,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/33",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:16.0740908Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/34"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 34,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/34",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:16.196949Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/35"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 35,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/35",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:16.3345322Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/36"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 36,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/36",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:16.5364725Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 37,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/37"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 37,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/37",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:16.6668148Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/38"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 38,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/38",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:16.7911898Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/39"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 39,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/39",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:16.9172448Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/40"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 40,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/40",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:17.0375482Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/41"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 41,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/41",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:17.1738383Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/42"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 42,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/42",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:17.2931336Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/43"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 43,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/43",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:17.4439741Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 36,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/44"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 44,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/44",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:17.572026Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/45"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 45,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/45",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T14:49:17.7247151Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "194b77c8-c015-487a-b977-9e8842f7764b"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/46"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 46,
+      "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/configurations/46",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    }
+  ],
+  "repositories": {
+    "7779cd9a-edf0-42a9-9775-8998e63b2de4": {
+      "metadata": {
+        "id": "7779cd9a-edf0-42a9-9775-8998e63b2de4",
+        "name": "sample4",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/7779cd9a-edf0-42a9-9775-8998e63b2de4",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 4421,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample4",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample4",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample4",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/master": "dc5e4014c4fc8d68439e63bc69cef78511829fac",
+        "refs/heads/policy-control/main": "29b2365c062507c3db95155af417ff3f5655adb8",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/pr-fixture": "76ae12f09428a31fdd47813fae2d999b4e796bb1"
+      }
+    },
+    "6f1f8b01-b81c-4b15-8145-d4ae3403cb19": {
+      "metadata": {
+        "id": "6f1f8b01-b81c-4b15-8145-d4ae3403cb19",
+        "name": "project1",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/6f1f8b01-b81c-4b15-8145-d4ae3403cb19",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/project1",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/project1",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/project1",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {}
+    },
+    "54f04bde-a309-4cfd-ace5-e89953f382a7": {
+      "metadata": {
+        "id": "54f04bde-a309-4cfd-ace5-e89953f382a7",
+        "name": "sample3",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 10543,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample3",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample3",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample3",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/master": "b63b1feeb92a88b3e750d12b3799a250e792b357",
+        "refs/heads/policy-lab/main": "4e626cce091d157c062ad8330efa8dfdbaed78f2",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/allowed": "81fc3bc371daee8ce8e06d232e70873c9ce28461",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/pr-fixture": "032c9df138be73b8f65f5d255c5392b889cdbad8",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/size-1048576": "329a1adbb1b5a8d3813ae9025500dc2e45753b31"
+      }
+    },
+    "1fe43113-48cd-4edd-8a67-f49b20b57e0a": {
+      "metadata": {
+        "id": "1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+        "name": "sample2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 9082,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample2",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample2",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample2",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/master": "91971113a1b391168c85b54488595d886b9c87a7",
+        "refs/heads/policy-direct/main": "4f57ccb1669d328d21c659a231d0b744b3400a50",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/allowed": "2073d34c64632b14fa5e6f96e47ef1eb5f721fa5",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/pr-fixture": "7e1e3a69b2c87cc4fcfa6c8550e87d135f05e647",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/size-1048576": "29a44cbe7c8ffa4c594fe472f17505b2e833de52"
+      }
+    }
+  },
+  "sourceRefs": {
+    "sample2": {
+      "refs/heads/master": "91971113a1b391168c85b54488595d886b9c87a7",
+      "refs/heads/policy-direct/main": "4f57ccb1669d328d21c659a231d0b744b3400a50"
+    },
+    "sample3": {
+      "refs/heads/master": "b63b1feeb92a88b3e750d12b3799a250e792b357",
+      "refs/heads/policy-lab/main": "4e626cce091d157c062ad8330efa8dfdbaed78f2"
+    },
+    "sample4": {
+      "refs/heads/master": "dc5e4014c4fc8d68439e63bc69cef78511829fac",
+      "refs/heads/policy-control/main": "29b2365c062507c3db95155af417ff3f5655adb8"
+    }
+  }
+}

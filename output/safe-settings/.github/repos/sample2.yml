@@ -1,0 +1,50 @@
+name: sample2
+repository:
+  allow_squash_merge: true
+repository_rulesets:
+  - name: sample2-branch-policy
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - "~DEFAULT_BRANCH"
+        exclude: []
+    rules:
+      - type: pull_request
+        parameters:
+          required_approving_review_count: 2
+          dismiss_stale_reviews_on_push: true
+          require_code_owner_review: false
+          require_last_push_approval: false
+          required_review_thread_resolution: true
+          allowed_merge_methods:
+            - squash
+      - type: required_status_checks
+        parameters:
+          strict_required_status_checks_policy: true
+          required_status_checks:
+            - context: policy-lab-sample2
+            - context: status-check
+      - type: non_fast_forward
+      - type: deletion
+  - name: sample2-push-policy
+    target: push
+    enforcement: active
+    rules:
+      - type: commit_author_email_pattern
+        parameters:
+          operator: ends_with
+          pattern: "@MngEnvMCAP267305.onmicrosoft.com"
+          negate: false
+      - type: file_path_restriction
+        parameters:
+          restricted_file_paths:
+            - "/policy-lab-blocked/*"
+            - "*/policy-lab-blocked/*"
+      - type: max_file_path_length
+        parameters:
+          max_file_path_length: 180
+      - type: max_file_size
+        parameters:
+          max_file_size: 1

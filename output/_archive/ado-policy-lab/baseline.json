@@ -1,0 +1,326 @@
+{
+  "capturedAt": "2026-10-23T13:45:16.671297+00:00",
+  "organization": "https://dev.azure.com/contosodevopstest",
+  "project": "027fa3fb-f624-4754-9d1f-639baea883a2",
+  "policies": [
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-08-27T09:46:37.8672772Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/branch-policies-test",
+            "matchKind": "Exact",
+            "repositoryId": "07dafa4f-df43-4d0f-9787-a0ed885d4461"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/policy/configurations/5"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 5,
+      "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/policy/configurations/5",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-08-27T09:46:40.7570344Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/branch-policies-test",
+            "matchKind": "Exact",
+            "repositoryId": "07dafa4f-df43-4d0f-9787-a0ed885d4461"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/policy/configurations/6"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 6,
+      "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/policy/configurations/6",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    }
+  ],
+  "repositories": {
+    "sample2": {
+      "metadata": {
+        "id": "49520042-e39e-4493-b865-9f99f33b5980",
+        "name": "sample2",
+        "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/49520042-e39e-4493-b865-9f99f33b5980",
+        "project": {
+          "id": "027fa3fb-f624-4754-9d1f-639baea883a2",
+          "name": "sample-repo-testing",
+          "description": "Testing project for ADO to GitHub migration documentation",
+          "url": "https://dev.azure.com/contosodevopstest/_apis/projects/027fa3fb-f624-4754-9d1f-639baea883a2",
+          "state": "wellFormed",
+          "revision": 194,
+          "visibility": "private",
+          "lastUpdateTime": "2025-10-13T17:32:50.037Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 8464,
+        "remoteUrl": "https://contosodevopstest@dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample2",
+        "sshUrl": "git@ssh.dev.azure.com:v3/contosodevopstest/sample-repo-testing/sample2",
+        "webUrl": "https://dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample2",
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/49520042-e39e-4493-b865-9f99f33b5980"
+          },
+          "project": {
+            "href": "vstfs:///Classification/TeamProject/027fa3fb-f624-4754-9d1f-639baea883a2"
+          },
+          "web": {
+            "href": "https://dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample2"
+          },
+          "ssh": {
+            "href": "git@ssh.dev.azure.com:v3/contosodevopstest/sample-repo-testing/sample2"
+          },
+          "commits": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/49520042-e39e-4493-b865-9f99f33b5980/commits"
+          },
+          "refs": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/49520042-e39e-4493-b865-9f99f33b5980/refs"
+          },
+          "pullRequests": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/49520042-e39e-4493-b865-9f99f33b5980/pullRequests"
+          },
+          "items": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/49520042-e39e-4493-b865-9f99f33b5980/items"
+          },
+          "pushes": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/49520042-e39e-4493-b865-9f99f33b5980/pushes"
+          }
+        },
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": [
+        {
+          "name": "refs/heads/master",
+          "objectId": "91971113a1b391168c85b54488595d886b9c87a7",
+          "creator": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/49520042-e39e-4493-b865-9f99f33b5980/refs?filter=heads%2Fmaster"
+        }
+      ]
+    },
+    "sample3": {
+      "metadata": {
+        "id": "45bbec2e-1283-4c5c-9dae-ed31cadae7a3",
+        "name": "sample3",
+        "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/45bbec2e-1283-4c5c-9dae-ed31cadae7a3",
+        "project": {
+          "id": "027fa3fb-f624-4754-9d1f-639baea883a2",
+          "name": "sample-repo-testing",
+          "description": "Testing project for ADO to GitHub migration documentation",
+          "url": "https://dev.azure.com/contosodevopstest/_apis/projects/027fa3fb-f624-4754-9d1f-639baea883a2",
+          "state": "wellFormed",
+          "revision": 194,
+          "visibility": "private",
+          "lastUpdateTime": "2025-10-13T17:32:50.037Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 9916,
+        "remoteUrl": "https://contosodevopstest@dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample3",
+        "sshUrl": "git@ssh.dev.azure.com:v3/contosodevopstest/sample-repo-testing/sample3",
+        "webUrl": "https://dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample3",
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/45bbec2e-1283-4c5c-9dae-ed31cadae7a3"
+          },
+          "project": {
+            "href": "vstfs:///Classification/TeamProject/027fa3fb-f624-4754-9d1f-639baea883a2"
+          },
+          "web": {
+            "href": "https://dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample3"
+          },
+          "ssh": {
+            "href": "git@ssh.dev.azure.com:v3/contosodevopstest/sample-repo-testing/sample3"
+          },
+          "commits": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/45bbec2e-1283-4c5c-9dae-ed31cadae7a3/commits"
+          },
+          "refs": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/45bbec2e-1283-4c5c-9dae-ed31cadae7a3/refs"
+          },
+          "pullRequests": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/45bbec2e-1283-4c5c-9dae-ed31cadae7a3/pullRequests"
+          },
+          "items": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/45bbec2e-1283-4c5c-9dae-ed31cadae7a3/items"
+          },
+          "pushes": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/45bbec2e-1283-4c5c-9dae-ed31cadae7a3/pushes"
+          }
+        },
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": [
+        {
+          "name": "refs/heads/master",
+          "objectId": "b63b1feeb92a88b3e750d12b3799a250e792b357",
+          "creator": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/45bbec2e-1283-4c5c-9dae-ed31cadae7a3/refs?filter=heads%2Fmaster"
+        }
+      ]
+    },
+    "sample4": {
+      "metadata": {
+        "id": "71d2a640-a990-4547-9081-949f568d582a",
+        "name": "sample4",
+        "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/71d2a640-a990-4547-9081-949f568d582a",
+        "project": {
+          "id": "027fa3fb-f624-4754-9d1f-639baea883a2",
+          "name": "sample-repo-testing",
+          "description": "Testing project for ADO to GitHub migration documentation",
+          "url": "https://dev.azure.com/contosodevopstest/_apis/projects/027fa3fb-f624-4754-9d1f-639baea883a2",
+          "state": "wellFormed",
+          "revision": 194,
+          "visibility": "private",
+          "lastUpdateTime": "2025-10-13T17:32:50.037Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 4038,
+        "remoteUrl": "https://contosodevopstest@dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample4",
+        "sshUrl": "git@ssh.dev.azure.com:v3/contosodevopstest/sample-repo-testing/sample4",
+        "webUrl": "https://dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample4",
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/71d2a640-a990-4547-9081-949f568d582a"
+          },
+          "project": {
+            "href": "vstfs:///Classification/TeamProject/027fa3fb-f624-4754-9d1f-639baea883a2"
+          },
+          "web": {
+            "href": "https://dev.azure.com/contosodevopstest/sample-repo-testing/_git/sample4"
+          },
+          "ssh": {
+            "href": "git@ssh.dev.azure.com:v3/contosodevopstest/sample-repo-testing/sample4"
+          },
+          "commits": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/71d2a640-a990-4547-9081-949f568d582a/commits"
+          },
+          "refs": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/71d2a640-a990-4547-9081-949f568d582a/refs"
+          },
+          "pullRequests": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/71d2a640-a990-4547-9081-949f568d582a/pullRequests"
+          },
+          "items": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/71d2a640-a990-4547-9081-949f568d582a/items"
+          },
+          "pushes": {
+            "href": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/71d2a640-a990-4547-9081-949f568d582a/pushes"
+          }
+        },
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": [
+        {
+          "name": "refs/heads/master",
+          "objectId": "dc5e4014c4fc8d68439e63bc69cef78511829fac",
+          "creator": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "url": "https://dev.azure.com/contosodevopstest/027fa3fb-f624-4754-9d1f-639baea883a2/_apis/git/repositories/71d2a640-a990-4547-9081-949f568d582a/refs?filter=heads%2Fmaster"
+        }
+      ]
+    }
+  }
+}

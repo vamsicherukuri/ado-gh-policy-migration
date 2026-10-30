@@ -1,0 +1,28 @@
+# Environments & Secrets
+.env
+*.env
+*.pat
+*.secret
+*.pem
+*.key
+
+# Logs & Temporary Test Outputs
+*.log
+logs/
+.playwright-mcp/
+.gated-change/
+output/test-*/
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE & OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

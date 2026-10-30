@@ -1,0 +1,47 @@
+{
+  "identities": {
+    "kiran@MngEnvMCAP267305.onmicrosoft.com": "5250e609-5e8d-6403-9e6a-7f627014779e",
+    "kiranch@MngEnvMCAP267305.onmicrosoft.com": "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+  },
+  "members": {
+    "aad.M2E0N2RlOTUtZjljMC03NTNiLWE5ZGYtMGRmMTY5MGI3ZTcz": {
+      "descriptor": "aad.M2E0N2RlOTUtZjljMC03NTNiLWE5ZGYtMGRmMTY5MGI3ZTcz",
+      "directoryAlias": "kiranch",
+      "displayName": "kiran",
+      "domain": "91deab60-469f-438a-a2a4-831aa559e461",
+      "legacyDescriptor": null,
+      "mailAddress": "kiranch@MngEnvMCAP267305.onmicrosoft.com",
+      "origin": "aad",
+      "originId": "dec57098-c690-4033-b8f6-dc678d1be705",
+      "principalName": "kiranch@MngEnvMCAP267305.onmicrosoft.com",
+      "subjectKind": "user",
+      "url": "https://vssps.dev.azure.com/ado-policy-testing/_apis/Graph/Users/aad.M2E0N2RlOTUtZjljMC03NTNiLWE5ZGYtMGRmMTY5MGI3ZTcz"
+    },
+    "aad.NTI1MGU2MDktNWU4ZC03NDAzLTllNmEtN2Y2MjcwMTQ3Nzll": {
+      "descriptor": "aad.NTI1MGU2MDktNWU4ZC03NDAzLTllNmEtN2Y2MjcwMTQ3Nzll",
+      "directoryAlias": "kiran",
+      "displayName": "Kir",
+      "domain": "91deab60-469f-438a-a2a4-831aa559e461",
+      "legacyDescriptor": null,
+      "mailAddress": "kiran@MngEnvMCAP267305.onmicrosoft.com",
+      "origin": "aad",
+      "originId": "388af2ff-ee18-40ef-91ac-6ac545986e33",
+      "principalName": "kiran@MngEnvMCAP267305.onmicrosoft.com",
+      "subjectKind": "user",
+      "url": "https://vssps.dev.azure.com/ado-policy-testing/_apis/Graph/Users/aad.NTI1MGU2MDktNWU4ZC03NDAzLTllNmEtN2Y2MjcwMTQ3Nzll"
+    },
+    "vssgp.Uy0xLTktMTU1MTM3NDI0NS0yNjQ5NzA2MDE3LTE2MjQxNzU0MjktMjM2MzAzNDU5MS00Mjc4Njk3NzYwLTEtMzA3ODU4NzE2My0xODYxNDg5NzM1LTI2MTMzODgzODgtMjMwNTg1NDM5Mw": {
+      "description": "The default project team.",
+      "descriptor": "vssgp.Uy0xLTktMTU1MTM3NDI0NS0yNjQ5NzA2MDE3LTE2MjQxNzU0MjktMjM2MzAzNDU5MS00Mjc4Njk3NzYwLTEtMzA3ODU4NzE2My0xODYxNDg5NzM1LTI2MTMzODgzODgtMjMwNTg1NDM5Mw",
+      "displayName": "project1 Team",
+      "domain": "vstfs:///Classification/TeamProject/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+      "legacyDescriptor": null,
+      "mailAddress": null,
+      "origin": "vsts",
+      "originId": "ac8bc28c-82de-4586-b0a8-de3cc685c21d",
+      "principalName": "[project1]\\project1 Team",
+      "subjectKind": "group",
+      "url": "https://vssps.dev.azure.com/ado-policy-testing/_apis/Graph/Groups/vssgp.Uy0xLTktMTU1MTM3NDI0NS0yNjQ5NzA2MDE3LTE2MjQxNzU0MjktMjM2MzAzNDU5MS00Mjc4Njk3NzYwLTEtMzA3ODU4NzE2My0xODYxNDg5NzM1LTI2MTMzODgzODgtMjMwNTg1NDM5Mw"
+    }
+  }
+}

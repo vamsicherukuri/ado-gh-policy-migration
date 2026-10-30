@@ -1,0 +1,227 @@
+{
+  "capturedAt": "2026-10-23T14:49:10.088698+00:00",
+  "organization": "https://dev.azure.com/contosodevopstest",
+  "project": "85357c78-817f-44fd-b5c7-d77a97d1c650",
+  "policies": [],
+  "repositories": {
+    "sample2": {
+      "metadata": {
+        "id": "194b77c8-c015-487a-b977-9e8842f7764b",
+        "name": "sample2",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/194b77c8-c015-487a-b977-9e8842f7764b",
+        "project": {
+          "id": "85357c78-817f-44fd-b5c7-d77a97d1c650",
+          "name": "ado2gh-policy-lab",
+          "description": "Isolated policy migration lab based on sample-repo-testing. Source project remains unchanged.",
+          "url": "https://dev.azure.com/contosodevopstest/_apis/projects/85357c78-817f-44fd-b5c7-d77a97d1c650",
+          "state": "wellFormed",
+          "revision": 241,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T14:46:00.467Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 0,
+        "remoteUrl": "https://contosodevopstest@dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample2",
+        "sshUrl": "git@ssh.dev.azure.com:v3/contosodevopstest/ado2gh-policy-lab/sample2",
+        "webUrl": "https://dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample2",
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/194b77c8-c015-487a-b977-9e8842f7764b"
+          },
+          "project": {
+            "href": "vstfs:///Classification/TeamProject/85357c78-817f-44fd-b5c7-d77a97d1c650"
+          },
+          "web": {
+            "href": "https://dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample2"
+          },
+          "ssh": {
+            "href": "git@ssh.dev.azure.com:v3/contosodevopstest/ado2gh-policy-lab/sample2"
+          },
+          "commits": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/194b77c8-c015-487a-b977-9e8842f7764b/commits"
+          },
+          "refs": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/194b77c8-c015-487a-b977-9e8842f7764b/refs"
+          },
+          "pullRequests": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/194b77c8-c015-487a-b977-9e8842f7764b/pullRequests"
+          },
+          "items": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/194b77c8-c015-487a-b977-9e8842f7764b/items"
+          },
+          "pushes": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/194b77c8-c015-487a-b977-9e8842f7764b/pushes"
+          }
+        },
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": [
+        {
+          "name": "refs/heads/master",
+          "objectId": "91971113a1b391168c85b54488595d886b9c87a7",
+          "creator": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/194b77c8-c015-487a-b977-9e8842f7764b/refs?filter=heads%2Fmaster"
+        }
+      ]
+    },
+    "sample3": {
+      "metadata": {
+        "id": "ff58acac-2925-43ad-8b4f-1ab6666b744b",
+        "name": "sample3",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ff58acac-2925-43ad-8b4f-1ab6666b744b",
+        "project": {
+          "id": "85357c78-817f-44fd-b5c7-d77a97d1c650",
+          "name": "ado2gh-policy-lab",
+          "description": "Isolated policy migration lab based on sample-repo-testing. Source project remains unchanged.",
+          "url": "https://dev.azure.com/contosodevopstest/_apis/projects/85357c78-817f-44fd-b5c7-d77a97d1c650",
+          "state": "wellFormed",
+          "revision": 241,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T14:46:00.467Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 0,
+        "remoteUrl": "https://contosodevopstest@dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample3",
+        "sshUrl": "git@ssh.dev.azure.com:v3/contosodevopstest/ado2gh-policy-lab/sample3",
+        "webUrl": "https://dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample3",
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ff58acac-2925-43ad-8b4f-1ab6666b744b"
+          },
+          "project": {
+            "href": "vstfs:///Classification/TeamProject/85357c78-817f-44fd-b5c7-d77a97d1c650"
+          },
+          "web": {
+            "href": "https://dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample3"
+          },
+          "ssh": {
+            "href": "git@ssh.dev.azure.com:v3/contosodevopstest/ado2gh-policy-lab/sample3"
+          },
+          "commits": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ff58acac-2925-43ad-8b4f-1ab6666b744b/commits"
+          },
+          "refs": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ff58acac-2925-43ad-8b4f-1ab6666b744b/refs"
+          },
+          "pullRequests": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ff58acac-2925-43ad-8b4f-1ab6666b744b/pullRequests"
+          },
+          "items": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ff58acac-2925-43ad-8b4f-1ab6666b744b/items"
+          },
+          "pushes": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ff58acac-2925-43ad-8b4f-1ab6666b744b/pushes"
+          }
+        },
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": [
+        {
+          "name": "refs/heads/master",
+          "objectId": "b63b1feeb92a88b3e750d12b3799a250e792b357",
+          "creator": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ff58acac-2925-43ad-8b4f-1ab6666b744b/refs?filter=heads%2Fmaster"
+        }
+      ]
+    },
+    "sample4": {
+      "metadata": {
+        "id": "ffac77f0-cd03-4c6f-99ef-db7100b06b2f",
+        "name": "sample4",
+        "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ffac77f0-cd03-4c6f-99ef-db7100b06b2f",
+        "project": {
+          "id": "85357c78-817f-44fd-b5c7-d77a97d1c650",
+          "name": "ado2gh-policy-lab",
+          "description": "Isolated policy migration lab based on sample-repo-testing. Source project remains unchanged.",
+          "url": "https://dev.azure.com/contosodevopstest/_apis/projects/85357c78-817f-44fd-b5c7-d77a97d1c650",
+          "state": "wellFormed",
+          "revision": 241,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T14:46:00.467Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 0,
+        "remoteUrl": "https://contosodevopstest@dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample4",
+        "sshUrl": "git@ssh.dev.azure.com:v3/contosodevopstest/ado2gh-policy-lab/sample4",
+        "webUrl": "https://dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample4",
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ffac77f0-cd03-4c6f-99ef-db7100b06b2f"
+          },
+          "project": {
+            "href": "vstfs:///Classification/TeamProject/85357c78-817f-44fd-b5c7-d77a97d1c650"
+          },
+          "web": {
+            "href": "https://dev.azure.com/contosodevopstest/ado2gh-policy-lab/_git/sample4"
+          },
+          "ssh": {
+            "href": "git@ssh.dev.azure.com:v3/contosodevopstest/ado2gh-policy-lab/sample4"
+          },
+          "commits": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ffac77f0-cd03-4c6f-99ef-db7100b06b2f/commits"
+          },
+          "refs": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ffac77f0-cd03-4c6f-99ef-db7100b06b2f/refs"
+          },
+          "pullRequests": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ffac77f0-cd03-4c6f-99ef-db7100b06b2f/pullRequests"
+          },
+          "items": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ffac77f0-cd03-4c6f-99ef-db7100b06b2f/items"
+          },
+          "pushes": {
+            "href": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ffac77f0-cd03-4c6f-99ef-db7100b06b2f/pushes"
+          }
+        },
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": [
+        {
+          "name": "refs/heads/master",
+          "objectId": "dc5e4014c4fc8d68439e63bc69cef78511829fac",
+          "creator": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodwus31.vssps.visualstudio.com/A2f375755-19da-4147-bec2-aaa17da3a44f/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/contosodevopstest/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/contosodevopstest/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "url": "https://dev.azure.com/contosodevopstest/85357c78-817f-44fd-b5c7-d77a97d1c650/_apis/git/repositories/ffac77f0-cd03-4c6f-99ef-db7100b06b2f/refs?filter=heads%2Fmaster"
+        }
+      ]
+    }
+  }
+}

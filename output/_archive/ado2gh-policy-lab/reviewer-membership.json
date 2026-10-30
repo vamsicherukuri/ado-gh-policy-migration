@@ -1,0 +1,41 @@
+{
+  "aad.M2E0N2RlOTUtZjljMC03NTNiLWE5ZGYtMGRmMTY5MGI3ZTcz": {
+    "descriptor": "aad.M2E0N2RlOTUtZjljMC03NTNiLWE5ZGYtMGRmMTY5MGI3ZTcz",
+    "directoryAlias": "kiranch",
+    "displayName": "kiran",
+    "domain": "91deab60-469f-438a-a2a4-831aa559e461",
+    "legacyDescriptor": null,
+    "mailAddress": "kiranch@MngEnvMCAP267305.onmicrosoft.com",
+    "origin": "aad",
+    "originId": "dec57098-c690-4033-b8f6-dc678d1be705",
+    "principalName": "kiranch@MngEnvMCAP267305.onmicrosoft.com",
+    "subjectKind": "user",
+    "url": "https://vssps.dev.azure.com/contosodevopstest/_apis/Graph/Users/aad.M2E0N2RlOTUtZjljMC03NTNiLWE5ZGYtMGRmMTY5MGI3ZTcz"
+  },
+  "aad.NTI1MGU2MDktNWU4ZC03NDAzLTllNmEtN2Y2MjcwMTQ3Nzll": {
+    "descriptor": "aad.NTI1MGU2MDktNWU4ZC03NDAzLTllNmEtN2Y2MjcwMTQ3Nzll",
+    "directoryAlias": "kiran",
+    "displayName": "Kir",
+    "domain": "91deab60-469f-438a-a2a4-831aa559e461",
+    "legacyDescriptor": null,
+    "mailAddress": "kiran@MngEnvMCAP267305.onmicrosoft.com",
+    "origin": "aad",
+    "originId": "388af2ff-ee18-40ef-91ac-6ac545986e33",
+    "principalName": "kiran@MngEnvMCAP267305.onmicrosoft.com",
+    "subjectKind": "user",
+    "url": "https://vssps.dev.azure.com/contosodevopstest/_apis/Graph/Users/aad.NTI1MGU2MDktNWU4ZC03NDAzLTllNmEtN2Y2MjcwMTQ3Nzll"
+  },
+  "vssgp.Uy0xLTktMTU1MTM3NDI0NS0yMDIxNDA2MDg1LTIxMzkyMjU0MTItMzA0OTc3MjkyMi0yNTQ3MTA3NDA4LTEtMjQxMzc4NDQwNC0xNTYwNzE4NjU2LTMxMTE0OTM4MDQtMjI2ODY4NzQwOQ": {
+    "description": "The default project team.",
+    "descriptor": "vssgp.Uy0xLTktMTU1MTM3NDI0NS0yMDIxNDA2MDg1LTIxMzkyMjU0MTItMzA0OTc3MjkyMi0yNTQ3MTA3NDA4LTEtMjQxMzc4NDQwNC0xNTYwNzE4NjU2LTMxMTE0OTM4MDQtMjI2ODY4NzQwOQ",
+    "displayName": "ado2gh-policy-lab Team",
+    "domain": "vstfs:///Classification/TeamProject/85357c78-817f-44fd-b5c7-d77a97d1c650",
+    "legacyDescriptor": null,
+    "mailAddress": null,
+    "origin": "vsts",
+    "originId": "286c6562-76de-4127-8cf3-0c898c91040f",
+    "principalName": "[ado2gh-policy-lab]\\ado2gh-policy-lab Team",
+    "subjectKind": "group",
+    "url": "https://vssps.dev.azure.com/contosodevopstest/_apis/Graph/Groups/vssgp.Uy0xLTktMTU1MTM3NDI0NS0yMDIxNDA2MDg1LTIxMzkyMjU0MTItMzA0OTc3MjkyMi0yNTQ3MTA3NDA4LTEtMjQxMzc4NDQwNC0xNTYwNzE4NjU2LTMxMTE0OTM4MDQtMjI2ODY4NzQwOQ"
+  }
+}

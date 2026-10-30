@@ -1,0 +1,3457 @@
+[
+  {
+    "name": "configuration/ADO-013",
+    "entries": [
+      "ADO-013"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:03.768840+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.3180359Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/1"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        }
+      },
+      "revision": 1,
+      "id": 1,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/1",
+      "type": {
+        "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "displayName": "Commit author email validation"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-014",
+    "entries": [
+      "ADO-014"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:03.966529+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.4960122Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/2"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 2,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/2",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-015",
+    "entries": [
+      "ADO-015"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:04.117144+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.7510744Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/3"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        }
+      },
+      "revision": 1,
+      "id": 3,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/3",
+      "type": {
+        "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "displayName": "Git repository settings"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-016",
+    "entries": [
+      "ADO-016"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:04.237203+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.9178254Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/4"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b"
+        }
+      },
+      "revision": 1,
+      "id": 4,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/4",
+      "type": {
+        "id": "db2b9b4c-180d-4529-9701-01541d19f36b",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b",
+        "displayName": "Reserved names restriction"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-017",
+    "entries": [
+      "ADO-017"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:04.361125+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.0508818Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/5"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        }
+      },
+      "revision": 1,
+      "id": 5,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/5",
+      "type": {
+        "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "displayName": "Path Length restriction"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-018",
+    "entries": [
+      "ADO-018"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:04.590320+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.1739474Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/6"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 1,
+      "id": 6,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/6",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-026",
+    "entries": [
+      "ADO-026"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:04.848642+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.3274357Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/7"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        }
+      },
+      "revision": 1,
+      "id": 7,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/7",
+      "type": {
+        "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "displayName": "Commit author email validation"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-027",
+    "entries": [
+      "ADO-027"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:05.024519+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.4702103Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/8"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 8,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/8",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-028",
+    "entries": [
+      "ADO-028"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:05.221132+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.6007406Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/9"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        }
+      },
+      "revision": 1,
+      "id": 9,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/9",
+      "type": {
+        "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "displayName": "Git repository settings"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-029",
+    "entries": [
+      "ADO-029"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:05.376457+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.7299605Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/10"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b"
+        }
+      },
+      "revision": 1,
+      "id": 10,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/10",
+      "type": {
+        "id": "db2b9b4c-180d-4529-9701-01541d19f36b",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b",
+        "displayName": "Reserved names restriction"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-030",
+    "entries": [
+      "ADO-030"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:05.498348+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.8607731Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/11"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        }
+      },
+      "revision": 1,
+      "id": 11,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/11",
+      "type": {
+        "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "displayName": "Path Length restriction"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-031",
+    "entries": [
+      "ADO-031"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:05.622615+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.0165468Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/12"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 1,
+      "id": 12,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/12",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-019",
+    "entries": [
+      "ADO-019"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:05.750381+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.1673256Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/13"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 13,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/13",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-020",
+    "entries": [
+      "ADO-020"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:05.953801+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.3317017Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 14,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-021",
+    "entries": [
+      "ADO-021"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:06.082365+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.4734794Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 15,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-022",
+    "entries": [
+      "ADO-022"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:06.218878+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.6029535Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/16"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 16,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/16",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-023",
+    "entries": [
+      "ADO-023"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:06.414889+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.7684532Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 2,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 17,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-024",
+    "entries": [
+      "ADO-024"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:06.624101+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.9629201Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 18,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-025",
+    "entries": [
+      "ADO-025"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:06.747439+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.157869Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/19"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 19,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/19",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-032",
+    "entries": [
+      "ADO-032"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:06.874776+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.2858845Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/20"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 20,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/20",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-033",
+    "entries": [
+      "ADO-033"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:07.064101+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.4261221Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 21,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-034",
+    "entries": [
+      "ADO-034"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:07.189232+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.5795283Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 22,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-035",
+    "entries": [
+      "ADO-035"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:07.315402+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.7122808Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/23"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 23,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/23",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-036",
+    "entries": [
+      "ADO-036"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:07.440450+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.8704275Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 1,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/24"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 24,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/24",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-037",
+    "entries": [
+      "ADO-037"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:07.633147+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:20.0145636Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 25,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "configuration/ADO-038",
+    "entries": [
+      "ADO-038"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:07.836111+00:00",
+    "evidence": {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:20.1372086Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/26"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 26,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/26",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "effective-scope/sample2",
+    "entries": [
+      "ADO-013",
+      "ADO-014",
+      "ADO-015",
+      "ADO-016",
+      "ADO-017",
+      "ADO-018",
+      "ADO-026",
+      "ADO-027",
+      "ADO-028",
+      "ADO-029",
+      "ADO-030",
+      "ADO-031",
+      "ADO-032",
+      "ADO-033",
+      "ADO-034",
+      "ADO-035",
+      "ADO-036",
+      "ADO-037",
+      "ADO-038"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:07.954136+00:00",
+    "evidence": {
+      "repository": "sample2",
+      "effectivePolicyIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "effective-scope/sample3",
+    "entries": [
+      "ADO-013",
+      "ADO-014",
+      "ADO-015",
+      "ADO-016",
+      "ADO-017",
+      "ADO-018",
+      "ADO-019",
+      "ADO-020",
+      "ADO-021",
+      "ADO-022",
+      "ADO-023",
+      "ADO-024",
+      "ADO-025"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:08.131881+00:00",
+    "evidence": {
+      "repository": "sample3",
+      "effectivePolicyIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "effective-scope/sample4",
+    "entries": [
+      "ADO-013",
+      "ADO-014",
+      "ADO-015",
+      "ADO-016",
+      "ADO-017",
+      "ADO-018"
+    ],
+    "level": "configuration",
+    "timestamp": "2026-10-23T23:49:08.298733+00:00",
+    "evidence": {
+      "repository": "sample4",
+      "effectivePolicyIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/allowed",
+    "entries": [
+      "ADO-013",
+      "ADO-014",
+      "ADO-015",
+      "ADO-016",
+      "ADO-017",
+      "ADO-018"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:08.432399+00:00",
+    "evidence": {
+      "ref": "refs/heads/policy-tests/20261023PolicyBaseline02/allowed",
+      "objectId": "91fabb7b328e37a9b37a789d0d8163ad0658c3f6",
+      "pushId": 14
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/reject-email",
+    "entries": [
+      "ADO-013"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:09.315310+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"VS403702: The push was rejected because one or more commits contain author email 'unapproved@example.invalid' which does not match the policy-specified patterns. \",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/reject-path",
+    "entries": [
+      "ADO-014"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:09.915670+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"VS403694: The push was rejected because one or more commits add a file path '/policy-tests/20261023PolicyBaseline02/policy-lab-blocked/forbidden.txt' which matches the policy-specified pattern '*/policy-lab-blocked/*'. \",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/reject-case",
+    "entries": [
+      "ADO-015"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:10.524862+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"The tree object 9f798a660d66dbc995bee6125300c1536a93504f was rejected: The file 'case.txt' and the file 'Case.txt' pushed differ in case. You must remove or rename one of them or disable case-enforcement (see https://aka.ms/git-platform-compat).\\r\\nParameter name: newPush\",\"typeName\":\"Microsoft.TeamFoundation.SourceControl.WebServer.InvalidArgumentValueException, Microsoft.TeamFoundation.SourceControl.WebServer\",\"typeKey\":\"InvalidArgumentValueException\",\"errorCode\":0,\"eventId\":0}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/reject-reserved",
+    "entries": [
+      "ADO-016"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:10.957357+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"VS403655: The push was rejected because CON.txt starts with 'CON', which is a reserved file or directory name. \",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/path-180",
+    "entries": [
+      "ADO-017"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:11.403230+00:00",
+    "evidence": {
+      "ref": "refs/heads/policy-tests/20261023PolicyBaseline02/path-180",
+      "objectId": "e5b933b98c6fb3bd5aaf0d4b9cbfe2232250c0af",
+      "pushId": 15
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/path-181",
+    "entries": [
+      "ADO-017"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:12.283910+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"VS403656: The push was rejected because one or more commits contain path '/policy-tests/20261023PolicyBaseline02/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.txt', which exceeds the maximum path length of 180 characters. \",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/size-1048576",
+    "entries": [
+      "ADO-018"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:12.787568+00:00",
+    "evidence": {
+      "ref": "refs/heads/policy-tests/20261023PolicyBaseline02/size-1048576",
+      "objectId": "eaa0ad6b4271901c9a75aba0c61327599ec311a1",
+      "pushId": 16
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample3/size-1048577",
+    "entries": [
+      "ADO-018"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:13.856275+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"The blob object 2cbbea0a2701ec1725ae740a1e113d9661d453ed was rejected: VS403658: The object is 1048577 bytes, which is greater than the 1048576 byte limit for objects in this repository.\",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/allowed",
+    "entries": [
+      "ADO-026",
+      "ADO-027",
+      "ADO-028",
+      "ADO-029",
+      "ADO-030",
+      "ADO-031"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:14.499939+00:00",
+    "evidence": {
+      "ref": "refs/heads/policy-tests/20261023PolicyBaseline02/allowed",
+      "objectId": "80052588cdb77b8e9a80a3aeda3b0ac66caea815",
+      "pushId": 17
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/reject-email",
+    "entries": [
+      "ADO-026"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:15.593167+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"VS403702: The push was rejected because one or more commits contain author email 'unapproved@example.invalid' which does not match the policy-specified patterns. \",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/reject-path",
+    "entries": [
+      "ADO-027"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:16.037708+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"VS403694: The push was rejected because one or more commits add a file path '/policy-tests/20261023PolicyBaseline02/policy-lab-blocked/forbidden.txt' which matches the policy-specified pattern '*/policy-lab-blocked/*'. \",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/reject-case",
+    "entries": [
+      "ADO-028"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:16.508324+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"The tree object 9f798a660d66dbc995bee6125300c1536a93504f was rejected: The file 'case.txt' and the file 'Case.txt' pushed differ in case. You must remove or rename one of them or disable case-enforcement (see https://aka.ms/git-platform-compat).\\r\\nParameter name: newPush\",\"typeName\":\"Microsoft.TeamFoundation.SourceControl.WebServer.InvalidArgumentValueException, Microsoft.TeamFoundation.SourceControl.WebServer\",\"typeKey\":\"InvalidArgumentValueException\",\"errorCode\":0,\"eventId\":0}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/reject-reserved",
+    "entries": [
+      "ADO-029"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:16.964126+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"VS403655: The push was rejected because CON.txt starts with 'CON', which is a reserved file or directory name. \",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/path-180",
+    "entries": [
+      "ADO-030"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:17.472215+00:00",
+    "evidence": {
+      "ref": "refs/heads/policy-tests/20261023PolicyBaseline02/path-180",
+      "objectId": "3f427dedd8a591fb46c0d66ce334f3dc70930e65",
+      "pushId": 18
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/path-181",
+    "entries": [
+      "ADO-030"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:18.213091+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"VS403656: The push was rejected because one or more commits contain path '/policy-tests/20261023PolicyBaseline02/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.txt', which exceeds the maximum path length of 180 characters. \",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/size-1048576",
+    "entries": [
+      "ADO-031"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:18.684146+00:00",
+    "evidence": {
+      "ref": "refs/heads/policy-tests/20261023PolicyBaseline02/size-1048576",
+      "objectId": "36b453b7fc1446292c2c8b34b7f94880e1bfc99c",
+      "pushId": 19
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/size-1048577",
+    "entries": [
+      "ADO-031"
+    ],
+    "level": "combined-enforcement",
+    "timestamp": "2026-10-23T23:49:19.814355+00:00",
+    "evidence": {
+      "httpStatus": 400,
+      "rejection": "POST git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a/pushes: HTTP 400: {\"$id\":\"1\",\"innerException\":null,\"message\":\"The blob object 2cbbea0a2701ec1725ae740a1e113d9661d453ed was rejected: VS403658: The object is 1048577 bytes, which is greater than the 1048576 byte limit for objects in this repository.\",\"typeName\":\"Microsoft.TeamFoundation.Git.Server.GitObjectRejectedException, Microsoft.TeamFoundation.Git.Server\",\"typeKey\":\"GitObjectRejectedException\",\"errorCode\":0,\"eventId\":3000}"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "push/sample2/independent-layer-attribution",
+    "entries": [
+      "ADO-026",
+      "ADO-027",
+      "ADO-028",
+      "ADO-029",
+      "ADO-030",
+      "ADO-031"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:49:20.640875+00:00",
+    "status": "BLOCKED",
+    "detail": "Identical project push policies also apply; rejection proves combined enforcement, not independent attribution to the explicit repository layer. No policies disabled."
+  },
+  {
+    "name": "pr/sample2/create",
+    "entries": [
+      "ADO-032",
+      "ADO-033",
+      "ADO-034",
+      "ADO-035",
+      "ADO-036",
+      "ADO-037",
+      "ADO-038"
+    ],
+    "level": "fixture",
+    "timestamp": "2026-10-23T23:49:20.645979+00:00",
+    "evidence": {
+      "id": 4,
+      "repository": "1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+      "source": {
+        "ref": "refs/heads/policy-tests/20261023PolicyBaseline02/pr-fixture",
+        "objectId": "8ac3402e40fed9752648206d072ecf1f638cd4fb",
+        "pushId": 20
+      },
+      "target": "refs/heads/policy-direct/main",
+      "createdBy": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+      "threadId": 15
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample2/automatic-required-reviewers",
+    "entries": [
+      "ADO-038"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:50:07.763892+00:00",
+    "evidence": [
+      {
+        "reviewerUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a/pullRequests/4/reviewers/3a47de95-f9c0-653b-a9df-0df1690b7e73",
+        "vote": 0,
+        "hasDeclined": false,
+        "isRequired": true,
+        "isFlagged": false,
+        "displayName": "kiran",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/3a47de95-f9c0-653b-a9df-0df1690b7e73",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.M2E0N2RlOTUtZjljMC03NTNiLWE5ZGYtMGRmMTY5MGI3ZTcz"
+          }
+        },
+        "id": "3a47de95-f9c0-653b-a9df-0df1690b7e73",
+        "uniqueName": "kiranch@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=3a47de95-f9c0-653b-a9df-0df1690b7e73"
+      },
+      {
+        "reviewerUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a/pullRequests/4/reviewers/5250e609-5e8d-6403-9e6a-7f627014779e",
+        "vote": 0,
+        "hasDeclined": false,
+        "isRequired": true,
+        "isFlagged": false,
+        "displayName": "Kir",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/5250e609-5e8d-6403-9e6a-7f627014779e",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.NTI1MGU2MDktNWU4ZC03NDAzLTllNmEtN2Y2MjcwMTQ3Nzll"
+          }
+        },
+        "id": "5250e609-5e8d-6403-9e6a-7f627014779e",
+        "uniqueName": "kiran@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=5250e609-5e8d-6403-9e6a-7f627014779e"
+      }
+    ],
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample2/creator-vote-exclusion-isolation",
+    "entries": [
+      "ADO-032"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:50:54.082727+00:00",
+    "status": "BLOCKED",
+    "detail": "A single creator vote is insufficient for two approvers regardless of exclusion. Proving creator-vote exclusion independently needs an authenticated non-creator vote."
+  },
+  {
+    "name": "pr/sample2/work-item-missing-blocks",
+    "entries": [
+      "ADO-033"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:50:54.087694+00:00",
+    "evidence": {
+      "configuration": {
+        "createdBy": {
+          "displayName": "System Administrator",
+          "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+            }
+          },
+          "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+          "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+        },
+        "createdDate": "2026-10-23T19:45:19.4261221Z",
+        "isEnabled": true,
+        "isBlocking": true,
+        "isDeleted": false,
+        "settings": {
+          "scope": [
+            {
+              "refName": "refs/heads/policy-direct/main",
+              "matchKind": "Exact",
+              "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+            }
+          ]
+        },
+        "isEnterpriseManaged": false,
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21"
+          },
+          "policyType": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+          }
+        },
+        "revision": 1,
+        "id": 21,
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21",
+        "type": {
+          "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+          "displayName": "Work item linking"
+        }
+      },
+      "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f4",
+      "evaluationId": "0d110618-5a3e-4b7d-9191-d47ff72c9740",
+      "startedDate": "2026-10-23T23:49:21.7485451Z",
+      "status": "rejected"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample2/linked-work-item-allows",
+    "entries": [
+      "ADO-033"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:50:54.281303+00:00",
+    "evidence": {
+      "workItemId": 3,
+      "evaluation": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:19.4261221Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "scope": [
+              {
+                "refName": "refs/heads/policy-direct/main",
+                "matchKind": "Exact",
+                "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+            }
+          },
+          "revision": 1,
+          "id": 21,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21",
+          "type": {
+            "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+            "displayName": "Work item linking"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f4",
+        "evaluationId": "0d110618-5a3e-4b7d-9191-d47ff72c9740",
+        "startedDate": "2026-10-23T23:49:21.7485451Z",
+        "completedDate": "2026-10-23T23:50:54.5852267Z",
+        "status": "approved",
+        "context": {
+          "linkedWorkItemIds": [
+            3
+          ]
+        }
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample2/comment-unresolved-then-resolved",
+    "entries": [
+      "ADO-034"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:50:54.683033+00:00",
+    "evidence": {
+      "threadId": 15,
+      "unresolved": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:19.5795283Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "scope": [
+              {
+                "refName": "refs/heads/policy-direct/main",
+                "matchKind": "Exact",
+                "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+            }
+          },
+          "revision": 1,
+          "id": 22,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22",
+          "type": {
+            "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+            "displayName": "Comment requirements"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f4",
+        "evaluationId": "7f951690-14f5-4679-af43-8b34aa0ce220",
+        "startedDate": "2026-10-23T23:49:21.7485451Z",
+        "completedDate": "2026-10-23T23:50:54.9918389Z",
+        "status": "rejected"
+      },
+      "resolved": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:19.5795283Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "scope": [
+              {
+                "refName": "refs/heads/policy-direct/main",
+                "matchKind": "Exact",
+                "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+            }
+          },
+          "revision": 1,
+          "id": 22,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22",
+          "type": {
+            "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+            "displayName": "Comment requirements"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f4",
+        "evaluationId": "7f951690-14f5-4679-af43-8b34aa0ce220",
+        "startedDate": "2026-10-23T23:49:21.7485451Z",
+        "completedDate": "2026-10-23T23:50:55.5688778Z",
+        "status": "approved"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample2/status-failed-then-succeeded",
+    "entries": [
+      "ADO-037"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:50:55.691284+00:00",
+    "evidence": {
+      "failed": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:20.0145636Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "statusName": "external-validation",
+            "statusGenre": "policy-lab",
+            "authorId": null,
+            "invalidateOnSourceUpdate": true,
+            "defaultDisplayName": null,
+            "policyApplicability": 0,
+            "scope": [
+              {
+                "refName": "refs/heads/policy-direct/main",
+                "matchKind": "Exact",
+                "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+            }
+          },
+          "revision": 1,
+          "id": 25,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25",
+          "type": {
+            "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+            "displayName": "Status"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f4",
+        "evaluationId": "ba25db71-dafd-4ad7-8cf1-887c6e097a5b",
+        "startedDate": "2026-10-23T23:49:21.7485451Z",
+        "completedDate": "2026-10-23T23:50:56.1500635Z",
+        "status": "rejected",
+        "context": {
+          "latestStatusId": 4
+        }
+      },
+      "succeeded": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:20.0145636Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "statusName": "external-validation",
+            "statusGenre": "policy-lab",
+            "authorId": null,
+            "invalidateOnSourceUpdate": true,
+            "defaultDisplayName": null,
+            "policyApplicability": 0,
+            "scope": [
+              {
+                "refName": "refs/heads/policy-direct/main",
+                "matchKind": "Exact",
+                "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+            }
+          },
+          "revision": 1,
+          "id": 25,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25",
+          "type": {
+            "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+            "displayName": "Status"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f4",
+        "evaluationId": "ba25db71-dafd-4ad7-8cf1-887c6e097a5b",
+        "startedDate": "2026-10-23T23:49:21.7485451Z",
+        "completedDate": "2026-10-23T23:50:56.5408836Z",
+        "status": "approved",
+        "context": {
+          "latestStatusId": 5
+        }
+      },
+      "statusId": 5,
+      "iterationId": 1,
+      "producer": "This test runner; scoped to this synthetic PR only."
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample2/independent-reviewer-positive-path",
+    "entries": [
+      "ADO-032",
+      "ADO-038"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:50:56.650603+00:00",
+    "status": "BLOCKED",
+    "detail": "Positive completion needs authenticated independent approvals from both named reviewers. The runner will not impersonate them or bypass policies."
+  },
+  {
+    "name": "pr/sample2/merge-strategy-enforcement",
+    "entries": [
+      "ADO-035"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:50:56.655053+00:00",
+    "status": "BLOCKED",
+    "detail": "Squash-only configuration verified, but alternative merge-strategy completion cannot be isolated while independent-reviewer gates remain unsatisfied. No policy disabled."
+  },
+  {
+    "name": "pr/sample3/create",
+    "entries": [
+      "ADO-019",
+      "ADO-020",
+      "ADO-021",
+      "ADO-022",
+      "ADO-023",
+      "ADO-024",
+      "ADO-025"
+    ],
+    "level": "fixture",
+    "timestamp": "2026-10-23T23:50:56.659760+00:00",
+    "evidence": {
+      "id": 5,
+      "repository": "54f04bde-a309-4cfd-ace5-e89953f382a7",
+      "source": {
+        "ref": "refs/heads/policy-tests/20261023PolicyBaseline02/pr-fixture",
+        "objectId": "92b5a37ceff931fd1566c52387242532e5d0b9e9",
+        "pushId": 22
+      },
+      "target": "refs/heads/policy-lab/main",
+      "createdBy": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+      "threadId": 20
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample3/automatic-required-reviewers",
+    "entries": [
+      "ADO-025"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:51:43.556006+00:00",
+    "evidence": [
+      {
+        "reviewerUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7/pullRequests/5/reviewers/3a47de95-f9c0-653b-a9df-0df1690b7e73",
+        "vote": 0,
+        "hasDeclined": false,
+        "isRequired": true,
+        "isFlagged": false,
+        "displayName": "kiran",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/3a47de95-f9c0-653b-a9df-0df1690b7e73",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.M2E0N2RlOTUtZjljMC03NTNiLWE5ZGYtMGRmMTY5MGI3ZTcz"
+          }
+        },
+        "id": "3a47de95-f9c0-653b-a9df-0df1690b7e73",
+        "uniqueName": "kiranch@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=3a47de95-f9c0-653b-a9df-0df1690b7e73"
+      },
+      {
+        "reviewerUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7/pullRequests/5/reviewers/5250e609-5e8d-6403-9e6a-7f627014779e",
+        "vote": 0,
+        "hasDeclined": false,
+        "isRequired": true,
+        "isFlagged": false,
+        "displayName": "Kir",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/5250e609-5e8d-6403-9e6a-7f627014779e",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.NTI1MGU2MDktNWU4ZC03NDAzLTllNmEtN2Y2MjcwMTQ3Nzll"
+          }
+        },
+        "id": "5250e609-5e8d-6403-9e6a-7f627014779e",
+        "uniqueName": "kiran@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=5250e609-5e8d-6403-9e6a-7f627014779e"
+      }
+    ],
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample3/creator-vote-exclusion-isolation",
+    "entries": [
+      "ADO-019"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:29.299099+00:00",
+    "status": "BLOCKED",
+    "detail": "A single creator vote is insufficient for two approvers regardless of exclusion. Proving creator-vote exclusion independently needs an authenticated non-creator vote."
+  },
+  {
+    "name": "pr/sample3/work-item-missing-blocks",
+    "entries": [
+      "ADO-020"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:29.303264+00:00",
+    "evidence": {
+      "configuration": {
+        "createdBy": {
+          "displayName": "System Administrator",
+          "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+            }
+          },
+          "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+          "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+        },
+        "createdDate": "2026-10-23T19:45:18.3317017Z",
+        "isEnabled": true,
+        "isBlocking": true,
+        "isDeleted": false,
+        "settings": {
+          "scope": [
+            {
+              "refName": "refs/heads/policy-lab/",
+              "matchKind": "Prefix",
+              "repositoryId": null
+            }
+          ]
+        },
+        "isEnterpriseManaged": false,
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14"
+          },
+          "policyType": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+          }
+        },
+        "revision": 1,
+        "id": 14,
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14",
+        "type": {
+          "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+          "displayName": "Work item linking"
+        }
+      },
+      "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f5",
+      "evaluationId": "eeeaaed3-53b8-4d99-9c7b-6704685a13b5",
+      "startedDate": "2026-10-23T23:50:57.9067422Z",
+      "status": "rejected"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample3/linked-work-item-allows",
+    "entries": [
+      "ADO-020"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:29.479790+00:00",
+    "evidence": {
+      "workItemId": 4,
+      "evaluation": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:18.3317017Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "scope": [
+              {
+                "refName": "refs/heads/policy-lab/",
+                "matchKind": "Prefix",
+                "repositoryId": null
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+            }
+          },
+          "revision": 1,
+          "id": 14,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14",
+          "type": {
+            "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+            "displayName": "Work item linking"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f5",
+        "evaluationId": "eeeaaed3-53b8-4d99-9c7b-6704685a13b5",
+        "startedDate": "2026-10-23T23:50:57.9067422Z",
+        "completedDate": "2026-10-23T23:52:29.7616713Z",
+        "status": "approved",
+        "context": {
+          "linkedWorkItemIds": [
+            4
+          ]
+        }
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample3/comment-unresolved-then-resolved",
+    "entries": [
+      "ADO-021"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:29.889947+00:00",
+    "evidence": {
+      "threadId": 20,
+      "unresolved": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:18.4734794Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "scope": [
+              {
+                "refName": "refs/heads/policy-lab/",
+                "matchKind": "Prefix",
+                "repositoryId": null
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+            }
+          },
+          "revision": 1,
+          "id": 15,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15",
+          "type": {
+            "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+            "displayName": "Comment requirements"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f5",
+        "evaluationId": "eb8846da-f46c-41ec-9211-1a5468370353",
+        "startedDate": "2026-10-23T23:50:57.9067422Z",
+        "completedDate": "2026-10-23T23:52:30.1645114Z",
+        "status": "rejected"
+      },
+      "resolved": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:18.4734794Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "scope": [
+              {
+                "refName": "refs/heads/policy-lab/",
+                "matchKind": "Prefix",
+                "repositoryId": null
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+            }
+          },
+          "revision": 1,
+          "id": 15,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15",
+          "type": {
+            "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+            "displayName": "Comment requirements"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f5",
+        "evaluationId": "eb8846da-f46c-41ec-9211-1a5468370353",
+        "startedDate": "2026-10-23T23:50:57.9067422Z",
+        "completedDate": "2026-10-23T23:52:30.5884967Z",
+        "status": "approved"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample3/status-failed-then-succeeded",
+    "entries": [
+      "ADO-024"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:30.831477+00:00",
+    "evidence": {
+      "failed": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:18.9629201Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "statusName": "external-validation",
+            "statusGenre": "policy-lab",
+            "authorId": null,
+            "invalidateOnSourceUpdate": true,
+            "defaultDisplayName": null,
+            "policyApplicability": 0,
+            "scope": [
+              {
+                "refName": "refs/heads/policy-lab/",
+                "matchKind": "Prefix",
+                "repositoryId": null
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+            }
+          },
+          "revision": 1,
+          "id": 18,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18",
+          "type": {
+            "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+            "displayName": "Status"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f5",
+        "evaluationId": "e0fa61f1-9ca2-4e29-b2f3-9ffb61898353",
+        "startedDate": "2026-10-23T23:50:57.9067422Z",
+        "completedDate": "2026-10-23T23:52:31.208763Z",
+        "status": "rejected",
+        "context": {
+          "latestStatusId": 4
+        }
+      },
+      "succeeded": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:18.9629201Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "statusName": "external-validation",
+            "statusGenre": "policy-lab",
+            "authorId": null,
+            "invalidateOnSourceUpdate": true,
+            "defaultDisplayName": null,
+            "policyApplicability": 0,
+            "scope": [
+              {
+                "refName": "refs/heads/policy-lab/",
+                "matchKind": "Prefix",
+                "repositoryId": null
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+            }
+          },
+          "revision": 1,
+          "id": 18,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18",
+          "type": {
+            "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+            "displayName": "Status"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f5",
+        "evaluationId": "e0fa61f1-9ca2-4e29-b2f3-9ffb61898353",
+        "startedDate": "2026-10-23T23:50:57.9067422Z",
+        "completedDate": "2026-10-23T23:52:31.6567589Z",
+        "status": "approved",
+        "context": {
+          "latestStatusId": 5
+        }
+      },
+      "statusId": 5,
+      "iterationId": 1,
+      "producer": "This test runner; scoped to this synthetic PR only."
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample3/independent-reviewer-positive-path",
+    "entries": [
+      "ADO-019",
+      "ADO-025"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:31.867526+00:00",
+    "status": "BLOCKED",
+    "detail": "Positive completion needs authenticated independent approvals from both named reviewers. The runner will not impersonate them or bypass policies."
+  },
+  {
+    "name": "pr/sample3/merge-strategy-enforcement",
+    "entries": [
+      "ADO-022"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:31.872866+00:00",
+    "status": "BLOCKED",
+    "detail": "Squash-only configuration verified, but alternative merge-strategy completion cannot be isolated while independent-reviewer gates remain unsatisfied. No policy disabled."
+  },
+  {
+    "name": "pr/sample4/branch-policy-control",
+    "entries": [],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:31.877007+00:00",
+    "evidence": {
+      "pullRequestId": 6,
+      "evaluations": {},
+      "finalStatus": "abandoned"
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample2/automatic-build-validation",
+    "entries": [
+      "ADO-036"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:33.580643+00:00",
+    "evidence": {
+      "evaluation": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:19.8704275Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "buildDefinitionId": 1,
+            "queueOnSourceUpdateOnly": false,
+            "manualQueueOnly": false,
+            "displayName": "Policy lab fixture validation",
+            "validDuration": 0.0,
+            "scope": [
+              {
+                "refName": "refs/heads/policy-direct/main",
+                "matchKind": "Exact",
+                "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/24"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+            }
+          },
+          "revision": 1,
+          "id": 24,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/24",
+          "type": {
+            "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+            "displayName": "Build"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f4",
+        "evaluationId": "c610fde4-6015-46a9-8633-a7ca554a4f08",
+        "startedDate": "2026-10-23T23:49:22.8886011Z",
+        "completedDate": "2026-10-23T23:49:34.654602Z",
+        "status": "approved",
+        "context": {
+          "lastMergeCommitId": "a19ab56334fdc3828bff216be7c3e5ffdceb1966",
+          "lastMergeSourceCommitId": "8ac3402e40fed9752648206d072ecf1f638cd4fb",
+          "lastMergeTargetCommitId": "4f57ccb1669d328d21c659a231d0b744b3400a50",
+          "buildId": 5,
+          "buildDefinitionId": 1,
+          "buildDefinitionName": "policy-lab-sample2",
+          "buildIsNotCurrent": false,
+          "buildStartedUtc": "2026-10-23T23:49:22.8826275Z",
+          "isExpired": false,
+          "buildAfterMerge": false,
+          "wasAutoRequeued": false,
+          "buildOutputPreview": null
+        }
+      },
+      "build": {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/Builds/5"
+          },
+          "web": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_build/results?buildId=5"
+          },
+          "sourceVersionDisplayUri": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/builds/5/sources"
+          },
+          "timeline": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/builds/5/Timeline"
+          },
+          "badge": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/status/1"
+          }
+        },
+        "properties": {},
+        "tags": [],
+        "validationResults": [],
+        "plans": [
+          {
+            "planId": "8515b048-3064-4997-9e70-18841faa1e04"
+          }
+        ],
+        "triggerInfo": {
+          "pr.number": "4",
+          "pr.isFork": "False",
+          "pr.triggerRepository": "1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+          "pr.triggerRepository.Type": "TfsGit"
+        },
+        "id": 5,
+        "buildNumber": "20261023.3",
+        "status": "completed",
+        "result": "succeeded",
+        "queueTime": "2026-10-23T23:49:22.3324404Z",
+        "startTime": "2026-10-23T23:49:27.8103535Z",
+        "finishTime": "2026-10-23T23:49:34.3791753Z",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/Builds/5",
+        "definition": {
+          "drafts": [],
+          "id": 1,
+          "name": "policy-lab-sample2",
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/Definitions/1?revision=1",
+          "uri": "vstfs:///Build/Definition/1",
+          "path": "\\policy-lab",
+          "type": "build",
+          "queueStatus": "enabled",
+          "revision": 1,
+          "project": {
+            "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+            "name": "project1",
+            "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+            "state": "wellFormed",
+            "revision": 11,
+            "visibility": "private",
+            "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+          }
+        },
+        "buildNumberRevision": 3,
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "uri": "vstfs:///Build/Build/5",
+        "sourceBranch": "refs/pull/4/merge",
+        "sourceVersion": "a19ab56334fdc3828bff216be7c3e5ffdceb1966",
+        "queue": {
+          "id": 9,
+          "name": "Azure Pipelines",
+          "pool": {
+            "id": 9,
+            "name": "Azure Pipelines",
+            "isHosted": true
+          }
+        },
+        "priority": "normal",
+        "reason": "pullRequest",
+        "requestedFor": {
+          "displayName": "System Administrator",
+          "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+            }
+          },
+          "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+          "imageUrl": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz",
+          "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+        },
+        "requestedBy": {
+          "displayName": "Microsoft.VisualStudio.Services.TFS",
+          "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/00000002-0000-8888-8000-000000000000",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA"
+            }
+          },
+          "id": "00000002-0000-8888-8000-000000000000",
+          "uniqueName": "00000002-0000-8888-8000-000000000000@2c895908-04e0-4952-89fd-54b0046d6288",
+          "imageUrl": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA",
+          "descriptor": "s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA"
+        },
+        "lastChangedDate": "2026-10-23T23:49:34.587Z",
+        "lastChangedBy": {
+          "displayName": "Microsoft.VisualStudio.Services.TFS",
+          "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/00000002-0000-8888-8000-000000000000",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA"
+            }
+          },
+          "id": "00000002-0000-8888-8000-000000000000",
+          "uniqueName": "00000002-0000-8888-8000-000000000000@2c895908-04e0-4952-89fd-54b0046d6288",
+          "imageUrl": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA",
+          "descriptor": "s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA"
+        },
+        "parameters": "{\"system.pullRequest.pullRequestId\":\"4\",\"system.pullRequest.sourceBranch\":\"refs/heads/policy-tests/20261023PolicyBaseline02/pr-fixture\",\"system.pullRequest.targetBranch\":\"refs/heads/policy-direct/main\",\"system.pullRequest.targetBranchName\":\"policy-direct/main\",\"system.pullRequest.sourceCommitId\":\"8ac3402e40fed9752648206d072ecf1f638cd4fb\",\"system.pullRequest.sourceRepositoryUri\":\"https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample2\",\"system.pullRequest.pullRequestIteration\":\"1\"}",
+        "orchestrationPlan": {
+          "planId": "8515b048-3064-4997-9e70-18841faa1e04"
+        },
+        "logs": {
+          "id": 0,
+          "type": "Container",
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/builds/5/logs"
+        },
+        "repository": {
+          "id": "1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+          "type": "TfsGit",
+          "name": "sample2",
+          "url": "https://dev.azure.com/ado-policy-testing/project1/_git/sample2",
+          "clean": null,
+          "checkoutSubmodules": false
+        },
+        "retainedByRelease": false,
+        "triggeredByBuild": null,
+        "appendCommitMessageToRunName": true
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "pr/sample3/automatic-build-validation",
+    "entries": [
+      "ADO-023"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:52:33.945924+00:00",
+    "evidence": {
+      "evaluation": {
+        "configuration": {
+          "createdBy": {
+            "displayName": "System Administrator",
+            "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "_links": {
+              "avatar": {
+                "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+              }
+            },
+            "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+            "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+            "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          },
+          "createdDate": "2026-10-23T19:45:18.7684532Z",
+          "isEnabled": true,
+          "isBlocking": true,
+          "isDeleted": false,
+          "settings": {
+            "buildDefinitionId": 2,
+            "queueOnSourceUpdateOnly": false,
+            "manualQueueOnly": false,
+            "displayName": "Policy lab fixture validation",
+            "validDuration": 0.0,
+            "scope": [
+              {
+                "refName": "refs/heads/policy-lab/",
+                "matchKind": "Prefix",
+                "repositoryId": null
+              }
+            ]
+          },
+          "isEnterpriseManaged": false,
+          "_links": {
+            "self": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17"
+            },
+            "policyType": {
+              "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+            }
+          },
+          "revision": 1,
+          "id": 17,
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17",
+          "type": {
+            "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+            "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+            "displayName": "Build"
+          }
+        },
+        "artifactId": "vstfs:///CodeReview/CodeReviewId/214eef9d-ce60-45f3-8cd9-0bdfff07bf20%2f5",
+        "evaluationId": "6bb36b49-81f9-4e4e-a236-fc7bdfddbe74",
+        "startedDate": "2026-10-23T23:50:59.056871Z",
+        "completedDate": "2026-10-23T23:51:12.5847324Z",
+        "status": "approved",
+        "context": {
+          "lastMergeCommitId": "548a8e0cc5d26d4a1d5533d92ad99de667e62a48",
+          "lastMergeSourceCommitId": "92b5a37ceff931fd1566c52387242532e5d0b9e9",
+          "lastMergeTargetCommitId": "4e626cce091d157c062ad8330efa8dfdbaed78f2",
+          "buildId": 6,
+          "buildDefinitionId": 2,
+          "buildDefinitionName": "policy-lab-sample3",
+          "buildIsNotCurrent": false,
+          "buildStartedUtc": "2026-10-23T23:50:59.0513971Z",
+          "isExpired": false,
+          "buildAfterMerge": false,
+          "wasAutoRequeued": false,
+          "buildOutputPreview": null
+        }
+      },
+      "build": {
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/Builds/6"
+          },
+          "web": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_build/results?buildId=6"
+          },
+          "sourceVersionDisplayUri": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/builds/6/sources"
+          },
+          "timeline": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/builds/6/Timeline"
+          },
+          "badge": {
+            "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/status/2"
+          }
+        },
+        "properties": {},
+        "tags": [],
+        "validationResults": [],
+        "plans": [
+          {
+            "planId": "23ab9f8d-1443-4d62-8f50-88ba035472c9"
+          }
+        ],
+        "triggerInfo": {
+          "pr.number": "5",
+          "pr.isFork": "False",
+          "pr.triggerRepository": "54f04bde-a309-4cfd-ace5-e89953f382a7",
+          "pr.triggerRepository.Type": "TfsGit"
+        },
+        "id": 6,
+        "buildNumber": "20261023.3",
+        "status": "completed",
+        "result": "succeeded",
+        "queueTime": "2026-10-23T23:50:58.5305091Z",
+        "startTime": "2026-10-23T23:51:03.7448106Z",
+        "finishTime": "2026-10-23T23:51:12.3268887Z",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/Builds/6",
+        "definition": {
+          "drafts": [],
+          "id": 2,
+          "name": "policy-lab-sample3",
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/Definitions/2?revision=1",
+          "uri": "vstfs:///Build/Definition/2",
+          "path": "\\policy-lab",
+          "type": "build",
+          "queueStatus": "enabled",
+          "revision": 1,
+          "project": {
+            "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+            "name": "project1",
+            "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+            "state": "wellFormed",
+            "revision": 11,
+            "visibility": "private",
+            "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+          }
+        },
+        "buildNumberRevision": 3,
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "uri": "vstfs:///Build/Build/6",
+        "sourceBranch": "refs/pull/5/merge",
+        "sourceVersion": "548a8e0cc5d26d4a1d5533d92ad99de667e62a48",
+        "queue": {
+          "id": 9,
+          "name": "Azure Pipelines",
+          "pool": {
+            "id": 9,
+            "name": "Azure Pipelines",
+            "isHosted": true
+          }
+        },
+        "priority": "normal",
+        "reason": "pullRequest",
+        "requestedFor": {
+          "displayName": "System Administrator",
+          "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+            }
+          },
+          "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+          "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+          "imageUrl": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz",
+          "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+        },
+        "requestedBy": {
+          "displayName": "Microsoft.VisualStudio.Services.TFS",
+          "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/00000002-0000-8888-8000-000000000000",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA"
+            }
+          },
+          "id": "00000002-0000-8888-8000-000000000000",
+          "uniqueName": "00000002-0000-8888-8000-000000000000@2c895908-04e0-4952-89fd-54b0046d6288",
+          "imageUrl": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA",
+          "descriptor": "s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA"
+        },
+        "lastChangedDate": "2026-10-23T23:51:12.51Z",
+        "lastChangedBy": {
+          "displayName": "Microsoft.VisualStudio.Services.TFS",
+          "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/00000002-0000-8888-8000-000000000000",
+          "_links": {
+            "avatar": {
+              "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA"
+            }
+          },
+          "id": "00000002-0000-8888-8000-000000000000",
+          "uniqueName": "00000002-0000-8888-8000-000000000000@2c895908-04e0-4952-89fd-54b0046d6288",
+          "imageUrl": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA",
+          "descriptor": "s2s.MDAwMDAwMDItMDAwMC04ODg4LTgwMDAtMDAwMDAwMDAwMDAwQDJjODk1OTA4LTA0ZTAtNDk1Mi04OWZkLTU0YjAwNDZkNjI4OA"
+        },
+        "parameters": "{\"system.pullRequest.pullRequestId\":\"5\",\"system.pullRequest.sourceBranch\":\"refs/heads/policy-tests/20261023PolicyBaseline02/pr-fixture\",\"system.pullRequest.targetBranch\":\"refs/heads/policy-lab/main\",\"system.pullRequest.targetBranchName\":\"policy-lab/main\",\"system.pullRequest.sourceCommitId\":\"92b5a37ceff931fd1566c52387242532e5d0b9e9\",\"system.pullRequest.sourceRepositoryUri\":\"https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample3\",\"system.pullRequest.pullRequestIteration\":\"1\"}",
+        "orchestrationPlan": {
+          "planId": "23ab9f8d-1443-4d62-8f50-88ba035472c9"
+        },
+        "logs": {
+          "id": 0,
+          "type": "Container",
+          "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/build/builds/6/logs"
+        },
+        "repository": {
+          "id": "54f04bde-a309-4cfd-ace5-e89953f382a7",
+          "type": "TfsGit",
+          "name": "sample3",
+          "url": "https://dev.azure.com/ado-policy-testing/project1/_git/sample3",
+          "clean": null,
+          "checkoutSubmodules": false
+        },
+        "retainedByRelease": false,
+        "triggeredByBuild": null,
+        "appendCommitMessageToRunName": true
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "organization/ADO-001",
+    "entries": [
+      "ADO-001"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.296752+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed Off; target Off. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "organization/ADO-002",
+    "entries": [
+      "ADO-002"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.301289+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed On; target On. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "organization/ADO-003",
+    "entries": [
+      "ADO-003"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.306287+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed On; target On. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "organization/ADO-004",
+    "entries": [
+      "ADO-004"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.310044+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed Off; target On, if available. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "organization/ADO-007",
+    "entries": [
+      "ADO-007"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.314661+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed On; target On. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "organization/ADO-009",
+    "entries": [
+      "ADO-009"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.319522+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed Off; target Off. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "organization/ADO-010",
+    "entries": [
+      "ADO-010"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.323821+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed On; target Off. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "organization/ADO-011",
+    "entries": [
+      "ADO-011"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.327862+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed On; target Off. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "organization/ADO-012",
+    "entries": [
+      "ADO-012"
+    ],
+    "level": "organization-live-check",
+    "timestamp": "2026-10-23T23:52:34.331969+00:00",
+    "status": "BLOCKED",
+    "detail": "No authenticated admin-page or policy API read-back. Last user screenshot (2026-10-23T19:25:43-04:00) showed On; target Off. Not counted as a live pass. No invitations, SSH keys or organization settings changed."
+  },
+  {
+    "name": "pr/sample2/minimum-reviewers-blocks",
+    "entries": [
+      "ADO-032"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:54:42.982122+00:00",
+    "status": "BLOCKED",
+    "detail": "ADO-032: evaluation remained queued after 45s; expected ['rejected']. Pending is not counted as rejection or approval."
+  },
+  {
+    "name": "pr/sample2/single-creator-vote-insufficient-for-two-approvers",
+    "entries": [
+      "ADO-032"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:55:28.458310+00:00",
+    "status": "BLOCKED",
+    "detail": "ADO-032: evaluation remained queued after 45s; expected ['rejected']. Pending is not counted as rejection or approval."
+  },
+  {
+    "name": "pr/sample3/minimum-reviewers-blocks",
+    "entries": [
+      "ADO-019"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:56:14.599916+00:00",
+    "status": "BLOCKED",
+    "detail": "ADO-019: evaluation remained queued after 45s; expected ['rejected']. Pending is not counted as rejection or approval."
+  },
+  {
+    "name": "pr/sample3/single-creator-vote-insufficient-for-two-approvers",
+    "entries": [
+      "ADO-019"
+    ],
+    "level": "enforcement",
+    "timestamp": "2026-10-23T23:56:59.691713+00:00",
+    "status": "BLOCKED",
+    "detail": "ADO-019: evaluation remained queued after 45s; expected ['rejected']. Pending is not counted as rejection or approval."
+  },
+  {
+    "name": "preservation/destination",
+    "entries": [],
+    "level": "safety",
+    "timestamp": "2026-10-23T23:57:45.278575+00:00",
+    "evidence": {
+      "policiesUnchanged": true,
+      "originalRefsUnchanged": true,
+      "defaultsUnchanged": true
+    },
+    "status": "PASS"
+  },
+  {
+    "name": "preservation/source",
+    "entries": [],
+    "level": "safety",
+    "timestamp": "2026-10-23T23:57:47.116052+00:00",
+    "evidence": {
+      "sourcePoliciesUnchanged": true,
+      "sourceRefsUnchanged": true
+    },
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,26 @@
+{
+	"mcpServers": {
+		"ado": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"@azure-devops/mcp",
+				"${ADO_ORG}"
+			],
+			"tools": [
+				"*"
+			],
+			"env": {
+				"ADO_ORG": ""
+			}
+		},
+		"github": {
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp/",
+			"tools": [
+				"*"
+			]
+		}
+	}
+}
