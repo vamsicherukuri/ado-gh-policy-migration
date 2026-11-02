@@ -48,7 +48,7 @@ function Get-Prop {
 }
 
 # ---------------------------------------------------------------------------
-# 1. Locate Portable JSON Snapshot
+# 1. Locate Portable JSON Snapshot & Disambiguate Capture
 # ---------------------------------------------------------------------------
 if (-not $PortableJsonPath) {
     $latestCapture = Get-ChildItem (Join-Path $PSScriptRoot "..\..\output\policy-capture") -Filter "*.portable.json" -Recurse |
@@ -71,16 +71,28 @@ $adoData = Get-Content -LiteralPath $PortableJsonPath -Raw -Encoding utf8 | Conv
 $orgName = if (Get-Prop $adoData.source "organization") { $adoData.source.organization } else { "ado-org" }
 $projectName = if (Get-Prop $adoData.source "project") { $adoData.source.project } else { "ado-project" }
 
-# Extract all repositories discovered in this project (check capture-summary.json or capture.json)
+# Resolve repositories from summary or capture JSON with unambiguous matching
 $allRepos = [System.Collections.Generic.List[string]]::new()
-
 $parentDir = Split-Path $PortableJsonPath
 $summaryJsonPath = Join-Path $parentDir "capture-summary.json"
+
 if (Test-Path $summaryJsonPath) {
     $sumData = Get-Content -LiteralPath $summaryJsonPath -Raw -Encoding utf8 | ConvertFrom-Json
-    if ($sumData.captures -and $sumData.captures[0].repositories) {
-        foreach ($r in $sumData.captures[0].repositories) {
-            if (-not $allRepos.Contains($r)) { $allRepos.Add($r) }
+    if ($sumData.captures) {
+        $normalizedPortable = [System.IO.Path]::GetFullPath($PortableJsonPath)
+        $expectedCapturePath = $normalizedPortable -replace '\.portable\.json$', '.capture.json'
+        
+        $matches = @($sumData.captures | Where-Object {
+            ($_.project -eq $projectName -and (-not $_.organization -or $_.organization -eq $orgName)) -or
+            ([System.IO.Path]::GetFullPath($_.capture) -eq $expectedCapturePath)
+        })
+
+        if ($matches.Count -gt 1) {
+            throw "Ambiguous capture match: Found $($matches.Count) entries for Project '$projectName' in '$summaryJsonPath'. Specify an exact capture file."
+        } elseif ($matches.Count -eq 1 -and $matches[0].repositories) {
+            foreach ($r in $matches[0].repositories) {
+                if (-not $allRepos.Contains($r)) { $allRepos.Add($r) }
+            }
         }
     }
 }
@@ -107,190 +119,387 @@ if ($allRepos.Count -eq 0) {
 Write-Host "Discovered $($adoData.policies.Count) policies for Project '$projectName' across $($allRepos.Count) repositories ($($allRepos -join ', '))" -ForegroundColor Cyan
 
 # ---------------------------------------------------------------------------
-# 2. Partition Policies by Scope
+# 2. Ref Translation Helper (ADO matchKind -> GitHub Ruleset ref_name)
 # ---------------------------------------------------------------------------
-$projectPolicies = [System.Collections.Generic.List[object]]::new()
-$repoScopedPolicies = [System.Collections.Generic.Dictionary[string, System.Collections.Generic.List[object]]]::new()
+function Convert-AdoRefToGitHubPattern {
+    param(
+        [string]$RefName,
+        [string]$MatchKind,
+        [string]$FallbackPattern
+    )
+
+    if (-not $RefName) {
+        return $FallbackPattern
+    }
+
+    switch ($MatchKind) {
+        "Prefix" {
+            # In ADO, refs/heads/policy-lab/ with Prefix means anything under that hierarchy
+            $trimmed = $RefName.TrimEnd('/')
+            return "$trimmed/**"
+        }
+        "Exact" {
+            return $RefName
+        }
+        "DefaultBranch" {
+            return "~DEFAULT_BRANCH"
+        }
+        default {
+            if ($RefName.EndsWith('/')) {
+                return "$($RefName.TrimEnd('/'))/**"
+            }
+            return $RefName
+        }
+    }
+}
+
+# ---------------------------------------------------------------------------
+# 3. Partition Policies by Target Repository, Branch Ref, and Blocking Mode
+# ---------------------------------------------------------------------------
+# Structured item: @{ Policy = $pol; TargetRepo = $repo; RefPattern = $ref; IsBlocking = $bool }
+$projectScopedItems = [System.Collections.Generic.List[object]]::new()
+$repoScopedItems = [System.Collections.Generic.Dictionary[string, System.Collections.Generic.List[object]]]::new()
+
+# Audit lists for report
+$processedPolicies = [System.Collections.Generic.List[object]]::new()
+$requiredReviewerPolicies = [System.Collections.Generic.List[object]]::new()
+$mergeOnlyPolicies = [System.Collections.Generic.List[object]]::new()
 
 foreach ($pol in $adoData.policies) {
     $isEnabled = Get-Prop $pol "isEnabled" $true
     $isDeleted = Get-Prop $pol "isDeleted" $false
     if (-not $isEnabled -or $isDeleted) {
-        continue # Skip disabled or deleted policies
+        continue
     }
 
-    $repoRef = $null
-    $scope = Get-Prop $pol "scope"
-    if ($scope -and $scope.Count -gt 0) {
-        $firstScope = $scope[0]
-        $repoObj = Get-Prop $firstScope "repository"
+    $isBlocking = [bool](Get-Prop $pol "isBlocking" $true)
+    $processedPolicies.Add($pol)
+
+    $scopes = Get-Prop $pol "scope"
+    if (-not $scopes -or $scopes.Count -eq 0) {
+        $scopes = @([ordered]@{ repository = $null; refName = $null; matchKind = $null })
+    }
+
+    # Each tuple in scope represents an explicit target pairing
+    foreach ($sc in $scopes) {
+        $repoRef = $null
+        $repoObj = Get-Prop $sc "repository"
         if ($repoObj) {
             $refStr = Get-Prop $repoObj '$ref'
             if ($refStr -and $refStr -match '^repository:(.+)$') {
                 $repoRef = $Matches[1]
             }
         }
-    }
 
-    if ($null -eq $repoRef) {
-        $projectPolicies.Add($pol)
-    } else {
-        if (-not $repoScopedPolicies.ContainsKey($repoRef)) {
-            $repoScopedPolicies[$repoRef] = [System.Collections.Generic.List[object]]::new()
+        $rawRefName = Get-Prop $sc "refName"
+        $rawMatchKind = Get-Prop $sc "matchKind"
+        $ghRefPattern = Convert-AdoRefToGitHubPattern -RefName $rawRefName -MatchKind $rawMatchKind -FallbackPattern $DefaultBranchRef
+
+        $item = @{
+            Policy = $pol
+            TargetRepo = $repoRef
+            RawRefName = $rawRefName
+            RefPattern = $ghRefPattern
+            IsBlocking = $isBlocking
         }
-        $repoScopedPolicies[$repoRef].Add($pol)
+
+        if ($null -eq $repoRef) {
+            $projectScopedItems.Add($item)
+        } else {
+            if (-not $repoScopedItems.ContainsKey($repoRef)) {
+                $repoScopedItems[$repoRef] = [System.Collections.Generic.List[object]]::new()
+            }
+            $repoScopedItems[$repoRef].Add($item)
+        }
     }
 }
 
 # ---------------------------------------------------------------------------
-# 3. Helper: Map Policy List to Rulesets & Repo Settings
+# 4. Ruleset & Repository Settings Generator
 # ---------------------------------------------------------------------------
-function Convert-PolicyListToSafeSettingsBlocks {
+function Build-SafeSettingsScopeBlocks {
     param(
-        [System.Collections.Generic.List[object]]$Policies,
-        [string]$ScopeName,
-        [string]$BranchRefPattern
+        [System.Collections.Generic.List[object]]$Items,
+        [string]$ScopeIdentifier
     )
 
-    $branchRules = [System.Collections.Generic.List[object]]::new()
-    $pushRules = [System.Collections.Generic.List[object]]::new()
     $repoSettings = [ordered]@{}
+    $rulesets = [System.Collections.Generic.List[object]]::new()
 
-    # Aggregated Pull Request Rule parameters
-    $prParams = [ordered]@{
-        required_approving_review_count = 1
-        dismiss_stale_reviews_on_push = $false
-        require_code_owner_review = $false
-        require_last_push_approval = $false
-        required_review_thread_resolution = $false
-    }
-    $hasPrPolicy = $false
-    $allowedMergeMethods = [System.Collections.Generic.List[string]]::new()
+    # Partition items by (IsBlocking, RefPattern) for Branch Rules,
+    # and (IsBlocking) for Push Rules & Metadata Rules
+    $branchBuckets = [System.Collections.Generic.Dictionary[string, System.Collections.Generic.List[object]]]::new()
+    $pushBuckets = [System.Collections.Generic.Dictionary[string, System.Collections.Generic.List[object]]]::new()
+    $emailBuckets = [System.Collections.Generic.Dictionary[string, System.Collections.Generic.List[object]]]::new()
 
-    # Status checks list
-    $statusChecksList = [System.Collections.Generic.List[object]]::new()
-
-    foreach ($pol in $Policies) {
+    foreach ($it in $Items) {
+        $pol = $it.Policy
         $typeName = $pol.type.displayName
         $st = Get-Prop $pol "settings"
+        $isBlock = $it.IsBlocking
+        $refPat = $it.RefPattern
+
+        # Key for grouping
+        $blockKey = if ($isBlock) { "blocking" } else { "evaluate" }
+        $branchKey = "$blockKey|$refPat"
 
         switch ($typeName) {
             "Minimum number of reviewers" {
-                $hasPrPolicy = $true
-                $minApprovers = Get-Prop $st "minimumApproverCount"
-                if ($minApprovers) {
-                    $prParams.required_approving_review_count = [int]$minApprovers
-                }
-                $resetOnPush = Get-Prop $st "resetOnSourcePush" $false
-                if ($resetOnPush) {
-                    $prParams.dismiss_stale_reviews_on_push = $true
-                }
-                $blockLastPusher = Get-Prop $st "blockLastPusherVote" $false
-                $prohibitRequester = Get-Prop $st "prohibitRequesterFromApproving" $false
-                if ($blockLastPusher -or $prohibitRequester) {
-                    $prParams.require_last_push_approval = $true
-                }
+                if (-not $branchBuckets.ContainsKey($branchKey)) { $branchBuckets[$branchKey] = [System.Collections.Generic.List[object]]::new() }
+                $branchBuckets[$branchKey].Add($it)
             }
-
             "Comment requirements" {
-                $hasPrPolicy = $true
-                $prParams.required_review_thread_resolution = $true
+                if (-not $branchBuckets.ContainsKey($branchKey)) { $branchBuckets[$branchKey] = [System.Collections.Generic.List[object]]::new() }
+                $branchBuckets[$branchKey].Add($it)
             }
-
-            "Require a merge strategy" {
-                $allowSquash = Get-Prop $st "allowSquash" $false
-                $allowNoFF = Get-Prop $st "allowNoFastForward" $false
-                $allowRebase = Get-Prop $st "allowRebase" $false
-                $allowRebaseMerge = Get-Prop $st "allowRebaseMerge" $false
-
-                if ($allowSquash) {
-                    $allowedMergeMethods.Add("squash")
-                    $repoSettings["allow_squash_merge"] = $true
-                }
-                if ($allowNoFF) {
-                    $allowedMergeMethods.Add("merge")
-                    $repoSettings["allow_merge_commit"] = $true
-                }
-                if ($allowRebase -or $allowRebaseMerge) {
-                    $allowedMergeMethods.Add("rebase")
-                    $repoSettings["allow_rebase_merge"] = $true
-                }
-            }
-
             "Build" {
-                $pipelineName = "build"
-                $buildDef = Get-Prop $st "buildDefinitionId"
-                if ($buildDef) {
-                    $refVal = Get-Prop $buildDef '$ref'
-                    if ($refVal) {
-                        $pipelineName = ($refVal -replace '^pipeline:', '')
-                    } else {
-                        $pipelineName = "pipeline-$buildDef"
+                if (-not $branchBuckets.ContainsKey($branchKey)) { $branchBuckets[$branchKey] = [System.Collections.Generic.List[object]]::new() }
+                $branchBuckets[$branchKey].Add($it)
+            }
+            "Status" {
+                if (-not $branchBuckets.ContainsKey($branchKey)) { $branchBuckets[$branchKey] = [System.Collections.Generic.List[object]]::new() }
+                $branchBuckets[$branchKey].Add($it)
+            }
+            "Require a merge strategy" {
+                # Merge strategy affects both repo-wide settings and branch rules
+                if ((Get-Prop $st "allowSquash") -eq $true) { $repoSettings["allow_squash_merge"] = $true }
+                if ((Get-Prop $st "allowNoFastForward") -eq $true) { $repoSettings["allow_merge_commit"] = $true }
+                if ((Get-Prop $st "allowRebase") -eq $true -or (Get-Prop $st "allowRebaseMerge") -eq $true) { $repoSettings["allow_rebase_merge"] = $true }
+
+                if (-not $branchBuckets.ContainsKey($branchKey)) { $branchBuckets[$branchKey] = [System.Collections.Generic.List[object]]::new() }
+                $branchBuckets[$branchKey].Add($it)
+            }
+            "Required reviewers" {
+                $script:requiredReviewerPolicies.Add($pol)
+            }
+            "File size restriction" {
+                if (-not $pushBuckets.ContainsKey($blockKey)) { $pushBuckets[$blockKey] = [System.Collections.Generic.List[object]]::new() }
+                $pushBuckets[$blockKey].Add($it)
+            }
+            "Path Length restriction" {
+                if (-not $pushBuckets.ContainsKey($blockKey)) { $pushBuckets[$blockKey] = [System.Collections.Generic.List[object]]::new() }
+                $pushBuckets[$blockKey].Add($it)
+            }
+            "File name restriction" {
+                if (-not $pushBuckets.ContainsKey($blockKey)) { $pushBuckets[$blockKey] = [System.Collections.Generic.List[object]]::new() }
+                $pushBuckets[$blockKey].Add($it)
+            }
+            "Commit author email validation" {
+                if (-not $emailBuckets.ContainsKey($blockKey)) { $emailBuckets[$blockKey] = [System.Collections.Generic.List[object]]::new() }
+                $emailBuckets[$blockKey].Add($it)
+            }
+        }
+    }
+
+    # Helper: Resolve ruleset-level enforcement
+    function Get-RulesetEnforcement([string]$ModeKey) {
+        if ($Enforcement -eq "disabled") { return "disabled" }
+        if ($ModeKey -eq "evaluate") { return "evaluate" }
+        return $Enforcement
+    }
+
+    # --- Build Branch Rulesets ---
+    foreach ($bKey in $branchBuckets.Keys) {
+        $parts = $bKey -split '\|', 2
+        $modeKey = $parts[0]
+        $refPattern = $parts[1]
+        $bucketItems = $branchBuckets[$bKey]
+
+        $branchRules = [System.Collections.Generic.List[object]]::new()
+        $statusChecks = [System.Collections.Generic.List[object]]::new()
+        $allowedMergeMethods = [System.Collections.Generic.List[string]]::new()
+
+        $hasReviewerPolicy = $false
+        $hasPrPolicy = $false
+        $minApproverCount = 0
+        $dismissStale = $false
+        $requireLastPush = $false
+        $requireThreads = $false
+
+        foreach ($it in $bucketItems) {
+            $tName = $it.Policy.type.displayName
+            $s = Get-Prop $it.Policy "settings"
+
+            switch ($tName) {
+                "Minimum number of reviewers" {
+                    $hasPrPolicy = $true
+                    $hasReviewerPolicy = $true
+                    $cnt = Get-Prop $s "minimumApproverCount"
+                    if ($cnt) { $minApproverCount = [int]$cnt }
+                    if ((Get-Prop $s "resetOnSourcePush") -eq $true) { $dismissStale = $true }
+                    if ((Get-Prop $s "blockLastPusherVote") -eq $true -or (Get-Prop $s "prohibitRequesterFromApproving") -eq $true) {
+                        $requireLastPush = $true
                     }
                 }
-                $statusChecksList.Add([ordered]@{ context = $pipelineName })
-            }
-
-            "Status" {
-                $genre = Get-Prop $st "genre"
-                $sName = Get-Prop $st "name"
-                $ctx = if ($genre -and $sName) { "$genre/$sName" } elseif ($sName) { $sName } else { "status-check" }
-                $statusChecksList.Add([ordered]@{ context = $ctx })
-            }
-
-            "File size restriction" {
-                $maxBytes = Get-Prop $st "maximumGitBlobSizeInBytes" 104857600
-                $maxMb = [math]::Max(1, [math]::Round([int64]$maxBytes / 1048576))
-                $pushRules.Add([ordered]@{
-                    type = "max_file_size"
-                    parameters = [ordered]@{ max_file_size = [int]$maxMb }
-                })
-            }
-
-            "Path Length restriction" {
-                $maxLen = Get-Prop $st "maxPathLength" 248
-                $pushRules.Add([ordered]@{
-                    type = "max_file_path_length"
-                    parameters = [ordered]@{ max_file_path_length = [int]$maxLen }
-                })
-            }
-
-            "File name restriction" {
-                $rawPaths = Get-Prop $st "filenamePatterns"
-                $patterns = if ($rawPaths -is [System.Collections.IEnumerable] -and $rawPaths -isnot [string]) {
-                    @($rawPaths)
-                } elseif ($rawPaths) {
-                    @([string]$rawPaths)
-                } else {
-                    @("*.exe", "*.dll")
+                "Comment requirements" {
+                    $hasPrPolicy = $true
+                    $requireThreads = $true
                 }
-                $pushRules.Add([ordered]@{
-                    type = "file_path_restriction"
-                    parameters = [ordered]@{ restricted_file_paths = $patterns }
-                })
+                "Require a merge strategy" {
+                    $hasPrPolicy = $true
+                    if ((Get-Prop $s "allowSquash") -eq $true -and -not $allowedMergeMethods.Contains("squash")) { $allowedMergeMethods.Add("squash") }
+                    if ((Get-Prop $s "allowNoFastForward") -eq $true -and -not $allowedMergeMethods.Contains("merge")) { $allowedMergeMethods.Add("merge") }
+                    if (((Get-Prop $s "allowRebase") -eq $true -or (Get-Prop $s "allowRebaseMerge") -eq $true) -and -not $allowedMergeMethods.Contains("rebase")) {
+                        $allowedMergeMethods.Add("rebase")
+                    }
+                    if (-not $hasReviewerPolicy) {
+                        $script:mergeOnlyPolicies.Add($it.Policy)
+                    }
+                }
+                "Build" {
+                    $pName = "build"
+                    $bDef = Get-Prop $s "buildDefinitionId"
+                    if ($bDef) {
+                        $refVal = Get-Prop $bDef '$ref'
+                        if ($refVal) { $pName = ($refVal -replace '^pipeline:', '') }
+                        else { $pName = "pipeline-$bDef" }
+                    }
+                    $statusChecks.Add([ordered]@{ context = $pName })
+                }
+                "Status" {
+                    $genre = Get-Prop $s "genre"
+                    $sName = Get-Prop $s "name"
+                    $ctx = if ($genre -and $sName) { "$genre/$sName" } elseif ($sName) { $sName } else { "status-check" }
+                    $statusChecks.Add([ordered]@{ context = $ctx })
+                }
+            }
+        }
+
+        # Build pull_request rule
+        if ($hasPrPolicy) {
+            $prParameters = [ordered]@{
+                required_approving_review_count = if ($hasReviewerPolicy) { $minApproverCount } else { 0 }
+                dismiss_stale_reviews_on_push = $dismissStale
+                require_code_owner_review = $false
+                require_last_push_approval = $requireLastPush
+                required_review_thread_resolution = $requireThreads
+            }
+            if ($allowedMergeMethods.Count -gt 0) {
+                $prParameters["allowed_merge_methods"] = $allowedMergeMethods
+            }
+            $branchRules.Add([ordered]@{
+                type = "pull_request"
+                parameters = $prParameters
+            })
+        }
+
+        # Build required_status_checks rule
+        if ($statusChecks.Count -gt 0) {
+            $branchRules.Add([ordered]@{
+                type = "required_status_checks"
+                parameters = [ordered]@{
+                    strict_required_status_checks_policy = $true
+                    required_status_checks = $statusChecks
+                }
+            })
+        }
+
+        if ($branchRules.Count -gt 0) {
+            # Add implicit branch protection rules only to blocking branch rulesets
+            if ($modeKey -eq "blocking") {
+                $branchRules.Add([ordered]@{ type = "non_fast_forward" })
+                $branchRules.Add([ordered]@{ type = "deletion" })
             }
 
-            "Commit author email validation" {
-                $rawList = Get-Prop $st "authorEmailPatterns"
-                $rawPattern = if ($rawList -is [System.Collections.IEnumerable] -and $rawList -isnot [string]) {
-                    [string]($rawList | Select-Object -First 1)
-                } elseif ($rawList) {
-                    [string]$rawList
-                } else {
-                    "*@contoso.com"
+            $refSlug = ($refPattern -replace '[^A-Za-z0-9_-]', '-') -replace '-+', '-'
+            $rulesetName = "$ScopeIdentifier-$refSlug-$modeKey"
+            
+            $rulesets.Add([ordered]@{
+                name = $rulesetName
+                target = "branch"
+                enforcement = Get-RulesetEnforcement $modeKey
+                conditions = [ordered]@{
+                    ref_name = [ordered]@{
+                        include = @($refPattern)
+                        exclude = @()
+                    }
                 }
+                rules = $branchRules
+            })
+        }
+    }
 
+    # --- Build Push Rulesets (File size, path length, path restriction) ---
+    foreach ($mKey in $pushBuckets.Keys) {
+        $pushItems = $pushBuckets[$mKey]
+        $pushRules = [System.Collections.Generic.List[object]]::new()
+
+        foreach ($it in $pushItems) {
+            $tName = $it.Policy.type.displayName
+            $s = Get-Prop $it.Policy "settings"
+            switch ($tName) {
+                "File size restriction" {
+                    $maxBytes = Get-Prop $s "maximumGitBlobSizeInBytes" 104857600
+                    $maxMb = [math]::Max(1, [math]::Round([int64]$maxBytes / 1048576))
+                    $pushRules.Add([ordered]@{
+                        type = "max_file_size"
+                        parameters = [ordered]@{ max_file_size = [int]$maxMb }
+                    })
+                }
+                "Path Length restriction" {
+                    $maxLen = Get-Prop $s "maxPathLength" 248
+                    $pushRules.Add([ordered]@{
+                        type = "max_file_path_length"
+                        parameters = [ordered]@{ max_file_path_length = [int]$maxLen }
+                    })
+                }
+                "File name restriction" {
+                    $rawPaths = Get-Prop $s "filenamePatterns"
+                    $patterns = if ($rawPaths -is [System.Collections.IEnumerable] -and $rawPaths -isnot [string]) {
+                        @($rawPaths)
+                    } elseif ($rawPaths) { @([string]$rawPaths) }
+                    else { @("*.exe", "*.dll") }
+                    $pushRules.Add([ordered]@{
+                        type = "file_path_restriction"
+                        parameters = [ordered]@{ restricted_file_paths = $patterns }
+                    })
+                }
+            }
+        }
+
+        if ($pushRules.Count -gt 0) {
+            $rulesets.Add([ordered]@{
+                name = "$ScopeIdentifier-push-$mKey"
+                target = "push"
+                enforcement = Get-RulesetEnforcement $mKey
+                rules = $pushRules
+            })
+        }
+    }
+
+    # --- Build Dedicated Commit Author Email Rulesets (Branch Target ~ALL) ---
+    foreach ($mKey in $emailBuckets.Keys) {
+        $emailItems = $emailBuckets[$mKey]
+        $emailRules = [System.Collections.Generic.List[object]]::new()
+
+        foreach ($it in $emailItems) {
+            $s = Get-Prop $it.Policy "settings"
+            $rawList = Get-Prop $s "authorEmailPatterns"
+            $patterns = if ($rawList -is [System.Collections.IEnumerable] -and $rawList -isnot [string]) {
+                @($rawList)
+            } elseif ($rawList) { @([string]$rawList) }
+            else { @("*@contoso.com") }
+
+            foreach ($rawPattern in $patterns) {
+                $pStr = [string]$rawPattern
                 $operator = "ends_with"
-                $cleanPattern = $rawPattern
-                if ($rawPattern -match '^\*@(.+)$') {
+                $cleanPattern = $pStr
+
+                if ($pStr -match '^\*@(.+)$') {
                     $cleanPattern = "@$($Matches[1])"
                     $operator = "ends_with"
-                } elseif ($rawPattern -match '\*') {
-                    $cleanPattern = $rawPattern
+                } elseif ($pStr -match '^\*(.+)$') {
+                    $cleanPattern = $Matches[1]
+                    $operator = "ends_with"
+                } elseif (-not $pStr.Contains('*')) {
+                    $operator = "equals"
+                    $cleanPattern = $pStr
+                } else {
                     $operator = "regex"
+                    $cleanPattern = $pStr
                 }
 
-                $pushRules.Add([ordered]@{
+                $emailRules.Add([ordered]@{
                     type = "commit_author_email_pattern"
                     parameters = [ordered]@{
                         operator = $operator
@@ -300,60 +509,21 @@ function Convert-PolicyListToSafeSettingsBlocks {
                 })
             }
         }
-    }
 
-    # If any PR settings were present, add the pull_request rule
-    if ($hasPrPolicy -or $allowedMergeMethods.Count -gt 0) {
-        if ($allowedMergeMethods.Count -gt 0) {
-            $prParams["allowed_merge_methods"] = $allowedMergeMethods
-        }
-        $branchRules.Add([ordered]@{
-            type = "pull_request"
-            parameters = $prParams
-        })
-    }
-
-    # Add required status checks if any
-    if ($statusChecksList.Count -gt 0) {
-        $branchRules.Add([ordered]@{
-            type = "required_status_checks"
-            parameters = [ordered]@{
-                strict_required_status_checks_policy = $true
-                required_status_checks = $statusChecksList
-            }
-        })
-    }
-
-    # Add implicit safe branch protections (prevent deletion, prevent force-push)
-    if ($branchRules.Count -gt 0) {
-        $branchRules.Add([ordered]@{ type = "non_fast_forward" })
-        $branchRules.Add([ordered]@{ type = "deletion" })
-    }
-
-    # Assemble rulesets list
-    $rulesets = [System.Collections.Generic.List[object]]::new()
-    if ($branchRules.Count -gt 0) {
-        $rulesets.Add([ordered]@{
-            name = "$ScopeName-branch-policy"
-            target = "branch"
-            enforcement = $Enforcement
-            conditions = [ordered]@{
-                ref_name = [ordered]@{
-                    include = @($BranchRefPattern)
-                    exclude = @()
+        if ($emailRules.Count -gt 0) {
+            $rulesets.Add([ordered]@{
+                name = "$ScopeIdentifier-commit-metadata-$mKey"
+                target = "branch"
+                enforcement = Get-RulesetEnforcement $mKey
+                conditions = [ordered]@{
+                    ref_name = [ordered]@{
+                        include = @("~ALL")
+                        exclude = @()
+                    }
                 }
-            }
-            rules = $branchRules
-        })
-    }
-
-    if ($pushRules.Count -gt 0) {
-        $rulesets.Add([ordered]@{
-            name = "$ScopeName-push-policy"
-            target = "push"
-            enforcement = $Enforcement
-            rules = $pushRules
-        })
+                rules = $emailRules
+            })
+        }
     }
 
     return @{
@@ -363,7 +533,7 @@ function Convert-PolicyListToSafeSettingsBlocks {
 }
 
 # ---------------------------------------------------------------------------
-# 4. Generate Safe-Settings Output Files
+# 5. Generate Safe-Settings Output Files
 # ---------------------------------------------------------------------------
 $suborgDir = Join-Path $OutputDir ".github\suborgs"
 $repoDir = Join-Path $OutputDir ".github\repos"
@@ -384,19 +554,16 @@ Set-Content -Path $settingsFilePath -Value $orgSettingsYaml -Encoding utf8
 Write-Host "Created: $settingsFilePath" -ForegroundColor Green
 
 # --- B. Generate .github/suborgs/<project>.yml ---
-$projectBlocks = Convert-PolicyListToSafeSettingsBlocks -Policies $projectPolicies -ScopeName $projectName -BranchRefPattern $DefaultBranchRef
+$projectBlocks = Build-SafeSettingsScopeBlocks -Items $projectScopedItems -ScopeIdentifier $projectName
 
 $suborgDoc = [ordered]@{
-    suborg = [ordered]@{
-        name = $projectName
-        repos = @($allRepos)
-    }
+    suborgrepos = @($allRepos)
 }
 if ($projectBlocks.RepositorySettings.Count -gt 0) {
     $suborgDoc["repository"] = $projectBlocks.RepositorySettings
 }
 if ($projectBlocks.Rulesets.Count -gt 0) {
-    $suborgDoc["repository_rulesets"] = $projectBlocks.Rulesets
+    $suborgDoc["rulesets"] = $projectBlocks.Rulesets
 }
 
 $suborgYaml = ConvertTo-Yaml -InputObject $suborgDoc
@@ -406,18 +573,22 @@ Write-Host "Created: $suborgFilePath" -ForegroundColor Green
 
 # --- C. Generate .github/repos/<repo>.yml for Repo-scoped overrides ---
 $repoFilesCreated = 0
-foreach ($rName in $repoScopedPolicies.Keys) {
-    $rPolicies = $repoScopedPolicies[$rName]
-    $repoBlocks = Convert-PolicyListToSafeSettingsBlocks -Policies $rPolicies -ScopeName $rName -BranchRefPattern $DefaultBranchRef
+foreach ($rName in $repoScopedItems.Keys) {
+    $rItems = $repoScopedItems[$rName]
+    $repoBlocks = Build-SafeSettingsScopeBlocks -Items $rItems -ScopeIdentifier $rName
 
     $repoDoc = [ordered]@{
-        name = $rName
+        repository = [ordered]@{
+            name = $rName
+        }
     }
     if ($repoBlocks.RepositorySettings.Count -gt 0) {
-        $repoDoc["repository"] = $repoBlocks.RepositorySettings
+        foreach ($k in $repoBlocks.RepositorySettings.Keys) {
+            $repoDoc.repository[$k] = $repoBlocks.RepositorySettings[$k]
+        }
     }
     if ($repoBlocks.Rulesets.Count -gt 0) {
-        $repoDoc["repository_rulesets"] = $repoBlocks.Rulesets
+        $repoDoc["rulesets"] = $repoBlocks.Rulesets
     }
 
     $repoYaml = ConvertTo-Yaml -InputObject $repoDoc
@@ -428,51 +599,51 @@ foreach ($rName in $repoScopedPolicies.Keys) {
 }
 
 # ---------------------------------------------------------------------------
-# 5. Generate Auditable MIGRATION-REPORT.md
+# 6. Generate Auditable MIGRATION-REPORT.md
 # ---------------------------------------------------------------------------
 $reportPath = Join-Path $OutputDir "MIGRATION-REPORT.md"
-$totalPolicies = $adoData.policies.Count
-$mappedPoliciesCount = $projectPolicies.Count
-foreach ($k in $repoScopedPolicies.Keys) { $mappedPoliciesCount += $repoScopedPolicies[$k].Count }
+$totalCaptured = $adoData.policies.Count
+$processedCount = $processedPolicies.Count
 $allReposStr = ($allRepos -join ', ')
 
-$lines = @(
-    "# ADO to GitHub Policy Migration Report",
-    "",
-    "## Migration Overview",
-    "- **Source ADO Organization:** $orgName",
-    "- **Source ADO Project:** $projectName",
-    "- **Total Policies Captured:** $totalPolicies",
-    "- **Policies Processed into Safe-Settings:** $mappedPoliciesCount",
-    "- **Sub-Org Config File:** `.github/suborgs/$projectName.yml` (governs $($allRepos.Count) repositories: $allReposStr)",
-    "- **Repository-specific Override Files:** $repoFilesCreated (under `.github/repos/`)",
-    "",
-    "---",
-    "",
-    "## Parity & Mapping Summary",
-    "",
-    "| ADO Policy Name | Scope | Safe-Settings Mapping Status | GitHub Equivalent Feature | Action Required |",
-    "|---|---|---|---|---|",
-    "| Commit author email validation | Project & Repo | **Mapped (Close)** | Ruleset: ``commit_author_email_pattern`` | Verify domain pattern |",
-    "| File size restriction | Project & Repo | **Mapped (Exact)** | Ruleset: ``max_file_size`` | Converted from bytes to MB |",
-    "| Path Length restriction | Project & Repo | **Mapped (Exact)** | Ruleset: ``max_file_path_length`` | Exact match |",
-    "| File name restriction | Project & Repo | **Mapped (Exact)** | Ruleset: ``file_path_restriction`` | Uses fnmatch path patterns |",
-    "| Minimum number of reviewers | Project & Repo | **Mapped (Close)** | Ruleset: ``pull_request`` approvals | Approver count & reset-on-push mapped |",
-    "| Comment requirements | Project & Repo | **Mapped (Exact)** | Ruleset: ``required_review_thread_resolution`` | Blocks merge until threads resolved |",
-    "| Require a merge strategy | Project & Repo | **Mapped (Exact)** | Ruleset ``allowed_merge_methods`` & Repo settings | Squash / Merge / Rebase toggles |",
-    "| Build validation | Project & Repo | **Mapped (Action Needed)** | Ruleset: ``required_status_checks`` | **Confirm check context matches GitHub Actions workflow** |",
-    "| Status checks | Project & Repo | **Mapped (Action Needed)** | Ruleset: ``required_status_checks`` | Verify publisher App/status name |",
-    "| Work item linking | Project & Repo | **Gap / Custom Implementation** | Custom Status Check / GHA | Informational only in native GitHub; require GHA if blocking |",
-    "| Reserved names restriction | Project & Repo | **Partial / Workaround** | Ruleset: ``file_path_restriction`` | Enumerate OS reserved names (CON, NUL) if required |",
-    "| Git repository settings (Case enforcement) | Project & Repo | **No Direct Equivalent** | Not supported natively | Catch via pre-commit or CI linting |",
-    "",
-    "---",
-    "",
-    "## Action Checklist for Pull Request Reviewers",
-    "1. [ ] **Verify Sub-Org Target Repos:** Check ``.github/suborgs/$projectName.yml`` to ensure all migrated repos are listed under ``repos:``.",
-    "2. [ ] **Confirm Build Check Names:** In ADO, builds used pipeline names (e.g., ``policy-lab-sample2``). Ensure the corresponding GitHub Actions workflow job is named identically so status checks unblock merges.",
-    "3. [ ] **Review Dry-Run Output:** Review the Safe-Settings bot comment on this Pull Request to inspect the exact API changes before merging."
-)
+$lines = [System.Collections.Generic.List[string]]::new()
+$lines.Add("# ADO to GitHub Policy Migration Report")
+$lines.Add("")
+$lines.Add("## Migration Overview")
+$lines.Add("- **Source ADO Organization:** $orgName")
+$lines.Add("- **Source ADO Project:** $projectName")
+$lines.Add("- **Total Policies Captured:** $totalCaptured")
+$lines.Add("- **Active/Evaluated Policies Processed:** $processedCount")
+$lines.Add("- **Sub-Org Config File:** `.github/suborgs/$projectName.yml` (governs $($allRepos.Count) repositories: $allReposStr)")
+$lines.Add("- **Repository-specific Override Files:** $repoFilesCreated (under `.github/repos/`)")
+$lines.Add("")
+$lines.Add("---")
+$lines.Add("")
+$lines.Add("## Parity & Mapping Status")
+$lines.Add("")
+$lines.Add("| ADO Policy Type | Safe-Settings Status | GitHub Equivalent | Parity Notes |")
+$lines.Add("|---|---|---|---|")
+$lines.Add("| Commit author email validation | **Mapped** | Dedicated Ruleset (`target: branch`, `~ALL`) | Preserves all patterns; maps to `ends_with`, `equals`, or `regex` |")
+$lines.Add("| File size restriction | **Mapped** | Push Ruleset: `max_file_size` | Converted from bytes to MB |")
+$lines.Add("| Path Length restriction | **Mapped** | Push Ruleset: `max_file_path_length` | Exact character count |")
+$lines.Add("| File name restriction | **Mapped** | Push Ruleset: `file_path_restriction` | fnmatch file patterns |")
+$lines.Add("| Minimum number of reviewers | **Mapped** | Branch Ruleset: `pull_request` approvals | Approver count, reset-on-push, and last-pusher blocking |")
+$lines.Add("| Comment requirements | **Mapped** | Branch Ruleset: `required_review_thread_resolution` | Unresolved threads block merge |")
+$lines.Add("| Require a merge strategy | **Mapped (Behavioral Delta)** | Ruleset `allowed_merge_methods` + Repo settings | **Note:** Applying allowed merge methods via GitHub ruleset mandates a PR requirement even with 0 approvals |")
+$lines.Add("| Build validation | **Mapped (Action Needed)** | Branch Ruleset: `required_status_checks` | **Confirm check context matches GitHub Actions workflow** |")
+$lines.Add("| Status checks | **Mapped (Action Needed)** | Branch Ruleset: `required_status_checks` | Verify publisher App / context string |")
+$lines.Add("| Required reviewers | **Partial / Manual Configuration Required** | `CODEOWNERS` + `require_code_owner_review` | ADO path/identity reviewers require a `CODEOWNERS` file in the repo to bind identities to paths |")
+$lines.Add("| Work item linking | **Unsupported / Custom Action Required** | Custom Status Check / GHA | Informational only in native GitHub; require custom Action if blocking |")
+$lines.Add("| Case enforcement | **No Direct Equivalent** | None | Enforce via client-side git configuration or CI linting |")
+$lines.Add("| Reserved names restriction | **Partial / Workaround** | Push Ruleset: `file_path_restriction` | Enumerate OS reserved names (CON, NUL, COM1) if blocking pushes |")
+$lines.Add("")
+$lines.Add("---")
+$lines.Add("")
+$lines.Add("## Action Checklist for Reviewers")
+$lines.Add("1. [ ] **Verify Sub-Org Target Repos:** Check `.github/suborgs/$projectName.yml` to ensure all target repositories are listed under `suborgrepos:`.")
+$lines.Add("2. [ ] **Provision CODEOWNERS Files:** For repositories with 'Required reviewers' policies in ADO, ensure a corresponding `.github/CODEOWNERS` file is committed to map path filters to GitHub teams/users.")
+$lines.Add("3. [ ] **Confirm Status Check Contexts:** Verify that GitHub Actions workflows emit check runs matching the contexts declared in `required_status_checks`.")
+$lines.Add("4. [ ] **Review Dry-Run Output:** Review the Safe-Settings bot comment on the Pull Request to verify expected live diffs.")
 
 Set-Content -Path $reportPath -Value ($lines -join "`n") -Encoding utf8
 Write-Host "Created Migration Report: $reportPath" -ForegroundColor Green

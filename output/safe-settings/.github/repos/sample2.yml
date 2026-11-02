@@ -1,14 +1,14 @@
-name: sample2
 repository:
+  name: sample2
   allow_squash_merge: true
-repository_rulesets:
-  - name: sample2-branch-policy
+rulesets:
+  - name: sample2-refs-heads-policy-direct-main-blocking
     target: branch
     enforcement: active
     conditions:
       ref_name:
         include:
-          - "~DEFAULT_BRANCH"
+          - refs/heads/policy-direct/main
         exclude: []
     rules:
       - type: pull_request
@@ -28,15 +28,10 @@ repository_rulesets:
             - context: status-check
       - type: non_fast_forward
       - type: deletion
-  - name: sample2-push-policy
+  - name: sample2-push-blocking
     target: push
     enforcement: active
     rules:
-      - type: commit_author_email_pattern
-        parameters:
-          operator: ends_with
-          pattern: "@MngEnvMCAP267305.onmicrosoft.com"
-          negate: false
       - type: file_path_restriction
         parameters:
           restricted_file_paths:
@@ -48,3 +43,17 @@ repository_rulesets:
       - type: max_file_size
         parameters:
           max_file_size: 1
+  - name: sample2-commit-metadata-blocking
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - "~ALL"
+        exclude: []
+    rules:
+      - type: commit_author_email_pattern
+        parameters:
+          operator: ends_with
+          pattern: "@MngEnvMCAP267305.onmicrosoft.com"
+          negate: false

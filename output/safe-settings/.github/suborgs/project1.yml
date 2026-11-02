@@ -1,20 +1,18 @@
-suborg:
-  name: project1
-  repos:
-    - project1
-    - sample2
-    - sample3
-    - sample4
+suborgrepos:
+  - project1
+  - sample2
+  - sample3
+  - sample4
 repository:
   allow_squash_merge: true
-repository_rulesets:
-  - name: project1-branch-policy
+rulesets:
+  - name: project1-refs-heads-policy-lab--blocking
     target: branch
     enforcement: active
     conditions:
       ref_name:
         include:
-          - "~DEFAULT_BRANCH"
+          - "refs/heads/policy-lab/**"
         exclude: []
     rules:
       - type: pull_request
@@ -34,15 +32,10 @@ repository_rulesets:
             - context: status-check
       - type: non_fast_forward
       - type: deletion
-  - name: project1-push-policy
+  - name: project1-push-blocking
     target: push
     enforcement: active
     rules:
-      - type: commit_author_email_pattern
-        parameters:
-          operator: ends_with
-          pattern: "@MngEnvMCAP267305.onmicrosoft.com"
-          negate: false
       - type: file_path_restriction
         parameters:
           restricted_file_paths:
@@ -54,3 +47,17 @@ repository_rulesets:
       - type: max_file_size
         parameters:
           max_file_size: 1
+  - name: project1-commit-metadata-blocking
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - "~ALL"
+        exclude: []
+    rules:
+      - type: commit_author_email_pattern
+        parameters:
+          operator: ends_with
+          pattern: "@MngEnvMCAP267305.onmicrosoft.com"
+          negate: false

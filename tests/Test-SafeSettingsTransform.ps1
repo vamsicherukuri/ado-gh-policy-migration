@@ -69,7 +69,10 @@ Assert-True (Test-Path $reportFile) "MIGRATION-REPORT.md created"
 
 # Test 3: Validate Suborg Content
 $suborgContent = Get-Content -LiteralPath $suborgFile -Raw
-Assert-True ($suborgContent -match 'name: project1') "Suborg has correct project name"
+Assert-True ($suborgContent -match '(?m)^suborgrepos:') "Suborg uses top-level suborgrepos:"
+Assert-True ($suborgContent -match '(?m)^rulesets:') "Suborg uses top-level rulesets:"
+Assert-True ($suborgContent -notmatch 'suborg\.repos') "Suborg does not use invalid suborg.repos"
+Assert-True ($suborgContent -notmatch 'repository_rulesets:') "Suborg does not use repository_rulesets:"
 Assert-True ($suborgContent -match '- sample2') "Suborg lists sample2"
 Assert-True ($suborgContent -match 'required_approving_review_count: 2') "Branch ruleset has 2 required reviewers"
 Assert-True ($suborgContent -match 'dismiss_stale_reviews_on_push: true') "Stale review dismissal mapped"
@@ -82,7 +85,7 @@ Assert-True ($suborgContent -match 'max_file_size: 1') "Max file size converted 
 
 # Test 4: Validate Repo Overrides Content
 $repoContent = Get-Content -LiteralPath $repoFile -Raw
-Assert-True ($repoContent -match 'name: sample2') "Repo override targets sample2"
+Assert-True ($repoContent -match '(?m)^rulesets:') "Repo override uses top-level rulesets:"
 Assert-True ($repoContent -match 'context: policy-lab-sample2') "Repo has specific build pipeline check context"
 
 Write-Host "ALL TESTS PASSED ($passCount assertions)" -ForegroundColor Green

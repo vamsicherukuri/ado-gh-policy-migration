@@ -308,11 +308,16 @@ def observe_branch(kind, settings, readback_repo, branch):
         expected = settings.get("minimumApproverCount")
         actual = (reviews or {}).get("required_approving_review_count")
         actual = actual if actual is not None else (pull_rule or {}).get("required_approving_review_count")
-        extra = {"dismiss_stale_reviews": (reviews or {}).get("dismiss_stale_reviews"),
-                 "require_last_push_approval": (reviews or {}).get("require_last_push_approval")}
+        reset_expected = bool(settings.get("resetOnSourcePush"))
+        reset_actual = bool((reviews or {}).get("dismiss_stale_reviews") or (pull_rule or {}).get("dismiss_stale_reviews_on_push"))
+        last_pusher_expected = bool(settings.get("blockLastPusherVote") or settings.get("prohibitRequesterFromApproving"))
+        last_pusher_actual = bool((reviews or {}).get("require_last_push_approval") or (pull_rule or {}).get("require_last_push_approval"))
+        extra = {"dismiss_stale_reviews": reset_actual, "require_last_push_approval": last_pusher_actual}
         if actual is None:
             return "NOT MIGRATED", "Required approving reviews", f"{where}: no required-reviews protection"
-        result = "MIGRATED" if actual == expected else "PARTIAL"
+        count_matches = (actual == expected)
+        sub_settings_match = (reset_expected == reset_actual) and (last_pusher_expected == last_pusher_actual)
+        result = "MIGRATED" if (count_matches and sub_settings_match) else ("PARTIAL" if count_matches else "DIFFERS")
         return result, "Required approving reviews", f"{where}: count {actual} (ADO {expected}); {extra}"
     if kind == "workitems":
         return "NOT MIGRATED", "No GitHub equivalent", f"{where}: GitHub has no linked-work-item gate"
@@ -359,9 +364,18 @@ def push_rules_present(readback):
     found = []
     for name, value in readback["repositories"].items():
         for ruleset in value.get("rulesets", []):
-            for item in ruleset.get("rules", []) if isinstance(ruleset, dict) else []:
+            if not isinstance(ruleset, dict):
+                continue
+            for item in ruleset.get("rules", []):
                 if item.get("type") in kinds:
-                    found.append(f"{name}:{ruleset.get('name')}:{item['type']}")
+                    found.append({
+                        "repository": name,
+                        "ruleset_name": ruleset.get("name"),
+                        "target": ruleset.get("target"),
+                        "enforcement": ruleset.get("enforcement"),
+                        "type": item.get("type"),
+                        "parameters": item.get("parameters", {})
+                    })
     return found
 
 
@@ -401,14 +415,19 @@ def compare(run):
             kind = info["kind"]
             if kind in ("email", "path", "case", "reserved", "length", "size"):
                 expected = "Not migrated - repository/push policy, not a branch policy"
-                result = "MIGRATED" if push_rules else "NOT MIGRATED"
+                target_type = {"email": "commit_author_email_pattern",
+                               "path": "file_path_restriction",
+                               "length": "max_file_path_length",
+                               "size": "max_file_size"}.get(kind)
+                matching_rules = [r for r in push_rules if r.get("type") == target_type] if target_type else []
+                result = "MIGRATED" if matching_rules else "NOT MIGRATED"
                 equivalent = {"email": "Ruleset: commit author email pattern",
                               "path": "Push ruleset: restrict file paths",
                               "case": "No GitHub equivalent",
                               "reserved": "No GitHub equivalent",
                               "length": "Push ruleset: max file path length",
                               "size": "Push ruleset: max file size"}[kind]
-                evidence = f"Push/metadata rules in migrated repos: {push_rules or 'none'}"
+                evidence = f"Matching rules in migrated repos: {matching_rules or 'none'}"
             else:
                 cross_repo = (config or {}).get("settings", {}).get("scope", [{}])[0].get("repositoryId") is None
                 name = "sample3" if cross_repo else "sample2"
