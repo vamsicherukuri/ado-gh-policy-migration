@@ -1,0 +1,4 @@
+AdoOrg,AdoProject,TargetGhOrg,TargetGhRulesetName
+ado-policy-testing,project1,ADO2GHEC,[ADO-Migrated] project1 Custom Ruleset
+ado-policy-testing,PolicyTest-FleetAlpha,ADO2GHEC,[ADO-Migrated] PolicyTest-FleetAlpha Custom Ruleset
+ado-policy-testing,PolicyTest-FleetBeta,ADO2GHEC,[ADO-Migrated] PolicyTest-FleetBeta Custom Ruleset

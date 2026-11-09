@@ -1,0 +1,128 @@
+{
+  "CaptureVersion": "3.0",
+  "CapturedAtUtc": "2026-11-06T22:51:29.6605965Z",
+  "Organization": "ado-policy-testing",
+  "ProjectName": "PolicyTest-FleetBeta",
+  "RepositoryName": "fleet-beta-service",
+  "TargetGhOrg": "ADO2GHEC",
+  "TargetGhRepo": "fleet-beta-service",
+  "RepositoryId": "76e2a4d3-60d3-44c4-b02b-f8e202579071",
+  "DefaultBranch": "refs/heads/main",
+  "TotalPoliciesCount": 4,
+  "PushPoliciesCount": 3,
+  "BranchPoliciesCount": 1,
+  "Policies": [
+    {
+      "Id": 55,
+      "PolicyCode": "R02",
+      "PolicyName": "File path validation",
+      "TypeGuid": "51c78909-e838-41a2-9496-c647091e3c61",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "filenamePatterns": [
+          "*.pem",
+          "*.key",
+          "id_rsa*"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/195b561e-d4b1-492d-ae72-8c3d6705c2be/_apis/policy/configurations/55"
+    },
+    {
+      "Id": 56,
+      "PolicyCode": "R03",
+      "PolicyName": "Case enforcement",
+      "TypeGuid": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/195b561e-d4b1-492d-ae72-8c3d6705c2be/_apis/policy/configurations/56"
+    },
+    {
+      "Id": 57,
+      "PolicyCode": "B01",
+      "PolicyName": "Require a minimum number of reviewers",
+      "TypeGuid": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/main",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/main",
+            "matchKind": "Exact",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/195b561e-d4b1-492d-ae72-8c3d6705c2be/_apis/policy/configurations/57"
+    },
+    {
+      "Id": 58,
+      "PolicyCode": "R01",
+      "PolicyName": "Commit author email validation",
+      "TypeGuid": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": false,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "authorEmailPatterns": [
+          "*@beta-service.internal",
+          "*@microsoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": "76e2a4d3-60d3-44c4-b02b-f8e202579071"
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/195b561e-d4b1-492d-ae72-8c3d6705c2be/_apis/policy/configurations/58"
+    }
+  ]
+}

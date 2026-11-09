@@ -1,0 +1,8 @@
+AdoOrg,AdoProject,AdoRepo,TargetGhOrg,TargetGhRepo
+ado-policy-testing,project1,sample2,ADO2GHEC,sample2
+ado-policy-testing,project1,sample-starreads,ADO2GHEC,StarReads
+ado-policy-testing,project1,sample-tailwind-backend,ADO2GHEC,sample-tailwind-backend
+ado-policy-testing,PolicyTest-FleetAlpha,fleet-alpha-core,ADO2GHEC,fleet-alpha-core
+ado-policy-testing,PolicyTest-FleetAlpha,fleet-alpha-api,ADO2GHEC,fleet-alpha-api
+ado-policy-testing,PolicyTest-FleetBeta,fleet-beta-service,ADO2GHEC,fleet-beta-service
+ado-policy-testing,PolicyTest-FleetBeta,fleet-beta-web,ADO2GHEC,fleet-beta-web

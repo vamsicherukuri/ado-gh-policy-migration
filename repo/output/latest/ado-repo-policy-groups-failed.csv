@@ -1,0 +1,3 @@
+"Organization","TargetRepo","SourceRepo","GroupId","RulesetType","RulesetName","RulesCount","Status"
+"ADO2GHEC","repo-does-not-exist-999","repo-does-not-exist-999","MANUAL","branch","ado-migrated-repo-branch-ruleset","0","Failed: Response status code does not indicate success: 404 (Not Found)."
+"ADO2GHEC","repo-does-not-exist-999","repo-does-not-exist-999","MANUAL","push","ado-migrated-repo-push-ruleset","0","Failed: Response status code does not indicate success: 404 (Not Found)."

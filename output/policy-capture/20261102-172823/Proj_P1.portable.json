@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "exportedAt": "2026-11-02T22:37:17.6019632Z",
+  "source": {
+    "organization": "ado-policy-testing",
+    "capturedAt": "2026-11-02T22:28:34.1010678Z",
+    "project": "Proj_P1"
+  },
+  "howToApply": "Resolve every {'$ref': 'kind:name'} to a destination ID. Stop on unresolved or ambiguous references. Rebuild settings.scope using repositoryId, refName, matchKind (null repositoryId means all repositories). POST {isEnabled,isBlocking,type:{id},settings} to https://dev.azure.com/{org}/{project}/_apis/policy/configurations?api-version=7.1. Review isDeleted before applying; never recreate deleted policies blindly.",
+  "references": {
+    "repositories": {
+      "Proj_P1": {
+        "sourceId": "1276bcfb-04fe-494d-bbce-fba393bbda80"
+      }
+    },
+    "identities": {},
+    "pipelines": {}
+  },
+  "policies": [
+    {
+      "inventoryId": null,
+      "source": {
+        "createdBy": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "policyId": 44,
+        "createdDate": "2026-11-02T22:22:43.1077178Z",
+        "revision": 1
+      },
+      "type": {
+        "displayName": "Minimum number of reviewers",
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+      },
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "scope": [
+        {
+          "repository": {
+            "$ref": "repository:Proj_P1"
+          },
+          "refName": "refs/heads/Aditya",
+          "matchKind": "Exact"
+        }
+      ],
+      "settings": {
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false
+      }
+    },
+    {
+      "inventoryId": null,
+      "source": {
+        "createdBy": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "policyId": 45,
+        "createdDate": "2026-11-02T22:22:43.2637312Z",
+        "revision": 1
+      },
+      "type": {
+        "displayName": "Comment requirements",
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+      },
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "scope": [
+        {
+          "repository": {
+            "$ref": "repository:Proj_P1"
+          },
+          "refName": "refs/heads/Aditya",
+          "matchKind": "Exact"
+        }
+      ],
+      "settings": {}
+    }
+  ],
+  "unresolvedReferences": []
+}

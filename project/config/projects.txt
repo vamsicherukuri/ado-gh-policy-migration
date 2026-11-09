@@ -1,0 +1,5 @@
+# Azure DevOps Projects to capture and migrate
+# Format: <ado_organization>/<project_name> or <project_name>
+ado-policy-testing/project1
+ado-policy-testing/PolicyTest-FleetAlpha
+ado-policy-testing/PolicyTest-FleetBeta

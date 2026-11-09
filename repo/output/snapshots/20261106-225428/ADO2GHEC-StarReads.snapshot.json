@@ -1,0 +1,258 @@
+{
+  "SnapshotVersion": "3.0",
+  "CapturedAtUtc": "2026-11-06T22:54:33.0573764Z",
+  "TargetOrg": "ADO2GHEC",
+  "RepositoryName": "StarReads",
+  "DefaultBranch": "master",
+  "AllowForking": false,
+  "AllowSquashMerge": true,
+  "AllowMergeCommit": true,
+  "AllowRebaseMerge": true,
+  "RulesetsCount": 4,
+  "Rulesets": [
+    {
+      "id": 26731511,
+      "name": "ado-migrated-branch-ruleset",
+      "target": "branch",
+      "source_type": "Repository",
+      "source": "ADO2GHEC/StarReads",
+      "enforcement": "evaluate",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "~DEFAULT_BRANCH",
+            "refs/heads/main",
+            "refs/heads/master"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "non_fast_forward"
+        },
+        {
+          "type": "pull_request",
+          "parameters": {
+            "required_approving_review_count": 2,
+            "dismiss_stale_reviews_on_push": true,
+            "required_reviewers": [],
+            "require_code_owner_review": true,
+            "dismissal_restriction": {
+              "enabled": false,
+              "allowed_actors": []
+            },
+            "require_last_push_approval": false,
+            "required_review_thread_resolution": true,
+            "require_extra_approval_for_unattributed_changes": true,
+            "allowed_merge_methods": [
+              "squash"
+            ]
+          }
+        },
+        {
+          "type": "commit_author_email_pattern",
+          "parameters": {
+            "operator": "ends_with",
+            "pattern": "@MngEnvMCAP267305.onmicrosoft.com",
+            "negate": false,
+            "name": "ADO Migrated Author Email Pattern"
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5WWkm1zgGX4_c",
+      "created_at": "2026-11-06T17:26:16.308-05:00",
+      "updated_at": "2026-11-06T17:26:16.347-05:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/ADO2GHEC/StarReads/rulesets/26731511"
+        },
+        "html": {
+          "href": "https://github.com/ADO2GHEC/StarReads/rules/26731511"
+        }
+      }
+    },
+    {
+      "id": 26731512,
+      "name": "ado-migrated-push-ruleset",
+      "target": "push",
+      "source_type": "Repository",
+      "source": "ADO2GHEC/StarReads",
+      "enforcement": "evaluate",
+      "conditions": null,
+      "rules": [
+        {
+          "type": "max_file_size",
+          "parameters": {
+            "max_file_size": 1,
+            "ignored_file_paths": []
+          }
+        },
+        {
+          "type": "max_file_path_length",
+          "parameters": {
+            "max_file_path_length": 180
+          }
+        },
+        {
+          "type": "file_path_restriction",
+          "parameters": {
+            "restricted_file_paths": [
+              "/policy-lab-blocked/*",
+              "*/policy-lab-blocked/*"
+            ],
+            "ignored_file_paths": []
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5WWkm1zgGX4_g",
+      "created_at": "2026-11-06T17:26:16.808-05:00",
+      "updated_at": "2026-11-06T17:26:16.835-05:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/ADO2GHEC/StarReads/rulesets/26731512"
+        },
+        "html": {
+          "href": "https://github.com/ADO2GHEC/StarReads/rules/26731512"
+        }
+      }
+    },
+    {
+      "id": 26731535,
+      "name": "ado-migrated-repo-branch-ruleset",
+      "target": "branch",
+      "source_type": "Repository",
+      "source": "ADO2GHEC/StarReads",
+      "enforcement": "evaluate",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "~DEFAULT_BRANCH"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "pull_request",
+          "parameters": {
+            "required_approving_review_count": 2,
+            "dismiss_stale_reviews_on_push": true,
+            "required_reviewers": [],
+            "require_code_owner_review": true,
+            "dismissal_restriction": {
+              "enabled": false,
+              "allowed_actors": []
+            },
+            "require_last_push_approval": false,
+            "required_review_thread_resolution": true,
+            "require_extra_approval_for_unattributed_changes": true,
+            "allowed_merge_methods": [
+              "merge",
+              "squash",
+              "rebase"
+            ]
+          }
+        },
+        {
+          "type": "required_status_checks",
+          "parameters": {
+            "strict_required_status_checks_policy": true,
+            "do_not_enforce_on_create": false,
+            "required_status_checks": [
+              {
+                "context": "Policy lab fixture validation"
+              },
+              {
+                "context": "continuous-integration"
+              }
+            ]
+          }
+        },
+        {
+          "type": "non_fast_forward"
+        },
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "commit_author_email_pattern",
+          "parameters": {
+            "operator": "ends_with",
+            "pattern": "@MngEnvMCAP267305.onmicrosoft.com",
+            "negate": false,
+            "name": "Enforce Corporate Author Email"
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5WWkm1zgGX5A8",
+      "created_at": "2026-11-06T17:26:32.475-05:00",
+      "updated_at": "2026-11-06T17:26:32.521-05:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/ADO2GHEC/StarReads/rulesets/26731535"
+        },
+        "html": {
+          "href": "https://github.com/ADO2GHEC/StarReads/rules/26731535"
+        }
+      }
+    },
+    {
+      "id": 26731537,
+      "name": "ado-migrated-repo-push-ruleset",
+      "target": "push",
+      "source_type": "Repository",
+      "source": "ADO2GHEC/StarReads",
+      "enforcement": "evaluate",
+      "conditions": null,
+      "rules": [
+        {
+          "type": "file_path_restriction",
+          "parameters": {
+            "restricted_file_paths": [
+              "/policy-lab-blocked/*",
+              "*/policy-lab-blocked/*"
+            ],
+            "ignored_file_paths": []
+          }
+        },
+        {
+          "type": "max_file_path_length",
+          "parameters": {
+            "max_file_path_length": 180
+          }
+        },
+        {
+          "type": "max_file_size",
+          "parameters": {
+            "max_file_size": 1,
+            "ignored_file_paths": []
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5WWkm1zgGX5BE",
+      "created_at": "2026-11-06T17:26:33.259-05:00",
+      "updated_at": "2026-11-06T17:26:33.283-05:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/ADO2GHEC/StarReads/rulesets/26731537"
+        },
+        "html": {
+          "href": "https://github.com/ADO2GHEC/StarReads/rules/26731537"
+        }
+      }
+    }
+  ],
+  "BranchProtections": []
+}

@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-11-02T21:04:38.965007+00:00",
+  "documentation": "https://docs.github.com/en/migrations/ado/understand-migrations-from-azure-devops-to-github - 'Branch policies for the repository (user-scoped branch policies and cross-repo branch policies are not included)'",
+  "toolVersion": "gh ado2gh\tgithub/gh-ado2gh\tv1.34.0",
+  "migrations": {
+    "sample2": {
+      "githubRepository": "ago2gh-policy-migration/project1-sample2",
+      "succeeded": true,
+      "migrationId": "RM_kgTaACQwOGU3ZTM3YS1lMmU1LTQ3MDgtYjg5My05MjJlOGY2OTQwMzQ",
+      "exitCode": 0
+    },
+    "sample3": {
+      "githubRepository": "ago2gh-policy-migration/project1-sample3",
+      "succeeded": true,
+      "migrationId": "RM_kgTaACQzYWI5YWYzNC1mZjQ3LTRlOGUtYmE5My1hNjcwM2RjNWJkYTY",
+      "exitCode": 0
+    },
+    "sample4": {
+      "githubRepository": "ago2gh-policy-migration/project1-sample4",
+      "succeeded": true,
+      "migrationId": "RM_kgTaACQ4MDNmMmFmZC03YWJkLTQ3MmYtYjczMy1mMWU0N2U4MzA0ODA",
+      "exitCode": 0
+    }
+  },
+  "observedCounts": {
+    "NOT MIGRATED": 32,
+    "UNVERIFIED": 8,
+    "MIGRATED": 2
+  },
+  "verdictCounts": {
+    "MATCHES DOCS": 29,
+    "UNVERIFIED": 8,
+    "DIFFERS FROM DOCS": 4,
+    "DOCS UNCLEAR": 1
+  },
+  "githubProtectionByRepo": {
+    "sample2": [
+      [
+        "policy-direct/main"
+      ],
+      0
+    ],
+    "sample3": [
+      [],
+      0
+    ],
+    "sample4": [
+      [],
+      0
+    ]
+  },
+  "githubOrgNonCounterChanges": [],
+  "pullRequests": {
+    "sample2": {
+      "ado": 2,
+      "github": 2
+    },
+    "sample3": {
+      "ado": 2,
+      "github": 2
+    },
+    "sample4": {
+      "ado": 2,
+      "github": 1
+    }
+  },
+  "refsMatch": {
+    "sample2": true,
+    "sample3": true,
+    "sample4": true
+  },
+  "mannequins": {
+    "data": {
+      "organization": {
+        "mannequins": {
+          "nodes": [
+            {
+              "login": "kiran",
+              "email": null,
+              "claimant": null
+            },
+            {
+              "login": "admin",
+              "email": null,
+              "claimant": null
+            },
+            {
+              "login": "kiranch",
+              "email": null,
+              "claimant": null
+            }
+          ]
+        }
+      }
+    }
+  }
+}

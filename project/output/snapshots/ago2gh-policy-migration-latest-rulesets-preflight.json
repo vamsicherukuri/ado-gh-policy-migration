@@ -1,0 +1,13 @@
+{
+  "SnapshotVersion": "2.0",
+  "TargetOrganization": "ago2gh-policy-migration",
+  "PlanName": "enterprise",
+  "CapturedAtUtc": "2026-11-04T05:21:17.4845992Z",
+  "AuthSource": "GitHub CLI Keyring (User: vamsicherukuri)",
+  "ScopeMode": "Auto",
+  "OrgLevelAccess": false,
+  "OrgRulesetsCount": 0,
+  "OrgRulesets": [],
+  "RepoRulesetsCount": 0,
+  "RepoRulesets": []
+}

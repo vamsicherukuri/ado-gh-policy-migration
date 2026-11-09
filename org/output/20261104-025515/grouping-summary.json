@@ -1,0 +1,31 @@
+{
+  "GeneratedAt": "2026-11-04T03:49:40.1857886Z",
+  "SourceDirectory": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\output\\20261104-025515",
+  "TotalOrgsAnalyzed": 2,
+  "DistinctGroupsCount": 2,
+  "DefaultDominantGroup": "Group-1",
+  "Groups": [
+    {
+      "GroupId": "Group-1",
+      "Label": "Profile A (Least Policies Active)",
+      "OrgCount": 1,
+      "ActivePolicyCount": 6,
+      "Organizations": [
+        "ado-policy-testing"
+      ]
+    },
+    {
+      "GroupId": "Group-2",
+      "Label": "Profile B (Most Policies Active)",
+      "OrgCount": 1,
+      "ActivePolicyCount": 8,
+      "Organizations": [
+        "contosodevopstest"
+      ]
+    }
+  ],
+  "StaticCrosswalkFile": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\ado-to-ghec-crosswalk.csv",
+  "GeneratedFiles": {
+    "OrgPolicyMatrixCsv": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\output\\20261104-025515\\ado-org-policy-matrix.csv"
+  }
+}

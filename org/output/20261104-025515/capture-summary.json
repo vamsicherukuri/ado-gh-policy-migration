@@ -1,0 +1,16 @@
+{
+  "runId": "20261104-025515",
+  "capturedAt": "2026-11-04T02:55:18.4838130Z",
+  "organizationsScanned": 2,
+  "organizationsSuccess": 2,
+  "organizationsFailed": 0,
+  "totalPoliciesInventoried": 13,
+  "conflictsDetected": 3,
+  "artifacts": {
+    "matrixCsv": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\output\\20261104-025515\\org-governance-matrix.csv",
+    "orgJsonSnapshots": [
+      "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\output\\20261104-025515\\ado-policy-testing.org-policies.json",
+      "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\output\\20261104-025515\\contosodevopstest.org-policies.json"
+    ]
+  }
+}

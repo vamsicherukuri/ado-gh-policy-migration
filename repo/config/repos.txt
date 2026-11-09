@@ -1,0 +1,11 @@
+# Azure DevOps Target Repositories
+# Format:
+#   Cloud: org/project/repository
+#   Server 2022.1: https://{server}/tfs/{collection}/{project}/_git/{repository}
+ado-policy-testing/project1/sample2
+ado-policy-testing/project1/sample-starreads
+ado-policy-testing/project1/sample-tailwind-backend
+ado-policy-testing/PolicyTest-FleetAlpha/fleet-alpha-core
+ado-policy-testing/PolicyTest-FleetAlpha/fleet-alpha-api
+ado-policy-testing/PolicyTest-FleetBeta/fleet-beta-service
+ado-policy-testing/PolicyTest-FleetBeta/fleet-beta-web

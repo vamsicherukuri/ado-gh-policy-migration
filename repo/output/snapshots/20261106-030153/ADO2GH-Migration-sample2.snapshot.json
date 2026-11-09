@@ -1,0 +1,14 @@
+{
+  "SnapshotVersion": "3.0",
+  "CapturedAtUtc": "2026-11-06T03:01:54.7589060Z",
+  "TargetOrg": "ADO2GH-Migration",
+  "RepositoryName": "sample2",
+  "DefaultBranch": "master",
+  "AllowForking": false,
+  "AllowSquashMerge": true,
+  "AllowMergeCommit": true,
+  "AllowRebaseMerge": true,
+  "RulesetsCount": 0,
+  "Rulesets": [],
+  "BranchProtections": []
+}

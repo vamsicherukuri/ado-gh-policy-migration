@@ -1,0 +1,40 @@
+{
+  "startedAt": "2026-10-24T00:57:32.710142+00:00",
+  "toolVersion": "gh ado2gh\tgithub/gh-ado2gh\tv1.34.0",
+  "repositories": {
+    "sample2": {
+      "githubRepository": "ago2gh-policy-migration/project1-sample2",
+      "command": "gh ado2gh migrate-repo --ado-org ado-policy-testing --ado-team-project project1 --ado-repo sample2 --github-org ago2gh-policy-migration --github-repo project1-sample2 --target-repo-visibility private --verbose",
+      "startedAt": "2026-10-24T00:57:32.889095+00:00",
+      "finishedAt": "2026-10-24T01:01:47.024562+00:00",
+      "exitCode": 0,
+      "migrationId": "RM_kgTaACQwOGU3ZTM3YS1lMmU1LTQ3MDgtYjg5My05MjJlOGY2OTQwMzQ",
+      "succeeded": true,
+      "migrationLogDownloaded": true,
+      "downloadLogsOutput": "[2026-10-23 21:01:45] [INFO] You are running an up-to-date version of the ado2gh CLI [v1.34.0]\n[2026-10-23 21:01:45] [INFO] GITHUB ORG: ago2gh-policy-migration\n[2026-10-23 21:01:45] [INFO] GITHUB REPO: project1-sample2\n[2026-10-23 21:01:45] [INFO] MIGRATION LOG FILE: C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample2-migration.log\n[2026-10-23 21:01:45] [INFO] OVERWRITE: true\n[2026-10-23 21:01:45] [WARNING] Migration logs are only available for 24 hours after a migration finishes!\n[2026-10-23 21:01:45] [INFO] Downloading migration logs...\n[2026-10-23 21:01:46] [INFO] Downloading log for repository project1-sample2 to C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample2-migration.log...\n[2026-10-23 21:01:46] [INFO] Downloaded project1-sample2 log to C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample2-migration.log.\n"
+    },
+    "sample3": {
+      "githubRepository": "ago2gh-policy-migration/project1-sample3",
+      "command": "gh ado2gh migrate-repo --ado-org ado-policy-testing --ado-team-project project1 --ado-repo sample3 --github-org ago2gh-policy-migration --github-repo project1-sample3 --target-repo-visibility private --verbose",
+      "startedAt": "2026-10-24T01:01:47.185061+00:00",
+      "finishedAt": "2026-10-24T01:03:54.570950+00:00",
+      "exitCode": 0,
+      "migrationId": "RM_kgTaACQzYWI5YWYzNC1mZjQ3LTRlOGUtYmE5My1hNjcwM2RjNWJkYTY",
+      "succeeded": true,
+      "migrationLogDownloaded": true,
+      "downloadLogsOutput": "[2026-10-23 21:03:53] [INFO] You are running an up-to-date version of the ado2gh CLI [v1.34.0]\n[2026-10-23 21:03:53] [INFO] GITHUB ORG: ago2gh-policy-migration\n[2026-10-23 21:03:53] [INFO] GITHUB REPO: project1-sample3\n[2026-10-23 21:03:53] [INFO] MIGRATION LOG FILE: C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample3-migration.log\n[2026-10-23 21:03:53] [INFO] OVERWRITE: true\n[2026-10-23 21:03:53] [WARNING] Migration logs are only available for 24 hours after a migration finishes!\n[2026-10-23 21:03:53] [INFO] Downloading migration logs...\n[2026-10-23 21:03:54] [INFO] Downloading log for repository project1-sample3 to C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample3-migration.log...\n[2026-10-23 21:03:54] [INFO] Downloaded project1-sample3 log to C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample3-migration.log.\n"
+    },
+    "sample4": {
+      "githubRepository": "ago2gh-policy-migration/project1-sample4",
+      "command": "gh ado2gh migrate-repo --ado-org ado-policy-testing --ado-team-project project1 --ado-repo sample4 --github-org ago2gh-policy-migration --github-repo project1-sample4 --target-repo-visibility private --verbose",
+      "startedAt": "2026-10-24T01:03:54.728221+00:00",
+      "finishedAt": "2026-10-24T01:07:10.336060+00:00",
+      "exitCode": 0,
+      "migrationId": "RM_kgTaACQ4MDNmMmFmZC03YWJkLTQ3MmYtYjczMy1mMWU0N2U4MzA0ODA",
+      "succeeded": true,
+      "migrationLogDownloaded": true,
+      "downloadLogsOutput": "[2026-10-23 21:07:08] [INFO] You are running an up-to-date version of the ado2gh CLI [v1.34.0]\n[2026-10-23 21:07:08] [INFO] GITHUB ORG: ago2gh-policy-migration\n[2026-10-23 21:07:08] [INFO] GITHUB REPO: project1-sample4\n[2026-10-23 21:07:08] [INFO] MIGRATION LOG FILE: C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample4-migration.log\n[2026-10-23 21:07:08] [INFO] OVERWRITE: true\n[2026-10-23 21:07:09] [WARNING] Migration logs are only available for 24 hours after a migration finishes!\n[2026-10-23 21:07:09] [INFO] Downloading migration logs...\n[2026-10-23 21:07:09] [INFO] Downloading log for repository project1-sample4 to C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample4-migration.log...\n[2026-10-23 21:07:10] [INFO] Downloaded project1-sample4 log to C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\ado2gh-migration\\20261023Ado2GhMigration01\\migration-logs\\project1-sample4-migration.log.\n"
+    }
+  },
+  "finishedAt": "2026-10-24T01:07:10.338556+00:00"
+}

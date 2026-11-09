@@ -1,0 +1,2 @@
+"GroupId","RepositoryCount","ActivePolicies","PolicyCodes","MemberRepos"
+"REPO-GRP-01","3","13","B01, B03, B04, B05, B06, B07, B08, R01, R02, R03, R04, R05, R06","ado-policy-testing/project1/sample-starreads; ado-policy-testing/project1/sample-tailwind-backend; ado-policy-testing/project1/sample2"

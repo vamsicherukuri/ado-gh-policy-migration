@@ -1,0 +1,14 @@
+{
+  "SnapshotVersion": "3.0",
+  "CapturedAtUtc": "2026-11-06T21:19:35.3766696Z",
+  "TargetOrg": "ADO2GHEC",
+  "RepositoryName": "StarReads",
+  "DefaultBranch": "master",
+  "AllowForking": false,
+  "AllowSquashMerge": true,
+  "AllowMergeCommit": true,
+  "AllowRebaseMerge": true,
+  "RulesetsCount": 0,
+  "Rulesets": [],
+  "BranchProtections": []
+}

@@ -3,7 +3,7 @@
 .SYNOPSIS
     Regression test suite covering precision mapping edge cases:
       1. Configuration keys (suborgrepos, rulesets)
-      2. Multi-repo and ref tuples (Prefix matchKind -> **)
+      2. Multi-repo and ref tuples (Prefix matchKind -> pathname-aware patterns)
       3. Capture ambiguity detection (rejects unspecific/duplicate matches)
       4. Advisory vs blocking partitioning (isBlocking=false -> evaluate)
       5. Required reviewers marked as Partial with identity details
@@ -21,7 +21,7 @@ $ErrorActionPreference = "Stop"
 $scriptRoot = $PSScriptRoot
 $transformDir = Join-Path $scriptRoot "..\scripts\transform"
 $pipelineDir = Join-Path $scriptRoot "..\scripts\pipeline"
-$testOutput = Join-Path $scriptRoot "..\output\test-regression"
+$testOutput = Join-Path ([IO.Path]::GetTempPath()) ("migration-regression-" + [guid]::NewGuid().ToString("N"))
 
 # Load modules
 . (Join-Path $transformDir "ConvertTo-Yaml.ps1")
@@ -52,8 +52,7 @@ function Assert-Throws([scriptblock]$Block, [string]$ExpectedMessageSubstring, [
 
 Write-Host "`nRunning Migration Edge Case Regression Tests..." -ForegroundColor Cyan
 
-# Clean scratch directory
-Remove-Item -Recurse -Force $testOutput -ErrorAction SilentlyContinue
+try {
 $null = New-Item -ItemType Directory -Path $testOutput -Force
 
 # ---------------------------------------------------------------------------
@@ -108,8 +107,8 @@ $syntheticAdo = [ordered]@{
                 }
             )
             settings = [ordered]@{
-                genre = "advisory"
-                name = "linter"
+                statusGenre = "advisory"
+                statusName = "linter"
             }
         },
         # 3. Merge-only policy (NO reviewer requirements)
@@ -164,7 +163,7 @@ $syntheticAdo = [ordered]@{
                 }
             )
             settings = [ordered]@{
-                authorEmailPatterns = @("*@company.com", "service-bot@partner.org")
+                authorEmailPatterns = @("*@company.com", "*@*.partner.org", "bot+ci@ci.net")
             }
         }
     )
@@ -173,10 +172,15 @@ $syntheticAdo = [ordered]@{
 $fixturePath = Join-Path $testOutput "project-alpha.portable.json"
 $syntheticAdo | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $fixturePath -Encoding utf8
 
-# Execute transform
-& (Join-Path $transformDir "Convert-AdoToSafeSettings.ps1") `
+$contextMapPath = Join-Path $testOutput "contexts.json"
+@{ statuses = @{ "advisory/linter" = "advisory/linter" } } |
+    ConvertTo-Json | Set-Content -LiteralPath $contextMapPath
+
+# Dot-source the real transform so helper behavior can also be exercised.
+. (Join-Path $transformDir "Convert-AdoToSafeSettings.ps1") `
     -PortableJsonPath $fixturePath `
     -OutputDir $testOutput `
+    -CheckContextMapPath $contextMapPath `
     -Enforcement "active"
 
 $suborgFile = Join-Path $testOutput ".github\suborgs\project-alpha.yml"
@@ -213,10 +217,116 @@ Assert-True ($reportText -match 'Required reviewers.*Partial / Manual Configurat
 Assert-True ($reportText -match 'CODEOWNERS') "Report explains CODEOWNERS prerequisite"
 
 # --- Fix 6: Author Email Ruleset (Branch target, ~ALL, multiple patterns) ---
-Assert-True ($suborgText -match 'name:.*email.*|.*commit-metadata.*') "Dedicated metadata ruleset exists"
+Assert-True ($suborgText -match 'name:.*metadata') "Dedicated metadata ruleset exists"
 Assert-True ($suborgText -match 'target: branch') "Email metadata ruleset targets branch (not push)"
 Assert-True ($suborgText -match '~ALL') "Email metadata ruleset targets ~ALL"
-Assert-True ($suborgText -match '@company\.com' -and $suborgText -match 'service-bot@partner\.org') "Both email patterns preserved"
+Assert-True ($repo1Text -match 'context: advisory/linter') "Native ADO status field names map to the destination context"
+$emailRuleset = @($projectBlocks.Rulesets | Where-Object { $_.name -match 'metadata' })[0]
+Assert-True ($emailRuleset.rules.Count -eq 1) "Email alternatives emit one rule"
+$emailParameters = $emailRuleset.rules[0].parameters
+Assert-True ($emailParameters.operator -eq "regex") "Email operator conforms to GitHub schema"
+foreach ($email in @("dev@company.com", "ops@sub.partner.org", "bot+ci@ci.net")) {
+    Assert-True ([regex]::IsMatch($email, $emailParameters.pattern)) "Email allowlist accepts $email"
+}
+foreach ($email in @("attacker@fakecompany.com", "dev@company.com.attacker.com", "botxci@ci.net")) {
+    Assert-True (-not [regex]::IsMatch($email, $emailParameters.pattern)) "Email allowlist rejects $email"
+}
+
+$prefixPatterns = @(Convert-AdoRefToGitHubPattern "refs/heads/release" Prefix "~DEFAULT_BRANCH")
+Assert-True (($prefixPatterns -join ',') -eq 'refs/heads/release*,refs/heads/release*/**/*') "String prefix uses the documented recursive fnmatch subset"
+$folderPatterns = @(Convert-AdoRefToGitHubPattern "refs/heads/policy-lab/" Prefix "~DEFAULT_BRANCH")
+Assert-True (($folderPatterns -join ',') -eq 'refs/heads/policy-lab/**/*') "Folder prefix includes direct and deep descendants"
+$matcherDir = Join-Path $testOutput "matcher"
+$null = New-Item -ItemType Directory -Path $matcherDir
+git -C $matcherDir init --quiet
+if ($LASTEXITCODE -ne 0) { throw "Cannot initialize offline wildcard test repository" }
+$prefixPatterns | Set-Content (Join-Path $matcherDir ".gitignore")
+foreach ($ref in @("release", "release-candidate", "release/v1", "release-candidate/subbranch", "release/2026/01")) {
+    git -C $matcherDir check-ignore --no-index --quiet "refs/heads/$ref"
+    Assert-True ($LASTEXITCODE -eq 0) "Git pathname wildcard corpus includes $ref"
+}
+git -C $matcherDir check-ignore --no-index --quiet "refs/heads/not-release/v1"
+Assert-True ($LASTEXITCODE -eq 1) "Prefix does not include unrelated branches"
+$folderPatterns | Set-Content (Join-Path $matcherDir ".gitignore")
+foreach ($ref in @("policy-lab/main", "policy-lab/a/b/c")) {
+    git -C $matcherDir check-ignore --no-index --quiet "refs/heads/$ref"
+    Assert-True ($LASTEXITCODE -eq 0) "Folder prefix includes $ref"
+}
+git -C $matcherDir check-ignore --no-index --quiet "refs/heads/policy-lab-candidate/main"
+Assert-True ($LASTEXITCODE -eq 1) "Folder prefix preserves its slash boundary"
+
+$items = [Collections.Generic.List[object]]::new()
+foreach ($ref in @("refs/heads/release/a", "refs/heads/release-a")) {
+    $items.Add(@{ Policy = @{ type = @{ displayName = "Minimum number of reviewers" }; settings = @{ minimumApproverCount = 2 } }; RefPattern = @($ref); IsBlocking = $true })
+}
+$names = (Build-SafeSettingsScopeBlocks $items "repo").Rulesets.name
+Assert-True (@($names | Select-Object -Unique).Count -eq 2) "Different refs have distinct ruleset identities"
+$items.Reverse()
+$reorderedNames = (Build-SafeSettingsScopeBlocks $items "repo").Rulesets.name
+Assert-True ((@($names | Sort-Object) -join ',') -eq (@($reorderedNames | Sort-Object) -join ',')) "Ruleset names are order-independent"
+$projectNames = (Build-SafeSettingsScopeBlocks $items "repo" -ScopeKind project).Rulesets.name
+Assert-True (@($names + $projectNames | Select-Object -Unique).Count -eq 4) "Project and repository layers cannot collide"
+foreach ($counts in @(@(3, 1), @(1, 3), @(0, 0))) {
+    $items.Clear()
+    foreach ($count in $counts) {
+        $items.Add(@{ Policy = @{ type = @{ displayName = "Minimum number of reviewers" }; settings = @{ minimumApproverCount = $count } }; RefPattern = @("refs/heads/main"); IsBlocking = $true })
+    }
+    $blocks = Build-SafeSettingsScopeBlocks $items "counts"
+    Assert-True ($blocks.Rulesets[0].rules[0].parameters.required_approving_review_count -eq ($counts | Measure-Object -Maximum).Maximum) "Reviewer aggregation retains the maximum, including zero"
+}
+$items[0].Policy.settings.minimumApproverCount = -1
+Assert-Throws { Build-SafeSettingsScopeBlocks $items "invalid" } "minimumApproverCount" "Negative reviewer counts fail explicitly"
+$items.Clear()
+$items.Add(@{
+    Policy = @{ type = @{ displayName = "Minimum number of reviewers" }; settings = @{
+        minimumApproverCount = 2; prohibitRequesterFromApproving = $true
+    } }
+    RefPattern = @("refs/heads/main"); IsBlocking = $true
+})
+$requesterBlocks = Build-SafeSettingsScopeBlocks $items "requester"
+Assert-True (-not $requesterBlocks.Rulesets[0].rules[0].parameters.require_last_push_approval) "Requester restrictions do not invent last-pusher restrictions"
+$Enforcement = "disabled"
+$items[0].IsBlocking = $false
+Assert-True ((Build-SafeSettingsScopeBlocks $items "advisory").Rulesets[0].enforcement -eq "disabled") "Explicit disabled overrides optional evaluate"
+$Enforcement = "active"
+
+$conversionFixture = @{
+    source = @{ organization = "fixture"; project = "conversion" }
+    references = @{ repositories = @{ repo = @{} } }
+    policies = @(
+        @{ type = @{ displayName = "File size restriction" }; settings = @{ maximumGitBlobSizeInBytes = 1500000 } },
+        @{ type = @{ displayName = "Build" }; settings = @{ buildDefinitionId = 77 } }
+    )
+}
+$conversionPath = Join-Path $testOutput "conversion.portable.json"
+$conversionFixture | ConvertTo-Json -Depth 20 | Set-Content $conversionPath
+$conversionOutput = Join-Path $testOutput "conversion"
+& (Join-Path $transformDir "Convert-AdoToSafeSettings.ps1") -PortableJsonPath $conversionPath -OutputDir $conversionOutput
+$conversionReport = Get-Content (Join-Path $conversionOutput "MIGRATION-REPORT.md") -Raw
+$conversionYaml = Get-Content (Join-Path $conversionOutput ".github\suborgs\conversion.yml") -Raw
+Assert-True ($conversionReport -match '1500000 bytes.*1048576 bytes') "Persisted report identifies the exact threshold tightening"
+Assert-True ($conversionReport -match 'UNVERIFIED.*77') "Persisted report identifies the unresolved build ID"
+Assert-True ($conversionYaml -notmatch 'required_status_checks|pipeline-77') "Unmapped builds never become guessed active checks"
+$items.Clear()
+foreach ($patterns in @(@("a?@company.com", "Z+ci@company.com"), @("*@partner.org"))) {
+    $items.Add(@{
+        Policy = @{ type = @{ displayName = "Commit author email validation" }; settings = @{ authorEmailPatterns = $patterns } }
+        RefPattern = @("~ALL"); IsBlocking = $true
+    })
+}
+$emailPolicies = (Build-SafeSettingsScopeBlocks $items "multiple-email-policies").Rulesets
+Assert-True ($emailPolicies.Count -eq 2) "Different source email policies remain separate conjunctive rulesets"
+Assert-True (@($emailPolicies | Where-Object { $_.rules.Count -ne 1 }).Count -eq 0) "Each email policy emits exactly one regex rule"
+$wildcardRegex = Convert-EmailPatternsToRegex @("a?@company.com", "Z+ci@company.com")
+Assert-True ("ab@company.com" -cmatch $wildcardRegex -and "abc@company.com" -cnotmatch $wildcardRegex) "Question-mark wildcards match exactly one character"
+Assert-True ($wildcardRegex -ceq '^(Z\+ci@company\.com|a.@company\.com)$') "Regex alternatives use portable ordinal sorting"
+Assert-Throws { Convert-EmailPatternsToRegex @("") } "empty patterns" "Empty email patterns are rejected"
+$items.Clear()
+$items.Add(@{
+    Policy = @{ type = @{ displayName = "File size restriction" }; settings = @{ maximumGitBlobSizeInBytes = 500000 } }
+    RefPattern = @("~ALL"); IsBlocking = $true
+})
+Assert-True ((Build-SafeSettingsScopeBlocks $items "small-file-limit").Rulesets.Count -eq 0) "Unrepresentable sub-MiB limits are omitted, not weakened"
 
 # --- Fix 9: Merge-Only Zero Approvals ---
 Assert-True ($repo2Text -match 'required_approving_review_count: 0') "Merge-only policy explicitly sets approvals to 0"
@@ -261,7 +371,7 @@ Assert-Throws {
         -ProjectName "project-alpha"
 } "" "Submit-SafeSettingsPR fails on git status failure in non-git directory"
 
-# Clean scratch directory
-Remove-Item -Recurse -Force $testOutput -ErrorAction SilentlyContinue
-
 Write-Host "`nALL REGRESSION SPEC TESTS PASSED ($passCount assertions)" -ForegroundColor Green
+} finally {
+    if (Test-Path -LiteralPath $testOutput) { Remove-Item -LiteralPath $testOutput -Recurse -Force }
+}

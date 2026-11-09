@@ -1,0 +1,14 @@
+PolicyCode,AdoPolicyName,AdoInternalKey,TargetGhPolicyKey,ImplementationType,ProposedGhSetting,ApplyPolicy
+P01,Third-party application access through OAuth,Policy.DisallowOAuthAuthentication,GH-OAUTH-RESTRICTIONS,Direct Org API,Enforce / Restrict,True
+P02,SSH authentication,Policy.DisallowSecureShell,GH-SSH-KEY-POLICY,Semantically Similar,Enforce / Restrict,False
+P03,Validate SSH key expiration,Policy.ValidateSshKeyExpiration,GH-SSH-KEY-EXPIRATION,Semantically Similar,Enforce / Require,False
+P04,Log audit events,Policy.LogAuditEvents,GH-AUDIT-STREAM,Direct Org API,Enforce / Require,False
+P05,Restrict personal access token (PAT) creation,Policy.DisablePATCreation,GH-PAT-RESTRICTIONS,Direct Org API,Require Fine-Grained Approval,True
+P06,Protections when using public package registries,Policy.ArtifactsExternalPackageProtectionToken,GH-PACKAGES-PROTECTION,Direct Org API,Enforce / Restrict,False
+P07,Enable IP / Entra ID Conditional Access validation,Policy.EnforceAADConditionalAccess,GH-SAML-ENFORCEMENT,Architectural (Enterprise/IdP),Enforce / Restrict,False
+P08,External guest access,Policy.DisallowAadGuestUserAccess,GH-MEMBER-INVITE-POLICY,Direct Org API,Disallow External Collaborators,True
+P09,Allow team and project admins to invite new users,Policy.AllowTeamAdminsInvitationsAccessToken,GH-TEAM-INVITE-DELEGATION,Direct Org API,Enforce / Restrict,True
+P10,Request access,Policy.AllowRequestAccessToken,GH-REQUEST-ACCESS,Direct Org API,Allow / Enable,False
+P11,Allow public projects / Anonymous access,Policy.AllowAnonymousAccess,GH-REPO-VISIBILITY,Direct Org API,Disallow Public Repositories,True
+P12,Enforce repository forking restriction,Policy.EnforceRepositoryForking,GH-REPO-FORKING,Direct Org API,Disallow Private Repo Forking,True
+P-BASIC,Disallow Basic Authentication credentials,Policy.DisallowBasicAuthentication,GH-AUTH-BASIC-DISABLED,Deprecated in GitHub,Native Platform Enforcement,False

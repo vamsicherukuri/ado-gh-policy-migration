@@ -1,0 +1,478 @@
+{
+  "CaptureVersion": "3.0",
+  "CapturedAtUtc": "2026-11-06T21:19:32.3283139Z",
+  "Organization": "ado-policy-testing",
+  "ProjectName": "project1",
+  "RepositoryName": "sample-starreads",
+  "TargetGhOrg": "ADO2GHEC",
+  "TargetGhRepo": "StarReads",
+  "RepositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0",
+  "DefaultBranch": "refs/heads/master",
+  "TotalPoliciesCount": 19,
+  "PushPoliciesCount": 6,
+  "BranchPoliciesCount": 13,
+  "Policies": [
+    {
+      "Id": 1,
+      "PolicyCode": "R01",
+      "PolicyName": "Commit author email validation",
+      "TypeGuid": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/1"
+    },
+    {
+      "Id": 2,
+      "PolicyCode": "R02",
+      "PolicyName": "File path validation",
+      "TypeGuid": "51c78909-e838-41a2-9496-c647091e3c61",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/2"
+    },
+    {
+      "Id": 3,
+      "PolicyCode": "R03",
+      "PolicyName": "Case enforcement",
+      "TypeGuid": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/3"
+    },
+    {
+      "Id": 4,
+      "PolicyCode": "R04",
+      "PolicyName": "Reserved names",
+      "TypeGuid": "db2b9b4c-180d-4529-9701-01541d19f36b",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/4"
+    },
+    {
+      "Id": 5,
+      "PolicyCode": "R05",
+      "PolicyName": "Maximum path length",
+      "TypeGuid": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/5"
+    },
+    {
+      "Id": 6,
+      "PolicyCode": "R06",
+      "PolicyName": "Maximum file size",
+      "TypeGuid": "2e26e725-8201-4edd-8bf5-978563c34a80",
+      "ScopeType": "RepositoryPushPolicy",
+      "TargetBranch": "ALL",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/6"
+    },
+    {
+      "Id": 13,
+      "PolicyCode": "B01",
+      "PolicyName": "Require a minimum number of reviewers",
+      "TypeGuid": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/policy-lab/",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/13"
+    },
+    {
+      "Id": 14,
+      "PolicyCode": "B08",
+      "PolicyName": "Check for linked work items",
+      "TypeGuid": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/policy-lab/",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14"
+    },
+    {
+      "Id": 15,
+      "PolicyCode": "B03",
+      "PolicyName": "Check for comment resolution",
+      "TypeGuid": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/policy-lab/",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15"
+    },
+    {
+      "Id": 16,
+      "PolicyCode": "B04",
+      "PolicyName": "Limit merge types",
+      "TypeGuid": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/policy-lab/",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/16"
+    },
+    {
+      "Id": 17,
+      "PolicyCode": "B05",
+      "PolicyName": "Build validation",
+      "TypeGuid": "0609b952-1397-4640-95ec-e00a01b2c241",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/policy-lab/",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "buildDefinitionId": 2,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17"
+    },
+    {
+      "Id": 18,
+      "PolicyCode": "B06",
+      "PolicyName": "Status checks (External services)",
+      "TypeGuid": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/policy-lab/",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18"
+    },
+    {
+      "Id": 19,
+      "PolicyCode": "B07",
+      "PolicyName": "Automatically included reviewers",
+      "TypeGuid": "fd2167ab-b0be-447a-8ec8-39368250530e",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/policy-lab/",
+      "IsCrossRepo": true,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/19"
+    },
+    {
+      "Id": 27,
+      "PolicyCode": "B01",
+      "PolicyName": "Require a minimum number of reviewers",
+      "TypeGuid": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/master",
+      "IsCrossRepo": false,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/27"
+    },
+    {
+      "Id": 28,
+      "PolicyCode": "B03",
+      "PolicyName": "Check for comment resolution",
+      "TypeGuid": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/master",
+      "IsCrossRepo": false,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/28"
+    },
+    {
+      "Id": 29,
+      "PolicyCode": "B04",
+      "PolicyName": "Limit merge types",
+      "TypeGuid": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/master",
+      "IsCrossRepo": false,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/29"
+    },
+    {
+      "Id": 30,
+      "PolicyCode": "B08",
+      "PolicyName": "Check for linked work items",
+      "TypeGuid": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/master",
+      "IsCrossRepo": false,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/30"
+    },
+    {
+      "Id": 31,
+      "PolicyCode": "B06",
+      "PolicyName": "Status checks (External services)",
+      "TypeGuid": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/master",
+      "IsCrossRepo": false,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "statusName": "sonarcloud-analysis",
+        "statusGenre": "security",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/31"
+    },
+    {
+      "Id": 32,
+      "PolicyCode": "B07",
+      "PolicyName": "Automatically included reviewers",
+      "TypeGuid": "fd2167ab-b0be-447a-8ec8-39368250530e",
+      "ScopeType": "BranchPolicy",
+      "TargetBranch": "refs/heads/master",
+      "IsCrossRepo": false,
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Security lead review required for StarReads master branch.",
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/32"
+    }
+  ]
+}

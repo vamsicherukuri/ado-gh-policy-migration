@@ -1,0 +1,137 @@
+{
+  "CaptureVersion": "2.0",
+  "CapturedAtUtc": "2026-11-09T20:57:04.1215105Z",
+  "Organization": "ado-policy-testing",
+  "ProjectName": "PolicyTest-FleetAlpha",
+  "ProjectId": "93c44f67-cab4-4c78-bfb5-39baff3ab08d",
+  "RepositoryCount": 3,
+  "TotalPoliciesCount": 5,
+  "PushPoliciesCount": 2,
+  "CrossRepoBranchCount": 2,
+  "RepoScopedCount": 1,
+  "Policies": [
+    {
+      "Id": 50,
+      "PolicyCode": "P13",
+      "PolicyName": "Commit author email validation",
+      "TypeGuid": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Classification": "ProjectPushPolicy",
+      "TargetRepositories": [],
+      "BranchPatterns": [],
+      "Settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com",
+          "*@microsoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/93c44f67-cab4-4c78-bfb5-39baff3ab08d/_apis/policy/configurations/50"
+    },
+    {
+      "Id": 51,
+      "PolicyCode": "P18",
+      "PolicyName": "File size restriction",
+      "TypeGuid": "2e26e725-8201-4edd-8bf5-978563c34a80",
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Classification": "ProjectPushPolicy",
+      "TargetRepositories": [],
+      "BranchPatterns": [],
+      "Settings": {
+        "maximumGitBlobSizeInBytes": 10485760,
+        "useUncompressedSize": false,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/93c44f67-cab4-4c78-bfb5-39baff3ab08d/_apis/policy/configurations/51"
+    },
+    {
+      "Id": 52,
+      "PolicyCode": "P19",
+      "PolicyName": "Minimum number of reviewers",
+      "TypeGuid": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Classification": "ProjectCrossRepoBranchPolicy",
+      "TargetRepositories": [],
+      "BranchPatterns": [
+        "refs/heads/main"
+      ],
+      "Settings": {
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/main",
+            "matchKind": "Exact",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/93c44f67-cab4-4c78-bfb5-39baff3ab08d/_apis/policy/configurations/52"
+    },
+    {
+      "Id": 53,
+      "PolicyCode": "P20",
+      "PolicyName": "Work item linking",
+      "TypeGuid": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Classification": "ProjectCrossRepoBranchPolicy",
+      "TargetRepositories": [],
+      "BranchPatterns": [
+        "refs/heads/main"
+      ],
+      "Settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/main",
+            "matchKind": "Exact",
+            "repositoryId": null
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/93c44f67-cab4-4c78-bfb5-39baff3ab08d/_apis/policy/configurations/53"
+    },
+    {
+      "Id": 54,
+      "PolicyCode": "P21",
+      "PolicyName": "Comment requirements",
+      "TypeGuid": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+      "IsEnabled": true,
+      "IsBlocking": true,
+      "Classification": "RepositoryScopedPolicy",
+      "TargetRepositories": [
+        "fleet-alpha-api"
+      ],
+      "BranchPatterns": [
+        "refs/heads/main"
+      ],
+      "Settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/main",
+            "matchKind": "Exact",
+            "repositoryId": "5e40bca8-d88e-45e4-9e9f-a2b8457c61ed"
+          }
+        ]
+      },
+      "RawUrl": "https://dev.azure.com/ado-policy-testing/93c44f67-cab4-4c78-bfb5-39baff3ab08d/_apis/policy/configurations/54"
+    }
+  ]
+}

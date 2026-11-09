@@ -1,0 +1,14 @@
+{
+  "SnapshotVersion": "3.0",
+  "CapturedAtUtc": "2026-11-06T21:19:34.4345450Z",
+  "TargetOrg": "ADO2GHEC",
+  "RepositoryName": "sample2",
+  "DefaultBranch": "master",
+  "AllowForking": false,
+  "AllowSquashMerge": true,
+  "AllowMergeCommit": true,
+  "AllowRebaseMerge": true,
+  "RulesetsCount": 0,
+  "Rulesets": [],
+  "BranchProtections": []
+}

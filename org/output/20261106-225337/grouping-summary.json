@@ -1,0 +1,20 @@
+{
+  "GeneratedAt": "2026-11-06T22:53:40.0226917Z",
+  "SourceDirectory": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\output\\20261106-225337",
+  "TotalOrgsAnalyzed": 1,
+  "DistinctGroupsCount": 1,
+  "DefaultDominantGroup": "Group-1",
+  "Groups": {
+    "GroupId": "Group-1",
+    "Label": "Baseline Profile",
+    "OrgCount": 1,
+    "ActivePolicyCount": 6,
+    "Organizations": [
+      "ado-policy-testing"
+    ]
+  },
+  "StaticCrosswalkFile": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\config\\ado-to-ghec-crosswalk.csv",
+  "GeneratedFiles": {
+    "OrgPolicyMatrixCsv": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\org\\output\\20261106-225337\\ado-org-policy-matrix.csv"
+  }
+}

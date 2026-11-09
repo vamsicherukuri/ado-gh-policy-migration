@@ -1,0 +1,2 @@
+"Scope","Target","RulesetType","RulesetId","RulesetName","Enforcement","RulesCount","Status"
+"Repository","ADO2GHEC/ado-to-gh-branch-policies","branch",,"ado-migrated-branch-ruleset","evaluate","0","Failed (Response status code does not indicate success: 404 (Not Found).)"

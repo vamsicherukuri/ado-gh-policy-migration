@@ -84,6 +84,39 @@ def read(path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_context_map(path):
+    mapping = read(path) if path else {}
+    if not isinstance(mapping, dict):
+        raise ValueError("Check context mapping must be a JSON object.")
+    for group, entries in mapping.items():
+        if group not in ("pipelines", "statuses") or not isinstance(entries, dict):
+            raise ValueError("Check context mapping groups must be pipelines or statuses objects.")
+        if any(not isinstance(value, str) or not value.strip() for value in entries.values()):
+            raise ValueError("Destination check contexts must be nonempty strings.")
+    return mapping
+
+
+def expected_check_context(kind, settings, context_map, pipeline_names):
+    if kind == "build":
+        definition = settings.get("buildDefinitionId")
+        if isinstance(definition, dict):
+            name = definition.get("$ref", "").removeprefix("pipeline:")
+            keys = [name] + [key for key, value in pipeline_names.items() if value == name]
+        else:
+            keys = [str(definition), pipeline_names.get(str(definition))]
+        group = "pipelines"
+    else:
+        genre = settings.get("statusGenre") or settings.get("genre")
+        name = settings.get("statusName") or settings.get("name")
+        keys = [f"{genre}/{name}" if genre and name else name]
+        group = "statuses"
+    contexts = {context_map.get(group, {}).get(key) for key in keys if key}
+    contexts.discard(None)
+    if len(contexts) > 1:
+        raise ValueError(f"Ambiguous destination check mapping for {kind}: {keys}")
+    return next(iter(contexts), None), f"{group} mapping for {keys}"
+
+
 class GitHub:
     def __init__(self, token):
         self.token = token
@@ -240,10 +273,24 @@ def readback(run, github):
         branches = github.pages(f"{repo}/branches")
         protected = [b["name"] for b in branches if b.get("protected")]
         interesting = sorted(set(protected) | {LAB_BRANCH[name], meta["body"]["default_branch"]})
-        rulesets = []
-        for item in github.get(f"{repo}/rulesets?includes_parents=true", allow=(200, 403, 404))["body"] or []:
-            if isinstance(item, dict) and "id" in item:
-                rulesets.append(github.get(f"{repo}/rulesets/{item['id']}", allow=(200, 403, 404))["body"])
+        rulesets, rulesets_complete, page = [], True, 1
+        while True:
+            response = github.get(f"{repo}/rulesets?includes_parents=true&per_page=100&page={page}",
+                                  allow=(200, 403, 404))
+            if response["status"] != 200 or not isinstance(response["body"], list):
+                rulesets_complete = False
+                break
+            for item in response["body"]:
+                source = (f"/orgs/{item['source']}" if item.get("source_type") == "Organization"
+                          else repo)
+                detail = github.get(f"{source}/rulesets/{item['id']}", allow=(200, 403, 404))
+                if detail["status"] == 200 and isinstance(detail["body"], dict):
+                    rulesets.append(detail["body"])
+                else:
+                    rulesets_complete = False
+            if len(response["body"]) < 100:
+                break
+            page += 1
         codeowners = {}
         for branch in (LAB_BRANCH[name], meta["body"]["default_branch"]):
             for path in ("CODEOWNERS", ".github/CODEOWNERS", "docs/CODEOWNERS"):
@@ -260,7 +307,8 @@ def readback(run, github):
                            for b in interesting},
             "effectiveRules": {b: github.get(f"{repo}/rules/branches/{branch_path(b)}", allow=(200, 403, 404))
                                for b in interesting},
-            "rulesets": rulesets, "codeowners": codeowners, "refs": refs,
+            "rulesets": rulesets, "rulesetsComplete": rulesets_complete,
+            "codeowners": codeowners, "refs": refs,
             "pullRequests": [{"number": p["number"], "state": p["state"], "title": p["title"],
                               "head": p["head"]["ref"], "base": p["base"]["ref"], "merged_at": p.get("merged_at"),
                               "user": (p.get("user") or {}).get("login")}
@@ -296,13 +344,13 @@ def rule(rules, kind):
     return next((r.get("parameters", {}) for r in rules if r.get("type") == kind), None)
 
 
-def observe_branch(kind, settings, readback_repo, branch):
+def observe_branch(kind, settings, readback_repo, branch, context_map=None, pipeline_names=None,
+                   is_blocking=True):
     """Return (result, github_equivalent, evidence) for one ADO branch-policy kind on one migrated branch."""
     classic, rules = protection_of(readback_repo, branch)
     reviews = (classic or {}).get("required_pull_request_reviews")
     pull_rule = rule(rules, "pull_request")
     checks = (classic or {}).get("required_status_checks")
-    check_rule = rule(rules, "required_status_checks")
     where = f"{readback_repo.get('repository', {}).get('full_name', '?')}@{branch}"
     if kind == "reviewers":
         expected = settings.get("minimumApproverCount")
@@ -310,7 +358,7 @@ def observe_branch(kind, settings, readback_repo, branch):
         actual = actual if actual is not None else (pull_rule or {}).get("required_approving_review_count")
         reset_expected = bool(settings.get("resetOnSourcePush"))
         reset_actual = bool((reviews or {}).get("dismiss_stale_reviews") or (pull_rule or {}).get("dismiss_stale_reviews_on_push"))
-        last_pusher_expected = bool(settings.get("blockLastPusherVote") or settings.get("prohibitRequesterFromApproving"))
+        last_pusher_expected = bool(settings.get("blockLastPusherVote"))
         last_pusher_actual = bool((reviews or {}).get("require_last_push_approval") or (pull_rule or {}).get("require_last_push_approval"))
         extra = {"dismiss_stale_reviews": reset_actual, "require_last_push_approval": last_pusher_actual}
         if actual is None:
@@ -318,6 +366,9 @@ def observe_branch(kind, settings, readback_repo, branch):
         count_matches = (actual == expected)
         sub_settings_match = (reset_expected == reset_actual) and (last_pusher_expected == last_pusher_actual)
         result = "MIGRATED" if (count_matches and sub_settings_match) else ("PARTIAL" if count_matches else "DIFFERS")
+        if result == "MIGRATED" and last_pusher_expected:
+            result = "PARTIAL"
+            extra["parityGap"] = "GitHub can count the last pusher's review toward total approvals; ADO excludes that vote."
         return result, "Required approving reviews", f"{where}: count {actual} (ADO {expected}); {extra}"
     if kind == "workitems":
         return "NOT MIGRATED", "No GitHub equivalent", f"{where}: GitHub has no linked-work-item gate"
@@ -339,12 +390,26 @@ def observe_branch(kind, settings, readback_repo, branch):
         return "NOT MIGRATED", "Allowed merge methods", \
             f"{where}: no branch-level merge restriction; repo-wide flags {repo_flags}; ADO {ado}"
     if kind in ("build", "status"):
-        contexts = sorted(set((checks or {}).get("contexts") or []) |
-                          {c.get("context") for c in (check_rule or {}).get("required_status_checks", [])})
         label = "Required status checks"
-        if contexts:
-            return "MIGRATED", label, f"{where}: required checks {contexts}"
-        return "NOT MIGRATED", label, f"{where}: no required status checks"
+        expected, mapping_evidence = expected_check_context(
+            kind, settings, context_map or {}, pipeline_names or {})
+        if not expected:
+            return "UNVERIFIED", label, f"{where}: no destination {mapping_evidence}"
+        if not is_blocking:
+            return "UNVERIFIED", label, f"{where}: optional source check requires evaluation-specific branch evidence"
+        contexts = set((checks or {}).get("contexts") or [])
+        contexts.update(c.get("context") for c in (checks or {}).get("checks", []))
+        for item in rules:
+            if item.get("type") == "required_status_checks":
+                contexts.update(c.get("context") for c in item.get("parameters", {}).get("required_status_checks", []))
+        contexts.discard(None)
+        if expected in contexts:
+            return "MIGRATED", label, f"{where}: exact required check {expected!r} present"
+        observations = [readback_repo.get(key, {}).get(branch, {}).get("status")
+                        for key in ("protection", "effectiveRules")]
+        if any(status not in (200, 404) for status in observations):
+            return "UNVERIFIED", label, f"{where}: incomplete protection/rules evidence {observations}"
+        return "NOT MIGRATED", label, f"{where}: expected {expected!r}; observed {sorted(contexts)}"
     if kind == "required":
         code_owner = (reviews or {}).get("require_code_owner_reviews") or (pull_rule or {}).get(
             "require_code_owner_review")
@@ -373,27 +438,143 @@ def push_rules_present(readback):
                         "ruleset_name": ruleset.get("name"),
                         "target": ruleset.get("target"),
                         "enforcement": ruleset.get("enforcement"),
+                        "conditions": ruleset.get("conditions", {}),
                         "type": item.get("type"),
                         "parameters": item.get("parameters", {})
                     })
     return found
 
 
-def compare(run):
+def email_allowlist_regex(patterns):
+    alternatives = []
+    for pattern in sorted(set(patterns)):
+        alternatives.append("".join(
+            ".*" if char == "*" else "." if char == "?" else
+            "\\" + char if char in r"\.^$|()[]{}+" else char for char in pattern))
+    return "^(" + "|".join(alternatives) + ")$"
+
+
+def observe_push(kind, config, baseline, readback):
+    labels = {"email": "Commit author email", "path": "Restricted file paths",
+              "length": "Maximum file path length", "size": "Maximum file size",
+              "case": "Case enforcement", "reserved": "Reserved names"}
+    label = labels[kind]
+    if not config:
+        return "UNVERIFIED", label, "Source policy is missing from baseline"
+    if not config.get("isEnabled", True) or config.get("isDeleted"):
+        return "UNVERIFIED", label, "Source policy is disabled or deleted; no active parity claim"
+    if kind in ("case", "reserved"):
+        return "NOT MIGRATED", label, "No equivalent native rule; requires manual/custom validation"
+    settings = config.get("settings", {})
+    inventory = baseline.get("repositories", {})
+    by_id = {str(value["repository"]["id"]): name for name, value in inventory.items()}
+    targets = set()
+    for scope in settings.get("scope") or [{}]:
+        identifier = scope.get("repositoryId")
+        if identifier is None:
+            targets.update(inventory)
+        elif str(identifier) in by_id:
+            targets.add(by_id[str(identifier)])
+        else:
+            return "UNVERIFIED", label, f"Source repository {identifier} is outside the selected inventory"
+    if not targets:
+        return "UNVERIFIED", label, "No selected repositories establish the source policy scope"
+    rule_type = {"email": "commit_author_email_pattern", "path": "file_path_restriction",
+                 "length": "max_file_path_length", "size": "max_file_size"}[kind]
+    enforcement = "active" if config.get("isBlocking", True) else "evaluate"
+    evidence, outcomes = [], []
+    for name in sorted(targets):
+        repo = readback.get("repositories", {}).get(name)
+        if repo is None or repo.get("exists") not in (True, False) or (repo.get("exists") and
+                            (repo.get("rulesetsComplete") is not True or "rulesets" not in repo or
+                             any(not isinstance(r, dict) for r in repo.get("rulesets", [])))):
+            outcomes.append("UNVERIFIED")
+            evidence.append(f"{name}: ruleset evidence unavailable/incomplete")
+            continue
+        if not repo.get("exists"):
+            outcomes.append("NOT MIGRATED")
+            evidence.append(f"{name}: destination repository missing")
+            continue
+        candidates = [r for r in push_rules_present({"repositories": {name: repo}})
+                      if r["type"] == rule_type and r["enforcement"] == enforcement
+                      and r["target"] == ("branch" if kind == "email" else "push")]
+        if not candidates:
+            outcomes.append("NOT MIGRATED")
+            evidence.append(f"{name}: no {enforcement} {rule_type} rule on the required target")
+            continue
+        matches = False
+        if kind == "size":
+            expected = settings.get("maximumGitBlobSizeInBytes")
+            if not isinstance(expected, int) or isinstance(expected, bool) or expected <= 0:
+                return "UNVERIFIED", label, "Invalid/missing source byte threshold"
+            actual = [r["parameters"].get("max_file_size") for r in candidates]
+            actual_bytes = [value * 1048576 for value in actual
+                            if isinstance(value, int) and not isinstance(value, bool) and value > 0]
+            # Multiple active limits compose as the strongest (smallest) threshold.
+            matches = bool(actual_bytes) and min(actual_bytes) == expected
+            detail = f"expected {expected} bytes; effective limit {min(actual_bytes) if actual_bytes else 'unknown'} bytes"
+        elif kind == "length":
+            expected = settings.get("maxPathLength")
+            limits = [r["parameters"].get("max_file_path_length") for r in candidates]
+            limits = [value for value in limits if isinstance(value, int) and value > 0]
+            matches = expected is not None and bool(limits) and min(limits) == expected
+            detail = f"expected length {expected}; observed {limits}"
+        elif kind == "path":
+            expected = settings.get("filenamePatterns")
+            expected = [expected] if isinstance(expected, str) else expected
+            actual = {pattern for r in candidates for pattern in
+                      r["parameters"].get("restricted_file_paths", [])}
+            has_exceptions = any(r["parameters"].get("allowed_file_paths") for r in candidates)
+            matches = bool(expected) and actual == set(expected) and not has_exceptions
+            detail = f"expected patterns {expected}; observed {sorted(actual)}; exceptions={has_exceptions}"
+        else:
+            expected = settings.get("authorEmailPatterns") or []
+            expected = [expected] if isinstance(expected, str) else expected
+            canonical = email_allowlist_regex(expected)
+            matches = bool(expected) and all(
+                r["parameters"].get("operator") == "regex"
+                and r["parameters"].get("pattern") == canonical
+                and not r["parameters"].get("negate", False)
+                and r["conditions"].get("ref_name", {}).get("include") == ["~ALL"]
+                and not r["conditions"].get("ref_name", {}).get("exclude")
+                for r in candidates)
+            detail = (f"allowlist regex {'matches' if matches else 'differs'}; "
+                      "branch metadata only; repository-wide tag coverage is not established")
+        if kind == "email" and matches:
+            outcomes.append("PARTIAL")
+        else:
+            outcomes.append("MIGRATED" if matches else "PARTIAL")
+        evidence.append(f"{name}: {detail}")
+    if "UNVERIFIED" in outcomes:
+        result = "UNVERIFIED"
+    elif all(outcome == "MIGRATED" for outcome in outcomes):
+        result = "MIGRATED"
+    elif any(outcome in ("MIGRATED", "PARTIAL") for outcome in outcomes):
+        result = "PARTIAL"
+    else:
+        result = "NOT MIGRATED"
+    return result, label, "; ".join(evidence)
+
+
+def compare(run, context_map=None):
     from openpyxl import load_workbook
 
     base, back = read(run / "ado-baseline.json"), read(run / "github-readback.json")
     migration = read(run / "migration-results.json")
     org_before, org_after = read(run / "github-org-before.json"), read(run / "github-org-after.json")
-    mapping = read(POLICY_STATE)["policies"]
+    state = read(POLICY_STATE)
+    mapping = state["policies"]
+    pipeline_names = {str(value["id"]): value["name"] for value in state.get("pipelines", {}).values()}
+    pipeline_names.update({str(key): value["name"] for key, value in base.get("pipelines", {}).items()
+                           if value.get("name")})
     policies = {p["id"]: p for p in base["policies"]}
     workbook = load_workbook(INVENTORY, read_only=True, data_only=True)
     rows = list(workbook["Policy Inventory"].values)[1:]
+    workbook.close()
     assert len(rows) == 42 and len({r[0] for r in rows}) == 42
 
     org_diff = sorted(k for k in set(org_before["org"]) | set(org_after["org"])
                       if k not in ORG_VOLATILE and org_before["org"].get(k) != org_after["org"].get(k))
-    push_rules = push_rules_present(back)
     repos = back["repositories"]
     any_protection = {n: (v.get("protectedBranches") or [], len(v.get("rulesets") or []))
                       for n, v in repos.items()}
@@ -415,30 +596,25 @@ def compare(run):
             kind = info["kind"]
             if kind in ("email", "path", "case", "reserved", "length", "size"):
                 expected = "Not migrated - repository/push policy, not a branch policy"
-                target_type = {"email": "commit_author_email_pattern",
-                               "path": "file_path_restriction",
-                               "length": "max_file_path_length",
-                               "size": "max_file_size"}.get(kind)
-                matching_rules = [r for r in push_rules if r.get("type") == target_type] if target_type else []
-                result = "MIGRATED" if matching_rules else "NOT MIGRATED"
-                equivalent = {"email": "Ruleset: commit author email pattern",
-                              "path": "Push ruleset: restrict file paths",
-                              "case": "No GitHub equivalent",
-                              "reserved": "No GitHub equivalent",
-                              "length": "Push ruleset: max file path length",
-                              "size": "Push ruleset: max file size"}[kind]
-                evidence = f"Matching rules in migrated repos: {matching_rules or 'none'}"
+                result, equivalent, evidence = observe_push(kind, config, base, back)
             else:
                 cross_repo = (config or {}).get("settings", {}).get("scope", [{}])[0].get("repositoryId") is None
                 name = "sample3" if cross_repo else "sample2"
                 expected = ("Not migrated - cross-repo branch policy" if cross_repo else
                             "Migrated - branch policy for the repository" if kind != "required" else
                             "Uncertain - branch policy, but named reviewers may be 'user-scoped'")
-                result, equivalent, evidence = observe_branch(kind, config["settings"], repos[name],
-                                                              LAB_BRANCH[name])
+                if config:
+                    result, equivalent, evidence = observe_branch(
+                        kind, config["settings"], repos[name], LAB_BRANCH[name],
+                        context_map=context_map, pipeline_names=pipeline_names,
+                        is_blocking=config.get("isBlocking", True))
+                else:
+                    result, equivalent, evidence = "UNVERIFIED", kind, "Source policy missing from baseline"
         else:
             expected, result, evidence = "Unmapped", "UNKNOWN", "No policy mapping in policy-state.json"
-        if expected.startswith("Not migrated") and result == "NOT MIGRATED":
+        if result == "UNVERIFIED":
+            verdict = "UNVERIFIED"
+        elif expected.startswith("Not migrated") and result == "NOT MIGRATED":
             verdict = "MATCHES DOCS"
         elif expected.startswith("Migrated") and result == "MIGRATED":
             verdict = "MATCHES DOCS"
@@ -479,12 +655,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("command", choices=("baseline", "migrate", "readback", "compare"))
     parser.add_argument("--run-id", required=True)
+    parser.add_argument("--check-context-map", type=Path,
+                        help="JSON mapping of source pipeline IDs/names and statuses to destination checks (compare only)")
     args = parser.parse_args()
     if not re.fullmatch(r"[A-Za-z0-9-]{6,40}", args.run_id):
         raise SystemExit("run-id must be 6-40 letters, digits or hyphens.")
     run = OUT_ROOT / args.run_id
     if args.command == "compare":
-        return compare(run)
+        return compare(run, context_map=load_context_map(args.check_context_map))
+    if args.check_context_map:
+        parser.error("--check-context-map is only supported by compare")
     tokens = secrets()
     github = GitHub(tokens[0])
     if args.command == "readback":

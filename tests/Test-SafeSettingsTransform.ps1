@@ -12,7 +12,7 @@ $ErrorActionPreference = "Stop"
 
 $scriptRoot = $PSScriptRoot
 $transformDir = Join-Path $scriptRoot "..\scripts\transform"
-$testOutput = Join-Path $scriptRoot "..\output\test-safe-settings"
+$testOutput = Join-Path ([IO.Path]::GetTempPath()) ("safe-settings-tests-" + [guid]::NewGuid().ToString("N"))
 
 # Load modules
 . (Join-Path $transformDir "ConvertTo-Yaml.ps1")
@@ -52,9 +52,17 @@ $fixture = Get-ChildItem (Join-Path $scriptRoot "..\output\policy-capture") -Fil
 
 Assert-True ($null -ne $fixture) "Found portable JSON fixture"
 
+$null = New-Item -ItemType Directory -Path $testOutput
+$contextMapPath = Join-Path $testOutput "contexts.json"
+@{
+    pipelines = @{ "policy-lab-sample2" = "policy-lab-sample2"; "policy-lab-sample3" = "policy-lab-sample3" }
+    statuses = @{ "policy-lab/external-validation" = "policy-lab/external-validation" }
+} | ConvertTo-Json | Set-Content -LiteralPath $contextMapPath
+try {
 & (Join-Path $transformDir "Convert-AdoToSafeSettings.ps1") `
     -PortableJsonPath $fixture.FullName `
     -OutputDir $testOutput `
+    -CheckContextMapPath $contextMapPath `
     -Enforcement "active"
 
 $settingsFile = Join-Path $testOutput ".github\settings.yml"
@@ -89,3 +97,6 @@ Assert-True ($repoContent -match '(?m)^rulesets:') "Repo override uses top-level
 Assert-True ($repoContent -match 'context: policy-lab-sample2') "Repo has specific build pipeline check context"
 
 Write-Host "ALL TESTS PASSED ($passCount assertions)" -ForegroundColor Green
+} finally {
+    Remove-Item -LiteralPath $testOutput -Recurse -Force
+}

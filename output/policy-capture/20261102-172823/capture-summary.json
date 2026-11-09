@@ -1,0 +1,90 @@
+{
+  "captures": [
+    {
+      "capture": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261102-172823\\StarReads.capture.json",
+      "organization": "ado-policy-testing",
+      "project": "StarReads",
+      "repositories": [
+        "StarReads"
+      ],
+      "policies": 2,
+      "getRequests": 7,
+      "warnings": [],
+      "policyCounts": {
+        "repository": 0,
+        "repositoryBranch": 2,
+        "project": 0,
+        "mixed": 0,
+        "crossRepoBranch": 0
+      },
+      "next": ".\\scripts\\capture\\Export-AdoPolicies.ps1 -Capture \"C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261102-172823\\StarReads.capture.json\""
+    },
+    {
+      "capture": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261102-172823\\Tailwind Traders.capture.json",
+      "organization": "ado-policy-testing",
+      "project": "Tailwind Traders",
+      "repositories": [
+        "TailwindTraders-Backend",
+        "TailwindTraders-Website"
+      ],
+      "policies": 2,
+      "getRequests": 46,
+      "warnings": [],
+      "policyCounts": {
+        "repository": 1,
+        "repositoryBranch": 1,
+        "project": 0,
+        "mixed": 0,
+        "crossRepoBranch": 0
+      },
+      "next": ".\\scripts\\capture\\Export-AdoPolicies.ps1 -Capture \"C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261102-172823\\Tailwind Traders.capture.json\""
+    },
+    {
+      "capture": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261102-172823\\Proj_P1.capture.json",
+      "organization": "ado-policy-testing",
+      "project": "Proj_P1",
+      "repositories": [
+        "Proj_P1"
+      ],
+      "policies": 2,
+      "getRequests": 10,
+      "warnings": [],
+      "policyCounts": {
+        "repository": 0,
+        "repositoryBranch": 2,
+        "project": 0,
+        "mixed": 0,
+        "crossRepoBranch": 0
+      },
+      "next": ".\\scripts\\capture\\Export-AdoPolicies.ps1 -Capture \"C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261102-172823\\Proj_P1.capture.json\""
+    },
+    {
+      "capture": "C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261102-172823\\project1.capture.json",
+      "organization": "ado-policy-testing",
+      "project": "project1",
+      "repositories": [
+        "project1",
+        "sample-proj-p1",
+        "sample-starreads",
+        "sample-tailwind-backend",
+        "sample-tailwind-website",
+        "sample2",
+        "sample3",
+        "sample4"
+      ],
+      "policies": 43,
+      "getRequests": 90,
+      "warnings": [],
+      "policyCounts": {
+        "repository": 8,
+        "repositoryBranch": 22,
+        "project": 6,
+        "mixed": 0,
+        "crossRepoBranch": 7
+      },
+      "next": ".\\scripts\\capture\\Export-AdoPolicies.ps1 -Capture \"C:\\Users\\vcherukuri\\factory\\ado to gh branch policies\\output\\policy-capture\\20261102-172823\\project1.capture.json\""
+    }
+  ],
+  "status": "complete",
+  "runId": "20261102-172823"
+}

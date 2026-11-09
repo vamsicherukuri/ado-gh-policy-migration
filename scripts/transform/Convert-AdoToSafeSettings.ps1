@@ -25,7 +25,9 @@ param(
     [ValidateSet("active", "evaluate", "disabled")]
     [string]$Enforcement = "active",
 
-    [string]$DefaultBranchRef = "~DEFAULT_BRANCH"
+    [string]$DefaultBranchRef = "~DEFAULT_BRANCH",
+
+    [string]$CheckContextMapPath
 )
 
 Set-StrictMode -Version Latest
@@ -70,6 +72,113 @@ $adoData = Get-Content -LiteralPath $PortableJsonPath -Raw -Encoding utf8 | Conv
 
 $orgName = if (Get-Prop $adoData.source "organization") { $adoData.source.organization } else { "ado-org" }
 $projectName = if (Get-Prop $adoData.source "project") { $adoData.source.project } else { "ado-project" }
+$checkContextMap = @{}
+if ($CheckContextMapPath) {
+    $checkContextMap = Get-Content -LiteralPath $CheckContextMapPath -Raw |
+        ConvertFrom-Json -AsHashtable -Depth 100
+    if ($checkContextMap -isnot [Collections.IDictionary]) { throw "Check context mapping must be a JSON object." }
+    foreach ($group in $checkContextMap.Keys) {
+        if ($group -notin @("pipelines", "statuses") -or $checkContextMap[$group] -isnot [Collections.IDictionary]) {
+            throw "Check context mapping groups must be pipelines or statuses objects."
+        }
+        foreach ($value in $checkContextMap[$group].Values) {
+            if ($value -isnot [string] -or [string]::IsNullOrWhiteSpace($value)) {
+                throw "Destination check contexts must be nonempty strings."
+            }
+        }
+    }
+}
+$mappingWarnings = [Collections.Generic.List[string]]::new()
+$rulesetIdentities = [Collections.Generic.Dictionary[string, string]]::new([StringComparer]::Ordinal)
+
+function Add-MappingWarning([string]$Message) {
+    if (-not $script:mappingWarnings.Contains($Message)) {
+        $script:mappingWarnings.Add($Message)
+        Write-Warning $Message
+    }
+}
+
+function Resolve-PolicyCheckContext($Settings, [string]$Kind) {
+    $keys = [Collections.Generic.List[string]]::new()
+    $group = "statuses"
+    if ($Kind -eq "Build") {
+        $group = "pipelines"
+        $definition = Get-Prop $Settings "buildDefinitionId"
+        $reference = Get-Prop $definition '$ref'
+        if ($reference) {
+            $name = $reference -replace '^pipeline:', ''
+            $keys.Add($name)
+            $pipelines = Get-Prop (Get-Prop $adoData "references") "pipelines"
+            $sourceId = Get-Prop (Get-Prop $pipelines $name) "sourceId"
+            if ($null -ne $sourceId) { $keys.Add([string]$sourceId) }
+        } elseif ($null -ne $definition) {
+            $keys.Add([string]$definition)
+            $pipelines = Get-Prop (Get-Prop $adoData "references") "pipelines"
+            if ($pipelines) {
+                foreach ($entry in $pipelines.PSObject.Properties) {
+                    if ([string](Get-Prop $entry.Value "sourceId") -ceq [string]$definition) { $keys.Add($entry.Name) }
+                }
+            }
+        }
+    } else {
+        $genre = Get-Prop $Settings "statusGenre" (Get-Prop $Settings "genre")
+        $name = Get-Prop $Settings "statusName" (Get-Prop $Settings "name")
+        if ($name) { $keys.Add($(if ($genre) { "$genre/$name" } else { [string]$name })) }
+    }
+    $contexts = @(
+        foreach ($key in $keys) {
+            $context = Get-Prop (Get-Prop $checkContextMap $group) $key
+            if ($context) { $context }
+        }
+    ) | Select-Object -Unique
+    if (@($contexts).Count -gt 1) { throw "Ambiguous destination check mapping for $Kind ($($keys -join ', '))." }
+    if (@($contexts).Count -eq 1) { return @($contexts)[0] }
+    Add-MappingWarning "UNVERIFIED: No destination check mapping for $Kind ($($keys -join ', ')); required check omitted. Configure -CheckContextMapPath before deployment."
+    return $null
+}
+
+function Convert-EmailPatternsToRegex([string[]]$Patterns) {
+    if (-not $Patterns.Count) { throw "authorEmailPatterns must contain at least one pattern." }
+    $orderedPatterns = [Collections.Generic.SortedSet[string]]::new([StringComparer]::Ordinal)
+    foreach ($pattern in $Patterns) { [void]$orderedPatterns.Add($pattern) }
+    $alternatives = foreach ($pattern in $orderedPatterns) {
+        if ([string]::IsNullOrWhiteSpace($pattern)) { throw "authorEmailPatterns cannot contain empty patterns." }
+        $escaped = [Text.StringBuilder]::new()
+        foreach ($character in $pattern.ToCharArray()) {
+            if ($character -eq '*') { [void]$escaped.Append('.*') }
+            elseif ($character -eq '?') { [void]$escaped.Append('.') }
+            else {
+                if ('\.^$|()[]{}+'.Contains([string]$character)) { [void]$escaped.Append('\') }
+                [void]$escaped.Append($character)
+            }
+        }
+        $escaped.ToString()
+    }
+    return '^(' + ($alternatives -join '|') + ')$'
+}
+
+function New-PolicyRulesetName {
+    param([string]$ScopeIdentifier, [string]$ScopeKind, [string]$Target,
+          [string]$Mode, [string[]]$Refs, [string]$Kind, [string]$Discriminator = "")
+    [string[]]$canonicalRefs = @($Refs)
+    [Array]::Sort($canonicalRefs, [StringComparer]::Ordinal)
+    $identity = [ordered]@{
+        organization = $orgName; project = $projectName; scopeKind = $ScopeKind
+        scope = $ScopeIdentifier; target = $Target; mode = $Mode; kind = $Kind
+        refs = $canonicalRefs; discriminator = $Discriminator
+    } | ConvertTo-Json -Compress -Depth 10
+    $sha = [Security.Cryptography.SHA256]::Create()
+    try { $hash = [BitConverter]::ToString($sha.ComputeHash([Text.Encoding]::UTF8.GetBytes($identity))).Replace('-', '').ToLowerInvariant() }
+    finally { $sha.Dispose() }
+    $slug = ("$ScopeKind-$ScopeIdentifier-$Kind" -replace '[^A-Za-z0-9_-]', '-') -replace '-+', '-'
+    if ($slug.Length -gt 50) { $slug = $slug.Substring(0, 50) }
+    $name = "$slug-$Mode-$($hash.Substring(0, 16))"
+    if ($script:rulesetIdentities.ContainsKey($name) -and $script:rulesetIdentities[$name] -cne $identity) {
+        throw "Ruleset name collision for '$name'; refusing an ambiguous configuration."
+    }
+    $script:rulesetIdentities[$name] = $identity
+    return $name
+}
 
 # Resolve repositories from summary or capture JSON with unambiguous matching
 $allRepos = [System.Collections.Generic.List[string]]::new()
@@ -134,9 +243,8 @@ function Convert-AdoRefToGitHubPattern {
 
     switch ($MatchKind) {
         "Prefix" {
-            # In ADO, refs/heads/policy-lab/ with Prefix means anything under that hierarchy
-            $trimmed = $RefName.TrimEnd('/')
-            return "$trimmed/**"
+            if ($RefName.EndsWith('/')) { return "${RefName}**/*" }
+            return @("${RefName}*", "${RefName}*/**/*")
         }
         "Exact" {
             return $RefName
@@ -146,7 +254,7 @@ function Convert-AdoRefToGitHubPattern {
         }
         default {
             if ($RefName.EndsWith('/')) {
-                return "$($RefName.TrimEnd('/'))/**"
+                return "${RefName}**/*"
             }
             return $RefName
         }
@@ -193,7 +301,7 @@ foreach ($pol in $adoData.policies) {
 
         $rawRefName = Get-Prop $sc "refName"
         $rawMatchKind = Get-Prop $sc "matchKind"
-        $ghRefPattern = Convert-AdoRefToGitHubPattern -RefName $rawRefName -MatchKind $rawMatchKind -FallbackPattern $DefaultBranchRef
+        $ghRefPattern = @(Convert-AdoRefToGitHubPattern -RefName $rawRefName -MatchKind $rawMatchKind -FallbackPattern $DefaultBranchRef)
 
         $item = @{
             Policy = $pol
@@ -220,7 +328,8 @@ foreach ($pol in $adoData.policies) {
 function Build-SafeSettingsScopeBlocks {
     param(
         [System.Collections.Generic.List[object]]$Items,
-        [string]$ScopeIdentifier
+        [string]$ScopeIdentifier,
+        [ValidateSet("project", "repository")][string]$ScopeKind = "repository"
     )
 
     $repoSettings = [ordered]@{}
@@ -237,11 +346,11 @@ function Build-SafeSettingsScopeBlocks {
         $typeName = $pol.type.displayName
         $st = Get-Prop $pol "settings"
         $isBlock = $it.IsBlocking
-        $refPat = $it.RefPattern
+        $refPat = @($it.RefPattern | Sort-Object -Unique -CaseSensitive)
 
         # Key for grouping
         $blockKey = if ($isBlock) { "blocking" } else { "evaluate" }
-        $branchKey = "$blockKey|$refPat"
+        $branchKey = "$blockKey|$(ConvertTo-Json -InputObject $refPat -Compress)"
 
         switch ($typeName) {
             "Minimum number of reviewers" {
@@ -302,7 +411,7 @@ function Build-SafeSettingsScopeBlocks {
     foreach ($bKey in $branchBuckets.Keys) {
         $parts = $bKey -split '\|', 2
         $modeKey = $parts[0]
-        $refPattern = $parts[1]
+        $refPattern = @($parts[1] | ConvertFrom-Json)
         $bucketItems = $branchBuckets[$bKey]
 
         $branchRules = [System.Collections.Generic.List[object]]::new()
@@ -325,10 +434,15 @@ function Build-SafeSettingsScopeBlocks {
                     $hasPrPolicy = $true
                     $hasReviewerPolicy = $true
                     $cnt = Get-Prop $s "minimumApproverCount"
-                    if ($cnt) { $minApproverCount = [int]$cnt }
+                    $parsedCount = 0
+                    if ($null -eq $cnt -or -not [int]::TryParse([string]$cnt, [ref]$parsedCount) -or $parsedCount -lt 0 -or $parsedCount -gt 10) {
+                        throw "minimumApproverCount must be an integer from 0 to 10 for GitHub approval rules."
+                    }
+                    $minApproverCount = [Math]::Max($minApproverCount, $parsedCount)
                     if ((Get-Prop $s "resetOnSourcePush") -eq $true) { $dismissStale = $true }
-                    if ((Get-Prop $s "blockLastPusherVote") -eq $true -or (Get-Prop $s "prohibitRequesterFromApproving") -eq $true) {
+                    if ((Get-Prop $s "blockLastPusherVote") -eq $true) {
                         $requireLastPush = $true
+                        Add-MappingWarning "PARTIAL: $ScopeIdentifier last-pusher approval mapping does not exclude the pusher's vote from GitHub's total approval count."
                     }
                 }
                 "Comment requirements" {
@@ -347,20 +461,12 @@ function Build-SafeSettingsScopeBlocks {
                     }
                 }
                 "Build" {
-                    $pName = "build"
-                    $bDef = Get-Prop $s "buildDefinitionId"
-                    if ($bDef) {
-                        $refVal = Get-Prop $bDef '$ref'
-                        if ($refVal) { $pName = ($refVal -replace '^pipeline:', '') }
-                        else { $pName = "pipeline-$bDef" }
-                    }
-                    $statusChecks.Add([ordered]@{ context = $pName })
+                    $context = Resolve-PolicyCheckContext $s "Build"
+                    if ($context) { $statusChecks.Add([ordered]@{ context = $context }) }
                 }
                 "Status" {
-                    $genre = Get-Prop $s "genre"
-                    $sName = Get-Prop $s "name"
-                    $ctx = if ($genre -and $sName) { "$genre/$sName" } elseif ($sName) { $sName } else { "status-check" }
-                    $statusChecks.Add([ordered]@{ context = $ctx })
+                    $context = Resolve-PolicyCheckContext $s "Status"
+                    if ($context) { $statusChecks.Add([ordered]@{ context = $context }) }
                 }
             }
         }
@@ -401,8 +507,7 @@ function Build-SafeSettingsScopeBlocks {
                 $branchRules.Add([ordered]@{ type = "deletion" })
             }
 
-            $refSlug = ($refPattern -replace '[^A-Za-z0-9_-]', '-') -replace '-+', '-'
-            $rulesetName = "$ScopeIdentifier-$refSlug-$modeKey"
+            $rulesetName = New-PolicyRulesetName $ScopeIdentifier $ScopeKind "branch" $modeKey $refPattern "branch"
             
             $rulesets.Add([ordered]@{
                 name = $rulesetName
@@ -429,8 +534,19 @@ function Build-SafeSettingsScopeBlocks {
             $s = Get-Prop $it.Policy "settings"
             switch ($tName) {
                 "File size restriction" {
-                    $maxBytes = Get-Prop $s "maximumGitBlobSizeInBytes" 104857600
-                    $maxMb = [math]::Max(1, [math]::Round([int64]$maxBytes / 1048576))
+                    $maxBytes = Get-Prop $s "maximumGitBlobSizeInBytes"
+                    $parsedBytes = 0L
+                    if (-not [long]::TryParse([string]$maxBytes, [ref]$parsedBytes) -or $parsedBytes -le 0) {
+                        throw "maximumGitBlobSizeInBytes must be a positive integer."
+                    }
+                    if ($parsedBytes -lt 1048576) {
+                        Add-MappingWarning "PARTIAL: $ScopeIdentifier file-size threshold $parsedBytes bytes is below GitHub's 1 MiB minimum; rule omitted for manual resolution."
+                        continue
+                    }
+                    $maxMb = [math]::Floor($parsedBytes / 1048576)
+                    if ($parsedBytes % 1048576 -ne 0) {
+                        Add-MappingWarning "PARTIAL: $ScopeIdentifier file-size threshold tightened from $parsedBytes bytes to $([long]$maxMb * 1048576) bytes ($maxMb MiB); exact parity is not representable."
+                    }
                     $pushRules.Add([ordered]@{
                         type = "max_file_size"
                         parameters = [ordered]@{ max_file_size = [int]$maxMb }
@@ -459,7 +575,7 @@ function Build-SafeSettingsScopeBlocks {
 
         if ($pushRules.Count -gt 0) {
             $rulesets.Add([ordered]@{
-                name = "$ScopeIdentifier-push-$mKey"
+                name = New-PolicyRulesetName $ScopeIdentifier $ScopeKind "push" $mKey @() "push"
                 target = "push"
                 enforcement = Get-RulesetEnforcement $mKey
                 rules = $pushRules
@@ -470,7 +586,7 @@ function Build-SafeSettingsScopeBlocks {
     # --- Build Dedicated Commit Author Email Rulesets (Branch Target ~ALL) ---
     foreach ($mKey in $emailBuckets.Keys) {
         $emailItems = $emailBuckets[$mKey]
-        $emailRules = [System.Collections.Generic.List[object]]::new()
+        $emailPatterns = [Collections.Generic.SortedSet[string]]::new([StringComparer]::Ordinal)
 
         foreach ($it in $emailItems) {
             $s = Get-Prop $it.Policy "settings"
@@ -478,41 +594,13 @@ function Build-SafeSettingsScopeBlocks {
             $patterns = if ($rawList -is [System.Collections.IEnumerable] -and $rawList -isnot [string]) {
                 @($rawList)
             } elseif ($rawList) { @([string]$rawList) }
-            else { @("*@contoso.com") }
-
-            foreach ($rawPattern in $patterns) {
-                $pStr = [string]$rawPattern
-                $operator = "ends_with"
-                $cleanPattern = $pStr
-
-                if ($pStr -match '^\*@(.+)$') {
-                    $cleanPattern = "@$($Matches[1])"
-                    $operator = "ends_with"
-                } elseif ($pStr -match '^\*(.+)$') {
-                    $cleanPattern = $Matches[1]
-                    $operator = "ends_with"
-                } elseif (-not $pStr.Contains('*')) {
-                    $operator = "equals"
-                    $cleanPattern = $pStr
-                } else {
-                    $operator = "regex"
-                    $cleanPattern = $pStr
-                }
-
-                $emailRules.Add([ordered]@{
-                    type = "commit_author_email_pattern"
-                    parameters = [ordered]@{
-                        operator = $operator
-                        pattern = $cleanPattern
-                        negate = $false
-                    }
-                })
-            }
+            else { @() }
+            [void]$emailPatterns.Add((Convert-EmailPatternsToRegex -Patterns $patterns))
         }
 
-        if ($emailRules.Count -gt 0) {
+        foreach ($emailPattern in $emailPatterns) {
             $rulesets.Add([ordered]@{
-                name = "$ScopeIdentifier-commit-metadata-$mKey"
+                name = New-PolicyRulesetName $ScopeIdentifier $ScopeKind "branch" $mKey @("~ALL") "metadata" $emailPattern
                 target = "branch"
                 enforcement = Get-RulesetEnforcement $mKey
                 conditions = [ordered]@{
@@ -521,7 +609,10 @@ function Build-SafeSettingsScopeBlocks {
                         exclude = @()
                     }
                 }
-                rules = $emailRules
+                rules = @([ordered]@{
+                    type = "commit_author_email_pattern"
+                    parameters = [ordered]@{ operator = "regex"; pattern = $emailPattern; negate = $false }
+                })
             })
         }
     }
@@ -554,7 +645,7 @@ Set-Content -Path $settingsFilePath -Value $orgSettingsYaml -Encoding utf8
 Write-Host "Created: $settingsFilePath" -ForegroundColor Green
 
 # --- B. Generate .github/suborgs/<project>.yml ---
-$projectBlocks = Build-SafeSettingsScopeBlocks -Items $projectScopedItems -ScopeIdentifier $projectName
+$projectBlocks = Build-SafeSettingsScopeBlocks -Items $projectScopedItems -ScopeIdentifier $projectName -ScopeKind project
 
 $suborgDoc = [ordered]@{
     suborgrepos = @($allRepos)
@@ -623,19 +714,24 @@ $lines.Add("## Parity & Mapping Status")
 $lines.Add("")
 $lines.Add("| ADO Policy Type | Safe-Settings Status | GitHub Equivalent | Parity Notes |")
 $lines.Add("|---|---|---|---|")
-$lines.Add("| Commit author email validation | **Mapped** | Dedicated Ruleset (`target: branch`, `~ALL`) | Preserves all patterns; maps to `ends_with`, `equals`, or `regex` |")
-$lines.Add("| File size restriction | **Mapped** | Push Ruleset: `max_file_size` | Converted from bytes to MB |")
+$lines.Add("| Commit author email validation | **Partial** | Dedicated branch metadata rulesets | One anchored regex OR per source policy; tag coverage requires separate review |")
+$lines.Add("| File size restriction | **Mapped / Partial** | Push Ruleset: max_file_size | Exact MiB thresholds preserved; rounding differences reported below |")
 $lines.Add("| Path Length restriction | **Mapped** | Push Ruleset: `max_file_path_length` | Exact character count |")
 $lines.Add("| File name restriction | **Mapped** | Push Ruleset: `file_path_restriction` | fnmatch file patterns |")
-$lines.Add("| Minimum number of reviewers | **Mapped** | Branch Ruleset: `pull_request` approvals | Approver count, reset-on-push, and last-pusher blocking |")
+$lines.Add("| Minimum number of reviewers | **Mapped / Partial** | Branch Ruleset: pull_request approvals | Maximum count and reset-on-push preserved; requester self-approval is already prohibited by GitHub; last-pusher vote-count semantics differ |")
 $lines.Add("| Comment requirements | **Mapped** | Branch Ruleset: `required_review_thread_resolution` | Unresolved threads block merge |")
 $lines.Add("| Require a merge strategy | **Mapped (Behavioral Delta)** | Ruleset `allowed_merge_methods` + Repo settings | **Note:** Applying allowed merge methods via GitHub ruleset mandates a PR requirement even with 0 approvals |")
-$lines.Add("| Build validation | **Mapped (Action Needed)** | Branch Ruleset: `required_status_checks` | **Confirm check context matches GitHub Actions workflow** |")
-$lines.Add("| Status checks | **Mapped (Action Needed)** | Branch Ruleset: `required_status_checks` | Verify publisher App / context string |")
+$lines.Add("| Build validation | **Mapped only with explicit context mapping** | Branch Ruleset: required_status_checks | Unresolved mappings are UNVERIFIED and omitted, not replaced with guessed pipeline names |")
+$lines.Add("| Status checks | **Mapped only with explicit context mapping** | Branch Ruleset: required_status_checks | Native statusGenre/statusName or legacy genre/name identify the mapping key |")
 $lines.Add("| Required reviewers | **Partial / Manual Configuration Required** | `CODEOWNERS` + `require_code_owner_review` | ADO path/identity reviewers require a `CODEOWNERS` file in the repo to bind identities to paths |")
 $lines.Add("| Work item linking | **Unsupported / Custom Action Required** | Custom Status Check / GHA | Informational only in native GitHub; require custom Action if blocking |")
 $lines.Add("| Case enforcement | **No Direct Equivalent** | None | Enforce via client-side git configuration or CI linting |")
 $lines.Add("| Reserved names restriction | **Partial / Workaround** | Push Ruleset: `file_path_restriction` | Enumerate OS reserved names (CON, NUL, COM1) if blocking pushes |")
+$lines.Add("")
+$lines.Add("## Mapping Warnings")
+if ($mappingWarnings.Count) {
+    foreach ($warning in $mappingWarnings) { $lines.Add("- " + $warning.Replace('|', '\|')) }
+} else { $lines.Add("No unresolved check mappings or numeric conversion differences detected. Manual parity gaps above still apply.") }
 $lines.Add("")
 $lines.Add("---")
 $lines.Add("")

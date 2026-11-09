@@ -1,0 +1,5561 @@
+{
+  "captureVersion": "1.0",
+  "capturedAt": "2026-11-02T22:28:35.4174204Z",
+  "adoOrganization": "ado-policy-testing",
+  "adoProject": "project1",
+  "projectId": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+  "authMode": "pat",
+  "selectedRepositories": [
+    "project1",
+    "sample-proj-p1",
+    "sample-starreads",
+    "sample-tailwind-backend",
+    "sample-tailwind-website",
+    "sample2",
+    "sample3",
+    "sample4"
+  ],
+  "policies": [
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T21:56:49.4502103Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/1"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        }
+      },
+      "revision": 3,
+      "id": 1,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/1",
+      "type": {
+        "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "displayName": "Commit author email validation"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.4960122Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/2"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 2,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/2",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.7510744Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/3"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        }
+      },
+      "revision": 1,
+      "id": 3,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/3",
+      "type": {
+        "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "displayName": "Git repository settings"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:16.9178254Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/4"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b"
+        }
+      },
+      "revision": 1,
+      "id": 4,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/4",
+      "type": {
+        "id": "db2b9b4c-180d-4529-9701-01541d19f36b",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b",
+        "displayName": "Reserved names restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T21:56:53.8035537Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/5"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        }
+      },
+      "revision": 3,
+      "id": 5,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/5",
+      "type": {
+        "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "displayName": "Path Length restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T21:56:57.9621662Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/6"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 3,
+      "id": 6,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/6",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.3274357Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "authorEmailPatterns": [
+          "*@MngEnvMCAP267305.onmicrosoft.com"
+        ],
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/7"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7"
+        }
+      },
+      "revision": 1,
+      "id": 7,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/7",
+      "type": {
+        "id": "77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/77ed4bd3-b063-4689-934a-175e4d0a78d7",
+        "displayName": "Commit author email validation"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.4702103Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "/policy-lab-blocked/*",
+          "*/policy-lab-blocked/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/8"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 8,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/8",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.6007406Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ],
+        "enforceConsistentCase": true,
+        "rejectDotGit": null,
+        "optimizedByDefault": null,
+        "breadcrumbDays": null,
+        "allowedForkTargets": null,
+        "gvfsOnly": null,
+        "gvfsExemptUsers": null,
+        "gvfsAllowedVersionRanges": null,
+        "detectRenameFalsePositivesByDefault": null,
+        "strictVoteMode": null,
+        "inheritPullRequestCreationMode": null,
+        "repoPullRequestAsDraftByDefault": null,
+        "repoPullRequestAutoCompleteByDefault": null,
+        "revertEnabled": null,
+        "copilotReviewerEnabled": null,
+        "copilotReviewEffortLevel": null,
+        "copilotReviewMcpEnabled": null
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/9"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce"
+        }
+      },
+      "revision": 1,
+      "id": 9,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/9",
+      "type": {
+        "id": "7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/7ed39669-655c-494e-b4a0-a08b4da0fcce",
+        "displayName": "Git repository settings"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.7299605Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/10"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b"
+        }
+      },
+      "revision": 1,
+      "id": 10,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/10",
+      "type": {
+        "id": "db2b9b4c-180d-4529-9701-01541d19f36b",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/db2b9b4c-180d-4529-9701-01541d19f36b",
+        "displayName": "Reserved names restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:17.8607731Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maxPathLength": 180,
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/11"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8"
+        }
+      },
+      "revision": 1,
+      "id": 11,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/11",
+      "type": {
+        "id": "001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/001a79cf-fda1-4c4e-9e7c-bac40ee5ead8",
+        "displayName": "Path Length restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.0165468Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 1048576,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/12"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 1,
+      "id": 12,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/12",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.1673256Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/13"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 13,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/13",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.3317017Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 14,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/14",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.4734794Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 15,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/15",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.6029535Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/16"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 16,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/16",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.7684532Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 2,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 17,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/17",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:18.9629201Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 18,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/18",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.157869Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-lab/",
+            "matchKind": "Prefix",
+            "repositoryId": null
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/19"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 19,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/19",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.2858845Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/20"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 20,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/20",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.4261221Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 21,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/21",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.5795283Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 22,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/22",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.7122808Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/23"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 23,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/23",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:19.8704275Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 1,
+        "queueOnSourceUpdateOnly": false,
+        "manualQueueOnly": false,
+        "displayName": "Policy lab fixture validation",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/24"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 24,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/24",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:20.0145636Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "external-validation",
+        "statusGenre": "policy-lab",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 25,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/25",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-10-23T19:45:20.1372086Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e",
+          "3a47de95-f9c0-653b-a9df-0df1690b7e73"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Policy migration lab: both named reviewers must approve.",
+        "scope": [
+          {
+            "refName": "refs/heads/policy-direct/main",
+            "matchKind": "Exact",
+            "repositoryId": "1fe43113-48cd-4edd-8a67-f49b20b57e0a"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/26"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 26,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/26",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:08:54.5718065Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 2,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/27"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 27,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/27",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:22.691535Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/28"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 28,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/28",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:23.0634785Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/29"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 29,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/29",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:23.5420866Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/30"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 30,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/30",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:23.7827814Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "sonarcloud-analysis",
+        "statusGenre": "security",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/31"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 31,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/31",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:23.9562364Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "requiredReviewerIds": [
+          "5250e609-5e8d-6403-9e6a-7f627014779e"
+        ],
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "message": "Security lead review required for StarReads master branch.",
+        "scope": [
+          {
+            "refName": "refs/heads/master",
+            "matchKind": "Exact",
+            "repositoryId": "68af4ac0-9932-48a3-aa53-92e1246febc0"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/32"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e"
+        }
+      },
+      "revision": 1,
+      "id": 32,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/32",
+      "type": {
+        "id": "fd2167ab-b0be-447a-8ec8-39368250530e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fd2167ab-b0be-447a-8ec8-39368250530e",
+        "displayName": "Required reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:24.095758Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": true,
+        "allowDownvotes": false,
+        "resetOnSourcePush": false,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/release/",
+            "matchKind": "Prefix",
+            "repositoryId": "d5ef3859-c88e-457d-9af6-ddffb9a584ab"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/33"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 33,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/33",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:24.338498Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "allowSquash": true,
+        "allowRebase": true,
+        "scope": [
+          {
+            "refName": "refs/heads/release/",
+            "matchKind": "Prefix",
+            "repositoryId": "d5ef3859-c88e-457d-9af6-ddffb9a584ab"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/34"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab"
+        }
+      },
+      "revision": 1,
+      "id": 34,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/34",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4916e5d171ab",
+        "displayName": "Require a merge strategy"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:24.9138721Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "integration-tests",
+        "statusGenre": "ci",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/release/",
+            "matchKind": "Prefix",
+            "repositoryId": "d5ef3859-c88e-457d-9af6-ddffb9a584ab"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/35"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 35,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/35",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:25.1119951Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "filenamePatterns": [
+          "*.pem",
+          "*.key",
+          ".env*",
+          "secrets/*"
+        ],
+        "scope": [
+          {
+            "repositoryId": "d5ef3859-c88e-457d-9af6-ddffb9a584ab"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/36"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61"
+        }
+      },
+      "revision": 1,
+      "id": 36,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/36",
+      "type": {
+        "id": "51c78909-e838-41a2-9496-c647091e3c61",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/51c78909-e838-41a2-9496-c647091e3c61",
+        "displayName": "File name restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:25.2596953Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "maximumGitBlobSizeInBytes": 10485760,
+        "useUncompressedSize": true,
+        "scope": [
+          {
+            "repositoryId": "d5ef3859-c88e-457d-9af6-ddffb9a584ab"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/37"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80"
+        }
+      },
+      "revision": 1,
+      "id": 37,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/37",
+      "type": {
+        "id": "2e26e725-8201-4edd-8bf5-978563c34a80",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/2e26e725-8201-4edd-8bf5-978563c34a80",
+        "displayName": "File size restriction"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:25.5753568Z",
+      "isEnabled": true,
+      "isBlocking": false,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/main",
+            "matchKind": "Exact",
+            "repositoryId": "57e84fb7-40b2-4f0c-8b74-bff90bc4781e"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/38"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 38,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/38",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:25.710001Z",
+      "isEnabled": true,
+      "isBlocking": false,
+      "isDeleted": false,
+      "settings": {
+        "statusName": "performance-audit",
+        "statusGenre": "audit",
+        "authorId": null,
+        "invalidateOnSourceUpdate": true,
+        "defaultDisplayName": null,
+        "policyApplicability": 0,
+        "scope": [
+          {
+            "refName": "refs/heads/main",
+            "matchKind": "Exact",
+            "repositoryId": "57e84fb7-40b2-4f0c-8b74-bff90bc4781e"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/39"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226"
+        }
+      },
+      "revision": 1,
+      "id": 39,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/39",
+      "type": {
+        "id": "cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/cbdc66da-9728-4af8-aada-9a5a32e4a226",
+        "displayName": "Status"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:25.8594657Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "buildDefinitionId": 1,
+        "queueOnSourceUpdateOnly": true,
+        "manualQueueOnly": false,
+        "displayName": "Website PR verification",
+        "validDuration": 0.0,
+        "scope": [
+          {
+            "refName": "refs/heads/main",
+            "matchKind": "Exact",
+            "repositoryId": "57e84fb7-40b2-4f0c-8b74-bff90bc4781e"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/40"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241"
+        }
+      },
+      "revision": 1,
+      "id": 40,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/40",
+      "type": {
+        "id": "0609b952-1397-4640-95ec-e00a01b2c241",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/0609b952-1397-4640-95ec-e00a01b2c241",
+        "displayName": "Build"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:25.9995802Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "minimumApproverCount": 1,
+        "creatorVoteCounts": false,
+        "allowDownvotes": false,
+        "resetOnSourcePush": true,
+        "requireVoteOnLastIteration": false,
+        "resetRejectionsOnSourcePush": false,
+        "blockLastPusherVote": false,
+        "requireVoteOnEachIteration": false,
+        "scope": [
+          {
+            "refName": "refs/heads/Aditya",
+            "matchKind": "Exact",
+            "repositoryId": "9edafdf1-125b-44a3-aef6-2e2c175e6d99"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/41"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd"
+        }
+      },
+      "revision": 1,
+      "id": 41,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/41",
+      "type": {
+        "id": "fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/fa4e907d-c16b-4a4c-9dfa-4906e5d171dd",
+        "displayName": "Minimum number of reviewers"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:26.142419Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/Aditya",
+            "matchKind": "Exact",
+            "repositoryId": "9edafdf1-125b-44a3-aef6-2e2c175e6d99"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/42"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2"
+        }
+      },
+      "revision": 1,
+      "id": 42,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/42",
+      "type": {
+        "id": "c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/c6a1889d-b943-4856-b76f-9e46bb6b0df2",
+        "displayName": "Comment requirements"
+      }
+    },
+    {
+      "createdBy": {
+        "displayName": "System Administrator",
+        "url": "https://spsprodcus7.vssps.visualstudio.com/A2116ac0f-5dbc-4e3d-aa99-32d145c8b86c/_apis/Identities/90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/ado-policy-testing/_apis/GraphProfile/MemberAvatars/aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+          }
+        },
+        "id": "90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "uniqueName": "admin@MngEnvMCAP267305.onmicrosoft.com",
+        "imageUrl": "https://dev.azure.com/ado-policy-testing/_api/_common/identityImage?id=90a28fa8-c5e7-6dc8-8433-0df5a1d83a63",
+        "descriptor": "aad.OTBhMjhmYTgtYzVlNy03ZGM4LTg0MzMtMGRmNWExZDgzYTYz"
+      },
+      "createdDate": "2026-11-02T22:09:26.367269Z",
+      "isEnabled": true,
+      "isBlocking": true,
+      "isDeleted": false,
+      "settings": {
+        "scope": [
+          {
+            "refName": "refs/heads/Aditya",
+            "matchKind": "Exact",
+            "repositoryId": "9edafdf1-125b-44a3-aef6-2e2c175e6d99"
+          }
+        ]
+      },
+      "isEnterpriseManaged": false,
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/43"
+        },
+        "policyType": {
+          "href": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e"
+        }
+      },
+      "revision": 1,
+      "id": 43,
+      "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/configurations/43",
+      "type": {
+        "id": "40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/policy/types/40e92b44-2fe1-4dd6-b3d8-74a9c21d0c6e",
+        "displayName": "Work item linking"
+      }
+    }
+  ],
+  "repositories": {
+    "sample-tailwind-website": {
+      "repository": {
+        "id": "57e84fb7-40b2-4f0c-8b74-bff90bc4781e",
+        "name": "sample-tailwind-website",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/57e84fb7-40b2-4f0c-8b74-bff90bc4781e",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/create-cicd-action",
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample-tailwind-website",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample-tailwind-website",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample-tailwind-website",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/eventsource-1.1.1": "9ec75427a9908e65c75a26e81917487758989638",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/minimist-1.2.8": "e64be1dd5c6d297191ffe634346c7ae56cc6bc3e",
+        "refs/heads/dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/ini-1.3.8": "394b7ab6ddb715871d3bcc7a37ff5a25a6259905",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/decode-uri-component-0.2.2": "02f91bb84ef2d3e5cd35a314903cb4c170ffdee4",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/tmpl-1.0.5": "85fec700d391227e0bd6fc3ada98504c70d49c7c",
+        "refs/heads/dependabot/nuget/Source/Tailwind.Traders.Web/CsvHelper-24.0.1": "8d17c622d356ae7f90e0cf05828734bd413dcf71",
+        "refs/heads/main": "3ffbe85d0e1fe4e2f0ca04798b1f9871ccbc1571",
+        "refs/heads/dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/yargs-parser-11.1.1": "ed04d7a82a41cab0aa916f4f3bae7c8b84427223",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTradersBotComposer/scripts/minimist-1.2.6": "307d272b064f39bff2bb73761e5029af0d688391",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/qs-6.10.3": "408270d18f8ab89caf42f195c62c958edcd93b4b",
+        "refs/heads/fix/fixed-arm-sku-param": "7e562899fd61ec7190e8e50da158d9257bd609f9",
+        "refs/heads/dependabot/nuget/TailwindTraders.Website/Source/Tailwind.Traders.Web/MongoDB.Driver-2.19.0": "593eb431ae7c8906f17b05350cdaff4083382924",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/axios-0.21.2": "9b13d722cb7a9a2fa9bf047d0f3a3368aec303e3",
+        "refs/heads/create-cicd-action": "93b67ce7639a15d529018a941203b4bd1658812e",
+        "refs/heads/dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/typescript-4.1.5": "a117df5bfc38376f18d213b715cd29d9f3469fe0",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/json5-1.0.2": "03e7453b8cbbd074dc6ce08a623141cf42e0f0da",
+        "refs/heads/dependabot/nuget/Source/Tailwind.Traders.Web/SixLabors.ImageSharp-1.0.3": "831bd6eea54c6bae70e6751d6e7ea58cf6e618b9",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/terser-4.8.1": "0fd8c5d1d5bb2e4bc4cf3d6b2a2020d278a7c378",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/loader-utils-and-react-scripts-2.0.4": "e1966fc5f85a1dff025e0ebd6f3ab8a11596f324",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTradersBotComposer/scripts/follow-redirects-1.14.8": "0cad377aefb7cd8fcf12015910e58297e59a70de",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/url-parse-1.5.10": "7b598c7e0b56dd9ac016565b946643c2e2f07aa5",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/ua-parser-js-0.7.33": "102ceb0295feb398f036ea452e127a9699ce69a2",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/ws-5.2.3": "bb547e7f4c8f3201502be132f01e25eb7fa3c309",
+        "refs/heads/inn-demos-fix-path": "8427ea2ff51681036a9ce70d8b26eddb1c476a1f",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/async-2.6.4": "d15983c1bc2147c8bdf61f73a907d90be61fc3e7",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/node-sass-7.0.0": "cdc6b2d60d4c5d236b13014beae86b3bb8326da9",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/express-4.18.2": "e487a4f1415e96a42695cd3e2ade332d45f48191",
+        "refs/heads/dependabot/nuget/TailwindTraders.Website/Source/Tailwind.Traders.Web/Azure.Storage.Blobs-12.13.0": "254fb45ee2b472baae462de69e65ff4773af93ae",
+        "refs/heads/dependabot/nuget/Source/Tailwind.Traders.Web/Microsoft.ApplicationInsights.AspNetCore-2.17.0": "2b5b55ae67901abbc9c43b844c76651948c50656",
+        "refs/heads/dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/dot-prop-4.2.1": "f6469aae7f1734bb5e1b44f7c1ec79ef4fe516db",
+        "refs/heads/dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/react-scripts-4.0.3": "dd702e6144f972796ccd46998d3b9b79797bbb49",
+        "refs/tags/innovations-demo-v1": "f1ec154376008432ac6d47b6c286b3cbe02d0407",
+        "refs/heads/feature/net-5": "059169b780adb312ba0f65bd80ebd006eacba7b8",
+        "refs/heads/dependabot/npm_and_yarn/TailwindTradersBotComposer/scripts/qs-6.5.3": "b10fc9165d4f360a715690e033eae1205716c40f",
+        "refs/tags/innovations-demo-v2": "986beee3eeab26940daa8c8af53ca49842997c00"
+      },
+      "effectivePolicies": {
+        "dependabot/npm_and_yarn/TailwindTradersBotComposer/scripts/minimist-1.2.6": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/nuget/TailwindTraders.Website/Source/Tailwind.Traders.Web/MongoDB.Driver-2.19.0": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "main": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Minimum number of reviewers",
+            "isBlocking": false,
+            "id": 38,
+            "isEnabled": true
+          },
+          {
+            "type": "Status",
+            "isBlocking": false,
+            "id": 39,
+            "isEnabled": true
+          },
+          {
+            "type": "Build",
+            "isBlocking": true,
+            "id": 40,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/nuget/TailwindTraders.Website/Source/Tailwind.Traders.Web/Azure.Storage.Blobs-12.13.0": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/async-2.6.4": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/typescript-4.1.5": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "create-cicd-action": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/terser-4.8.1": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/react-scripts-4.0.3": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/node-sass-7.0.0": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/json5-1.0.2": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "feature/net-5": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/ua-parser-js-0.7.33": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/ws-5.2.3": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/express-4.18.2": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/eventsource-1.1.1": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/nuget/Source/Tailwind.Traders.Web/Microsoft.ApplicationInsights.AspNetCore-2.17.0": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/loader-utils-and-react-scripts-2.0.4": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/decode-uri-component-0.2.2": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "inn-demos-fix-path": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/nuget/Source/Tailwind.Traders.Web/SixLabors.ImageSharp-1.0.3": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/minimist-1.2.8": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/dot-prop-4.2.1": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/yargs-parser-11.1.1": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/axios-0.21.2": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/qs-6.10.3": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/tmpl-1.0.5": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/nuget/Source/Tailwind.Traders.Web/CsvHelper-24.0.1": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTradersBotComposer/scripts/qs-6.5.3": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "fix/fixed-arm-sku-param": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp/url-parse-1.5.10": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/Source/Tailwind.Traders.Web/ClientApp/ini-1.3.8": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/TailwindTradersBotComposer/scripts/follow-redirects-1.14.8": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ]
+      }
+    },
+    "sample4": {
+      "repository": {
+        "id": "7779cd9a-edf0-42a9-9775-8998e63b2de4",
+        "name": "sample4",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/7779cd9a-edf0-42a9-9775-8998e63b2de4",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 5904,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample4",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample4",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample4",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/policy-tests/20261023PolicyBaseline02/pr-fixture": "680cea09c73b803c50ffdf8f4c76636816be765d",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/pr-fixture": "76ae12f09428a31fdd47813fae2d999b4e796bb1",
+        "refs/heads/policy-control/main": "29b2365c062507c3db95155af417ff3f5655adb8",
+        "refs/heads/master": "dc5e4014c4fc8d68439e63bc69cef78511829fac"
+      },
+      "effectivePolicies": {
+        "policy-tests/20261023PolicyBaseline02/pr-fixture": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "master": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline01/pr-fixture": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "policy-control/main": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ]
+      }
+    },
+    "project1": {
+      "repository": {
+        "id": "6f1f8b01-b81c-4b15-8145-d4ae3403cb19",
+        "name": "project1",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/6f1f8b01-b81c-4b15-8145-d4ae3403cb19",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/project1",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/project1",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/project1",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {},
+      "effectivePolicies": {}
+    },
+    "sample-proj-p1": {
+      "repository": {
+        "id": "9edafdf1-125b-44a3-aef6-2e2c175e6d99",
+        "name": "sample-proj-p1",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/9edafdf1-125b-44a3-aef6-2e2c175e6d99",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/Aditya",
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample-proj-p1",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample-proj-p1",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample-proj-p1",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/Aditya": "70ba155c9ac8dd0c13ccb7b5c4ec864dc2566bfc",
+        "refs/heads/feature": "310d8fd11ed85a6d28cd3f18b178a19c7701e4d3",
+        "refs/heads/main": "10eaa440fd47ce96c56e4889ccf57c9f07cf7900",
+        "refs/heads/develop": "1e32735af1a63840f90fd0501b31ec2c5a4bdd24",
+        "refs/heads/nojenkinsfile": "eb356a525085d32ed1d1a1f2f71a1ce04faf5bc2"
+      },
+      "effectivePolicies": {
+        "develop": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "feature": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "nojenkinsfile": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "main": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "Aditya": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Minimum number of reviewers",
+            "isBlocking": true,
+            "id": 41,
+            "isEnabled": true
+          },
+          {
+            "type": "Comment requirements",
+            "isBlocking": true,
+            "id": 42,
+            "isEnabled": true
+          },
+          {
+            "type": "Work item linking",
+            "isBlocking": true,
+            "id": 43,
+            "isEnabled": true
+          }
+        ]
+      }
+    },
+    "sample2": {
+      "repository": {
+        "id": "1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+        "name": "sample2",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/1fe43113-48cd-4edd-8a67-f49b20b57e0a",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 17502,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample2",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample2",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample2",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/policy-tests/20261023PolicyBaseline02/size-1048576": "36b453b7fc1446292c2c8b34b7f94880e1bfc99c",
+        "refs/heads/policy-direct/main": "4f57ccb1669d328d21c659a231d0b744b3400a50",
+        "refs/heads/policy-tests/20261023PolicyBaseline02/pr-fixture": "8ac3402e40fed9752648206d072ecf1f638cd4fb",
+        "refs/heads/policy-tests/20261023PolicyBaseline02/path-180": "3f427dedd8a591fb46c0d66ce334f3dc70930e65",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/size-1048576": "29a44cbe7c8ffa4c594fe472f17505b2e833de52",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/allowed": "2073d34c64632b14fa5e6f96e47ef1eb5f721fa5",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/pr-fixture": "7e1e3a69b2c87cc4fcfa6c8550e87d135f05e647",
+        "refs/heads/master": "91971113a1b391168c85b54488595d886b9c87a7",
+        "refs/heads/policy-tests/20261023PolicyBaseline02/allowed": "80052588cdb77b8e9a80a3aeda3b0ac66caea815"
+      },
+      "effectivePolicies": {
+        "policy-tests/20261023PolicyBaseline01/size-1048576": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline02/allowed": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          }
+        ],
+        "master": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          }
+        ],
+        "policy-direct/main": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          },
+          {
+            "type": "Minimum number of reviewers",
+            "isBlocking": true,
+            "id": 20,
+            "isEnabled": true
+          },
+          {
+            "type": "Work item linking",
+            "isBlocking": true,
+            "id": 21,
+            "isEnabled": true
+          },
+          {
+            "type": "Comment requirements",
+            "isBlocking": true,
+            "id": 22,
+            "isEnabled": true
+          },
+          {
+            "type": "Require a merge strategy",
+            "isBlocking": true,
+            "id": 23,
+            "isEnabled": true
+          },
+          {
+            "type": "Build",
+            "isBlocking": true,
+            "id": 24,
+            "isEnabled": true
+          },
+          {
+            "type": "Status",
+            "isBlocking": true,
+            "id": 25,
+            "isEnabled": true
+          },
+          {
+            "type": "Required reviewers",
+            "isBlocking": true,
+            "id": 26,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline02/size-1048576": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline02/pr-fixture": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline02/path-180": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline01/pr-fixture": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline01/allowed": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 7,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 8,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 9,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 10,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 11,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 12,
+            "isEnabled": true
+          }
+        ]
+      }
+    },
+    "sample-tailwind-backend": {
+      "repository": {
+        "id": "d5ef3859-c88e-457d-9af6-ddffb9a584ab",
+        "name": "sample-tailwind-backend",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/d5ef3859-c88e-457d-9af6-ddffb9a584ab",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/custom-metrics-hpa",
+        "size": 247063,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample-tailwind-backend",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample-tailwind-backend",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample-tailwind-backend",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/feature/net-5": "5a5c074c5a2655170908f52e6cc25918eec0c0c2",
+        "refs/heads/custom-metrics-hpa": "30bae715e368d3bee3a876d40e5f1617e5440afc",
+        "refs/heads/dependabot/npm_and_yarn/Source/Services/Tailwind.Traders.Cart.Api/node-fetch-2.6.7": "dfad4bead9bacdd435732bc5791b21b09c8059f5",
+        "refs/heads/main": "03852ac338462b661d5837d01ebf0a712e12866c",
+        "refs/heads/dependabot/npm_and_yarn/Source/Services/Tailwind.Traders.Coupon.Api/swagger-ui-dist-and-swagger-ui-express-4.18.1": "4a3a1926b35feb0f0d1fe671348e2e01dca10425",
+        "refs/tags/innovations-demo-v1": "9d889e9213c97e4e26aa0af05132871dcf67b68c",
+        "refs/heads/dependabot/npm_and_yarn/Source/Services/Tailwind.Traders.Cart.Api/json-schema-and-jsprim-0.4.0": "7ce499cf2c4a011cf81bedaef5ee33d8b4fbb0d4",
+        "refs/tags/innovations-demo-v2": "9d889e9213c97e4e26aa0af05132871dcf67b68c"
+      },
+      "effectivePolicies": {
+        "custom-metrics-hpa": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 36,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 37,
+            "isEnabled": true
+          }
+        ],
+        "main": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 36,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 37,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/Source/Services/Tailwind.Traders.Coupon.Api/swagger-ui-dist-and-swagger-ui-express-4.18.1": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 36,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 37,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/Source/Services/Tailwind.Traders.Cart.Api/json-schema-and-jsprim-0.4.0": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 36,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 37,
+            "isEnabled": true
+          }
+        ],
+        "feature/net-5": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 36,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 37,
+            "isEnabled": true
+          }
+        ],
+        "dependabot/npm_and_yarn/Source/Services/Tailwind.Traders.Cart.Api/node-fetch-2.6.7": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 36,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 37,
+            "isEnabled": true
+          }
+        ]
+      }
+    },
+    "sample-starreads": {
+      "repository": {
+        "id": "68af4ac0-9932-48a3-aa53-92e1246febc0",
+        "name": "sample-starreads",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/68af4ac0-9932-48a3-aa53-92e1246febc0",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 0,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample-starreads",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample-starreads",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample-starreads",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/master": "8d7f2c4f1ec0f15eef299f49bc04e2d4833fb223",
+        "refs/heads/main": "ffd1fa2ae84b7fb74e473b071ec2018b1271e2ec"
+      },
+      "effectivePolicies": {
+        "main": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "master": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Minimum number of reviewers",
+            "isBlocking": true,
+            "id": 27,
+            "isEnabled": true
+          },
+          {
+            "type": "Comment requirements",
+            "isBlocking": true,
+            "id": 28,
+            "isEnabled": true
+          },
+          {
+            "type": "Require a merge strategy",
+            "isBlocking": true,
+            "id": 29,
+            "isEnabled": true
+          },
+          {
+            "type": "Work item linking",
+            "isBlocking": true,
+            "id": 30,
+            "isEnabled": true
+          },
+          {
+            "type": "Status",
+            "isBlocking": true,
+            "id": 31,
+            "isEnabled": true
+          },
+          {
+            "type": "Required reviewers",
+            "isBlocking": true,
+            "id": 32,
+            "isEnabled": true
+          }
+        ]
+      }
+    },
+    "sample3": {
+      "repository": {
+        "id": "54f04bde-a309-4cfd-ace5-e89953f382a7",
+        "name": "sample3",
+        "url": "https://dev.azure.com/ado-policy-testing/214eef9d-ce60-45f3-8cd9-0bdfff07bf20/_apis/git/repositories/54f04bde-a309-4cfd-ace5-e89953f382a7",
+        "project": {
+          "id": "214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "name": "project1",
+          "url": "https://dev.azure.com/ado-policy-testing/_apis/projects/214eef9d-ce60-45f3-8cd9-0bdfff07bf20",
+          "state": "wellFormed",
+          "revision": 11,
+          "visibility": "private",
+          "lastUpdateTime": "2026-10-23T19:30:00.087Z"
+        },
+        "defaultBranch": "refs/heads/master",
+        "size": 18964,
+        "remoteUrl": "https://ado-policy-testing@dev.azure.com/ado-policy-testing/project1/_git/sample3",
+        "sshUrl": "git@ssh.dev.azure.com:v3/ado-policy-testing/project1/sample3",
+        "webUrl": "https://dev.azure.com/ado-policy-testing/project1/_git/sample3",
+        "isDisabled": false,
+        "isInMaintenance": false
+      },
+      "refs": {
+        "refs/heads/policy-lab/main": "4e626cce091d157c062ad8330efa8dfdbaed78f2",
+        "refs/heads/policy-tests/20261023PolicyBaseline02/pr-fixture": "92b5a37ceff931fd1566c52387242532e5d0b9e9",
+        "refs/heads/policy-tests/20261023PolicyBaseline02/path-180": "e5b933b98c6fb3bd5aaf0d4b9cbfe2232250c0af",
+        "refs/heads/policy-tests/20261023PolicyBaseline02/size-1048576": "eaa0ad6b4271901c9a75aba0c61327599ec311a1",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/size-1048576": "329a1adbb1b5a8d3813ae9025500dc2e45753b31",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/allowed": "81fc3bc371daee8ce8e06d232e70873c9ce28461",
+        "refs/heads/policy-tests/20261023PolicyBaseline01/pr-fixture": "032c9df138be73b8f65f5d255c5392b889cdbad8",
+        "refs/heads/master": "b63b1feeb92a88b3e750d12b3799a250e792b357",
+        "refs/heads/policy-tests/20261023PolicyBaseline02/allowed": "91fabb7b328e37a9b37a789d0d8163ad0658c3f6"
+      },
+      "effectivePolicies": {
+        "policy-lab/main": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          },
+          {
+            "type": "Minimum number of reviewers",
+            "isBlocking": true,
+            "id": 13,
+            "isEnabled": true
+          },
+          {
+            "type": "Work item linking",
+            "isBlocking": true,
+            "id": 14,
+            "isEnabled": true
+          },
+          {
+            "type": "Comment requirements",
+            "isBlocking": true,
+            "id": 15,
+            "isEnabled": true
+          },
+          {
+            "type": "Require a merge strategy",
+            "isBlocking": true,
+            "id": 16,
+            "isEnabled": true
+          },
+          {
+            "type": "Build",
+            "isBlocking": true,
+            "id": 17,
+            "isEnabled": true
+          },
+          {
+            "type": "Status",
+            "isBlocking": true,
+            "id": 18,
+            "isEnabled": true
+          },
+          {
+            "type": "Required reviewers",
+            "isBlocking": true,
+            "id": 19,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline02/allowed": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "master": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline02/size-1048576": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline02/pr-fixture": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline02/path-180": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline01/size-1048576": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline01/pr-fixture": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ],
+        "policy-tests/20261023PolicyBaseline01/allowed": [
+          {
+            "type": "Commit author email validation",
+            "isBlocking": true,
+            "id": 1,
+            "isEnabled": true
+          },
+          {
+            "type": "File name restriction",
+            "isBlocking": true,
+            "id": 2,
+            "isEnabled": true
+          },
+          {
+            "type": "Git repository settings",
+            "isBlocking": true,
+            "id": 3,
+            "isEnabled": true
+          },
+          {
+            "type": "Reserved names restriction",
+            "isBlocking": true,
+            "id": 4,
+            "isEnabled": true
+          },
+          {
+            "type": "Path Length restriction",
+            "isBlocking": true,
+            "id": 5,
+            "isEnabled": true
+          },
+          {
+            "type": "File size restriction",
+            "isBlocking": true,
+            "id": 6,
+            "isEnabled": true
+          }
+        ]
+      }
+    }
+  },
+  "identities": {
+    "3a47de95-f9c0-653b-a9df-0df1690b7e73": {
+      "principalName": "kiranch@MngEnvMCAP267305.onmicrosoft.com",
+      "isGroup": false,
+      "descriptor": "Microsoft.IdentityModel.Claims.ClaimsIdentity;91deab60-469f-438a-a2a4-831aa559e461\\kiranch@MngEnvMCAP267305.onmicrosoft.com",
+      "mail": "kiranch@MngEnvMCAP267305.onmicrosoft.com",
+      "displayName": "kiran"
+    },
+    "5250e609-5e8d-6403-9e6a-7f627014779e": {
+      "principalName": "kiran@MngEnvMCAP267305.onmicrosoft.com",
+      "isGroup": false,
+      "descriptor": "Microsoft.IdentityModel.Claims.ClaimsIdentity;91deab60-469f-438a-a2a4-831aa559e461\\kiran@MngEnvMCAP267305.onmicrosoft.com",
+      "mail": "kiran@MngEnvMCAP267305.onmicrosoft.com",
+      "displayName": "Kir"
+    }
+  },
+  "pipelines": {
+    "1": {
+      "path": "\\policy-lab",
+      "yamlFilename": "azure-pipelines-policy-lab.yml",
+      "name": "policy-lab-sample2",
+      "repository": "sample2"
+    },
+    "2": {
+      "path": "\\policy-lab",
+      "yamlFilename": "azure-pipelines-policy-lab.yml",
+      "name": "policy-lab-sample3",
+      "repository": "sample3"
+    }
+  },
+  "warnings": []
+}

@@ -1,0 +1,119 @@
+{
+  "SnapshotVersion": "3.0",
+  "CapturedAtUtc": "2026-11-06T22:54:39.9920506Z",
+  "TargetOrg": "ADO2GHEC",
+  "RepositoryName": "fleet-beta-service",
+  "DefaultBranch": "main",
+  "AllowForking": false,
+  "AllowSquashMerge": true,
+  "AllowMergeCommit": true,
+  "AllowRebaseMerge": true,
+  "RulesetsCount": 2,
+  "Rulesets": [
+    {
+      "id": 26732897,
+      "name": "ado-migrated-branch-ruleset",
+      "target": "branch",
+      "source_type": "Repository",
+      "source": "ADO2GHEC/fleet-beta-service",
+      "enforcement": "evaluate",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "~DEFAULT_BRANCH",
+            "refs/heads/main",
+            "refs/heads/master"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "non_fast_forward"
+        },
+        {
+          "type": "pull_request",
+          "parameters": {
+            "required_approving_review_count": 2,
+            "dismiss_stale_reviews_on_push": true,
+            "required_reviewers": [],
+            "require_code_owner_review": false,
+            "dismissal_restriction": {
+              "enabled": false,
+              "allowed_actors": []
+            },
+            "require_last_push_approval": false,
+            "required_review_thread_resolution": false,
+            "require_extra_approval_for_unattributed_changes": true,
+            "allowed_merge_methods": [
+              "merge",
+              "squash",
+              "rebase"
+            ]
+          }
+        },
+        {
+          "type": "commit_author_email_pattern",
+          "parameters": {
+            "operator": "ends_with",
+            "pattern": "@beta-service.internal",
+            "negate": false,
+            "name": "ADO Migrated Author Email Pattern"
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5WW07qzgGX6WE",
+      "created_at": "2026-11-06T17:54:13.228-05:00",
+      "updated_at": "2026-11-06T17:54:13.295-05:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/ADO2GHEC/fleet-beta-service/rulesets/26732897"
+        },
+        "html": {
+          "href": "https://github.com/ADO2GHEC/fleet-beta-service/rules/26732897"
+        }
+      }
+    },
+    {
+      "id": 26732898,
+      "name": "ado-migrated-push-ruleset",
+      "target": "push",
+      "source_type": "Repository",
+      "source": "ADO2GHEC/fleet-beta-service",
+      "enforcement": "evaluate",
+      "conditions": null,
+      "rules": [
+        {
+          "type": "file_path_restriction",
+          "parameters": {
+            "restricted_file_paths": [
+              "*.pem",
+              "*.key",
+              "id_rsa*"
+            ],
+            "ignored_file_paths": []
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5WW07qzgGX6WI",
+      "created_at": "2026-11-06T17:54:13.848-05:00",
+      "updated_at": "2026-11-06T17:54:13.859-05:00",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/ADO2GHEC/fleet-beta-service/rulesets/26732898"
+        },
+        "html": {
+          "href": "https://github.com/ADO2GHEC/fleet-beta-service/rules/26732898"
+        }
+      }
+    }
+  ],
+  "BranchProtections": []
+}

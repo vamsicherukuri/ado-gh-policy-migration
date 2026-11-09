@@ -1,0 +1,3 @@
+"Organization","P01 (OAuth-Restrictions)","P02 (SSH-Block)","P03 (SSH-Key-Expiration)","P04 (Audit-Logging)","P05 (PAT-Restrictions)","P06 (Package-Protections)","P07 (Conditional-Access-IP)","P08 (Guest-Access-Block)","P09 (Team-Admin-Invite)","P10 (Request-Access)","P11 (Public-Projects)","P13 (Policy.AllowExtensionsLocalNetworkAccess)","P14 (Policy.AllowFeedbackCollection)"
+"ado-policy-testing","No","Yes","Yes","Yes","No","Yes","Yes","No","No","No","No","Yes","No"
+"contosodevopstest","Yes","Yes","Yes","Yes","No","Yes","Yes","No","No","No","Yes","Yes","No"
