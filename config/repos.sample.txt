@@ -1,6 +1,0 @@
-# One "owner/repo" per line. Lines starting with # are ignored.
-contoso/repo1
-contoso/repo2
-contoso/repo3
-contoso/repo4
-contoso/repo5

@@ -614,7 +614,7 @@ foreach ($target in $repoTargets) {
         }
 
         $dryStatus = if ($accessCheck -eq "Ready") { "DryRun-Validated" } else { $accessCheck }
-        Write-Host "    [DRY-RUN AUDIT] Pre-flight Check: $accessCheck" -ForegroundColor $(if ($accessCheck -eq 'Ready') { 'Green' } else { 'Red' })
+        Write-Host "    [DRY-RUN AUDIT] Pre-flight Check: $accessCheck ($dryStatus)" -ForegroundColor $(if ($accessCheck -eq 'Ready') { 'Green' } else { 'Red' })
 
         $appliedResults.Add([PSCustomObject]@{
             Organization = $tOrg
